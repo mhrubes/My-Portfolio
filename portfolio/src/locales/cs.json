@@ -1,0 +1,38 @@
+{
+    "hi": "Ahoj!",
+
+    "mainPage": {
+      "im": "Jmenuji se"
+    },
+
+    "aboutPage": {
+      "header": "<strong>Životopis</strong>",
+      "describe": "Jelikož mě programování bavilo odjakživa, i proto jsem si již na střední škole vybral takový obor, díky kterému jsem mohl získávat cenné informace. Abych poté své vědomosti a schopnosti prohloubil ještě více, rozhodl jsem se pokračovat ve studiu na vysoké škole <strong>Unicorn University</strong>. V průběhu studia na této univerzitě jsem se naučil a zdokonalil v dalších odvětvích, která spadají pod IT obor, ale zejména jsem si zvykl pracovat více v týmu a zároveň psát technickou dokumentaci v průběhu vývoje aplikace.",
+      "technicalKnowledge": "Technické znalosti",
+      "motivation": "Motivace",
+      "motivationText": "Jak jsem již zmínil v úvodu, programování mě začalo bavit již na přelomu základní a střední školy. Na tomto oboru se mi líbí hlavně to, že člověk nikdy nemůže být nejlepší aniž by se stále nezdokonaloval. <br/><br/>Je tomu tak i díky rychlému vývoji v IT, a i proto mám motivaci každý den se dozvědět nebo naučit něco nového, co jsem ještě minulý den nevěděl, nebo neuměl. <br/><br/>Nejvíce se mi na IT oboru tedy líbí to, že každý další den je co se učit, ať už ve stejném nebo v jiném programovacím jazyce, nebo z pohledu databází.<br/><br/>Je tedy <strong>mým cílem</strong> se co nejvíce zlepšovat, pokud to jde a zároveň bádat a objevovat krásy IT odvětví.",
+      "reference": "Mé projekty",
+
+      "wifiNameApp": "Získání Wi-Fi názvů a hesel, kde KeyContent není prázdný.",
+      "overlayApp": "Overlay aplikace, která je vždy nadřazená nad všemi ostatními.",
+      "symfonyApp": "Pochopení základů v PHP Symfony.",
+      "twilioLibraryApp": "Knihovna pro posílání SMS a dat jako tělo zprávy",
+      "shopApp": "Full-Stack kombinace pro vytvoření aplikace.",
+
+      "tools": "Nástroje"
+    },
+
+    "jobTitle": {
+      "webFrontendDeveloper": "Frontend vývojář",
+      "webBackendDeveloper": "Backend vývojář",
+      "tester": "Tester",
+      "webFullStackDeveloper": "Full-Stack vývojář"
+    },
+
+    "pages": {
+      "home": "Domů",
+      "about": "O mně",
+      "contact": "Kontakt"
+    }
+  }
+  

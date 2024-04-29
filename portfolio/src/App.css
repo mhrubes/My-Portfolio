@@ -1,0 +1,117 @@
+body {
+  background-color: #1d052e;
+}
+
+.main {
+  background-color: #1d052e;
+  min-height: 300vh;
+  height: auto;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(200, 200, 200, 1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #8814d9;
+  -webkit-box-shadow: inset 0 0 6px rgba(90, 90, 90, 0.7);
+}
+
+.centered {
+  position: absolute;
+  min-width: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centeredAbout {
+  padding-top: 150px;
+  min-width: 300px;
+}
+
+.aboutLinksImage {
+  height: 40px;
+  width: auto;
+}
+
+.aboutButton {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+
+.aboutButton:hover {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+
+.projectDetailButton {
+  background-color: black;
+  color: white;
+}
+
+.projectDetailButton:hover {
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+}
+
+.setShadow {
+  text-shadow: 10px 10px 10px rgba(0, 0, 0, 1)
+}
+
+.toolsBox {
+  height: 175px;
+  /* width: 210px; */
+  border: 2px solid white;
+}
+
+.toolsBox:hover {
+  height: 175px;
+  /* width: 210px; */
+}
+
+.toolsIconStyle {
+  color: white;
+  font-size: 100px;
+}
+
+.toolsIconStyleActive {
+  font-size: 100px;
+}
+
+/* .toolsBox:hover .toolsIconStyle {
+  color: aqua;
+} */
+
+.navbarAboutButton {
+  border-radius: 15px;
+  background: white;
+  color: black;
+  box-shadow: 5px 5px 14px #b5b5b5,
+    -5px -5px 14px #ffffff;
+}
+
+.navbarAboutButton:hover {
+  border-radius: 15px;
+  background: black;
+  color: white;
+  box-shadow: 5px 5px 14px #b5b5b5,
+    -5px -5px 14px #ffffff;
+}
+
+.navbarAboutButtonActive {
+  border-radius: 15px;
+  background: black;
+  color: white;
+  box-shadow: 5px 5px 14px #b5b5b5,
+    -5px -5px 14px #ffffff;
+}
