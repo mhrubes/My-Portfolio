@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const Main = lazy(() => import('./pages/Main'));
 const About = lazy(() => import('./pages/About'));
+const Contact = lazy(() => import('./pages/Contact'));
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/">
             <Route index element={<Main />} />
             <Route path='about' element={<About />} />
+            <Route path='contact' element={<Contact />} />
             {/* <Route path="*" element={<NoPage />} /> */}
           </Route>
         </Routes>

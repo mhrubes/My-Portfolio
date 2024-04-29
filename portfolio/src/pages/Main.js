@@ -31,8 +31,8 @@ function Main() {
                     </p>
 
                     <div className='mt-3'>
-                        <Link to='/about'>
-                            <button className='btn aboutButton setShadow'>
+                        <Link className='setShadow' to='/about'>
+                            <button className='btn aboutButton'>
                                 {t('pages.about')}
                             </button>
                         </Link>
