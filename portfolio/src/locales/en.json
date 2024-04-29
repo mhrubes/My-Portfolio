@@ -31,7 +31,12 @@
     "lastname": "Lastname",
     "yourMessage": "Your message",
     "gdpr": "I agree to the processing of personal data according to the GDPR.",
-    "submitButton": "Send"
+    "submitButton": "Send",
+
+    "emailErrorMessageEmpty": "Email cannot be empty.",
+    "emailErrorMessageNotInclude": "Email doesn't contain @.",
+    "acceptProcessGDPR": "You must accept with conditions.",
+    "formSent": "The form was sent successfully."
   },
 
   "jobTitle": {

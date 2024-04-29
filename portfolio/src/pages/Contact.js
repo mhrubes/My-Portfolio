@@ -13,7 +13,7 @@ import { faUser, faMobileAlt, faEnvelope, faMapMarkerAlt } from '@fortawesome/fr
 import Navigation from '../navigation';
 
 function Contact() {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     const [email, setEmail] = useState('');
@@ -22,8 +22,10 @@ function Contact() {
     const [message, setMessageArea] = useState('');
     const [acceptProccess, setAcceptProccess] = useState(false);
 
-    const [emailErrorMessage, setEmailErrorMessage] = useState('');
-    const [acceptProccessError, setAcceptProccessError] = useState('');
+    const [emailIsSent, setEmailIsSent] = useState(false);
+
+    const [emailErrorMessageSubmit, setEmailErrorMessageSubmit] = useState(false);
+    const [acceptProccessErrorSubmit, setAcceptProccessErrorSubmit] = useState(false);
 
     useEffect(() => {
         const handleResize = () => {
@@ -39,24 +41,27 @@ function Contact() {
 
     const onSubmit = () => {
         if (email === '' || email.length === 0) {
-            setEmailErrorMessage('Email cannot be empty.')
+            setEmailErrorMessageSubmit(true);
         }
         else if (!email.includes('@')) {
-            setEmailErrorMessage('Email doesn\'\t contain @.')
+            setEmailErrorMessageSubmit(true);
         }
         else {
-            setEmailErrorMessage('');
+            setEmailErrorMessageSubmit(false);
         }
 
         if (!acceptProccess) {
-            setAcceptProccessError('You must accept with conditions.')
+            setAcceptProccessErrorSubmit(true);
         }
         else {
-            setAcceptProccessError('')
+            setAcceptProccessErrorSubmit(false);
         }
 
         if (email !== '' && email.length !== 0 && email.includes('@') && acceptProccess) {
             console.log('text');
+            setEmailIsSent(true);
+            setAcceptProccessErrorSubmit(false);
+            setEmailErrorMessageSubmit(false);
         }
     }
 
@@ -144,9 +149,14 @@ function Contact() {
                                 <input type='email' className='form-control' id='emailFormInput' placeholder='email@example.com'
                                     onChange={(e) => setEmail(e.target.value)}
                                 />
-                                {emailErrorMessage !== '' &&
+                                {emailErrorMessageSubmit && email.length === 0 &&
                                     <span style={{ color: 'red' }}>
-                                        {emailErrorMessage}
+                                        {t('contactPage.emailErrorMessageEmpty')}
+                                    </span>
+                                }
+                                {emailErrorMessageSubmit && (email.length !== 0 && !email.includes('@')) &&
+                                    <span style={{ color: 'red' }}>
+                                        {t('contactPage.emailErrorMessageNotInclude')}
                                     </span>
                                 }
                             </div>
@@ -180,18 +190,25 @@ function Contact() {
                                         {t('contactPage.gdpr')} <strong>*</strong>
                                     </label>
                                     <br />
-                                    {!acceptProccess &&
+                                    {!acceptProccess && acceptProccessErrorSubmit &&
                                         <span style={{ color: 'red' }}>
-                                            {acceptProccessError}
+                                            {t('contactPage.acceptProcessGDPR')}
                                         </span>
                                     }
                                 </div>
                             </div>
-
                             <div className='text-center'>
                                 <button className='btn aboutButton mt-3 w-50' type='button' onClick={() => onSubmit()}>
                                     {t('contactPage.submitButton')}
                                 </button>
+
+                                {emailIsSent && (
+                                    <div className='pt-2'>
+                                        <span style={{ color: 'lightgreen' }}>
+                                            {t('contactPage.formSent')}
+                                        </span>
+                                    </div>
+                                )}
                             </div>
                         </form>
                     </div>
