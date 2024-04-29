@@ -1,23 +1,12 @@
 import { useTranslation } from 'react-i18next';
-import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
+
+import Language from './components/LanguageChange.js';
 
 function Navigation() {
     const { t, i18n } = useTranslation();
     const location = useLocation();
-
-    useEffect(() => {
-        const savedLanguage = localStorage.getItem('language');
-        if (savedLanguage) {
-            i18n.changeLanguage(savedLanguage);
-        }
-    }, []);
-
-    const changeLanguage = (lng) => {
-        i18n.changeLanguage(lng);
-        localStorage.setItem('language', lng);
-    };
 
     return (
         <div className='bg-white fixed-top' style={{ boxShadow: '10px 10px 10px rgba(0, 0, 0, 0.5)' }}>
@@ -43,15 +32,9 @@ function Navigation() {
                         </button>
                     </Link>
                 </li>
-
                 <li className="nav-item m-1">
-                    {i18n.language === "en" ? (
-                        <button className='btn' onClick={() => changeLanguage('cz')}>CZ</button>
-                    ) : (
-                        <button className='btn' onClick={() => changeLanguage('en')}>EN</button>
-                    )}
+                    <Language />
                 </li>
-
             </ul>
         </div>
     );

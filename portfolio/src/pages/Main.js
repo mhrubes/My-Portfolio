@@ -43,7 +43,6 @@ function Main() {
                         </Link>
                     </div>
                 </div>
-
             </div>
         </div>
     );

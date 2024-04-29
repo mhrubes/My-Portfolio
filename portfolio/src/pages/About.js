@@ -4,6 +4,8 @@ import TypeWritter from 'typewriter-effect';
 import '../../node_modules/bootstrap/dist/css/bootstrap.css';
 
 import Navigation from '../navigation';
+import Icon from '../components/Icon.js';
+import Language from '../components/LanguageChange';
 
 import { Link } from 'react-router-dom';
 
@@ -15,7 +17,31 @@ function About() {
     const { t, i18n } = useTranslation();
     const [backToTop, setBackToTop] = useState(false);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-    const [activeToolsHover, setActiveToolsHover] = useState('');
+
+    const technologyObj = [
+        { className: "devicon-html5-plain", title: "HTML5" },
+        { className: "devicon-css3-plain", title: "CSS3" },
+        { className: "devicon-bootstrap-plain", title: "Bootstrap" },
+        { className: "devicon-javascript-plain", title: "Javascript" },
+        { className: "devicon-nodejs-plain", title: "Node.js" },
+        { className: "devicon-react-original", title: "React.js" },
+        { className: "devicon-nextjs-plain", title: "Next.js" },
+        { className: "devicon-csharp-plain", title: "C#" },
+        { className: "devicon-dotnetcore-plain", title: ".NET Core" },
+        { className: "devicon-blazor-original", title: "C# Blazor" },
+        { className: "devicon-php-plain", title: "PHP" },
+        { className: "devicon-symfony-original", title: "PHP Symfony" },
+        { className: "devicon-mysql-original", title: "MySQL" },
+        { className: "devicon-sqldeveloper-plain", title: "SQL Developer" },
+        { className: "devicon-mongodb-plain", title: "MongoDB" },
+        { className: "devicon-postman-plain", title: "Postman" },
+        { className: "devicon-insomnia-plain", title: "Insomnia" },
+        { className: "devicon-git-plain", title: "Git" },
+        { className: "devicon-github-original", title: "Github" },
+        { className: "devicon-jira-plain", title: "Jira" },
+        { className: "devicon-docker-plain", title: "Docker" },
+        { className: "devicon-jenkins-line", title: "Jenkins" },
+    ];
 
     useEffect(() => {
         const savedLanguage = localStorage.getItem('language');
@@ -71,10 +97,10 @@ function About() {
             </div>
 
             <div className='container text-center mt-3'>
-                <img className='aboutLinksImage m-1' src={facebookImage} alt='facebook' title="Facebook" />
-                <img className='aboutLinksImage m-1' src={instagramImage} alt='facebook' title="Instagram" />
-                <Link to='https://github.com/mhrubes?tab=repositories' target="_blank">
-                    <img className='aboutLinksImage m-1 rounded-circle' src={githubImage} alt='facebook' title="GitHub" />
+                <img className='aboutLinksImage m-1' src={facebookImage} alt='facebook' title='Facebook' />
+                <img className='aboutLinksImage m-1' src={instagramImage} alt='facebook' title='Instagram' />
+                <Link to='https://github.com/mhrubes?tab=repositories' target='_blank'>
+                    <img className='aboutLinksImage m-1 rounded-circle' src={githubImage} alt='facebook' title='GitHub' />
                 </Link>
             </div>
 
@@ -184,7 +210,6 @@ function About() {
                         </ul>
 
                         {window.innerWidth <= 750 && <hr className='text-white' />}
-
                     </div>
                     <div className='col-md-6'>
                         <p className='text-center h4 pb-3 setShadow'>{t('aboutPage.motivation')}</p>
@@ -203,14 +228,13 @@ function About() {
 
             <div className='container text-white'>
                 <div className='row m-0'>
-
                     <div className='col-md-4 p-1'>
-                        <div className='card m-0' style={{ minHeight: "200px" }}>
+                        <div className='card m-0' style={{ minHeight: '200px' }}>
                             <div className='card-body d-flex flex-column'>
                                 <h5 className='card-title'>Wifi Name</h5>
                                 <h6 className='card-subtitle mb-2 text-muted'>C#</h6>
                                 <p className='card-text'>{t('aboutPage.wifiNameApp')}</p>
-                                <div className="mt-auto">
+                                <div className='mt-auto'>
                                     <Link className='text-decoration-none' to='https://github.com/mhrubes/WifiName' target='_blank'>
                                         <button className='btn projectDetailButton'>
                                             <span className=''>Klikni zde</span>
@@ -222,14 +246,13 @@ function About() {
                         </div>
                     </div>
 
-
                     <div className='col-md-4 p-1'>
-                        <div className='card m-0' style={{ minHeight: "200px" }}>
+                        <div className='card m-0' style={{ minHeight: '200px' }}>
                             <div className='card-body d-flex flex-column'>
                                 <h5 className='card-title'>Overlay</h5>
                                 <h6 className='card-subtitle mb-2 text-muted'>C#</h6>
                                 <p className='card-text'>{t('aboutPage.overlayApp')}</p>
-                                <div className="mt-auto">
+                                <div className='mt-auto'>
                                     <Link className='text-decoration-none' to='https://github.com/mhrubes/Overlay' target='_blank'>
                                         <button className='btn projectDetailButton'>
                                             <span className=''>Klikni zde</span>
@@ -241,12 +264,12 @@ function About() {
                     </div>
 
                     <div className='col-md-4 p-1'>
-                        <div className='card m-0' style={{ minHeight: "200px" }}>
+                        <div className='card m-0' style={{ minHeight: '200px' }}>
                             <div className='card-body d-flex flex-column'>
                                 <h5 className='card-title'>Symfony App</h5>
                                 <h6 className='card-subtitle mb-2 text-muted'>PHP</h6>
                                 <p className='card-text'>{t('aboutPage.symfonyApp')}</p>
-                                <div className="mt-auto">
+                                <div className='mt-auto'>
                                     <Link className='text-decoration-none' to='https://github.com/mhrubes/SymfonyApp' target='_blank'>
                                         <button className='btn projectDetailButton'>
                                             <span className=''>Klikni zde</span>
@@ -260,12 +283,12 @@ function About() {
                     {windowWidth > 750 && <div className='col-md-2  p-1'></div>}
 
                     <div className='col-md-4 p-1'>
-                        <div className='card m-0' style={{ minHeight: "200px" }}>
+                        <div className='card m-0' style={{ minHeight: '200px' }}>
                             <div className='card-body d-flex flex-column'>
                                 <h5 className='card-title'>TwilioLibrary</h5>
                                 <h6 className='card-subtitle mb-2 text-muted'>C#</h6>
                                 <p className='card-text'>{t('aboutPage.twilioLibraryApp')}</p>
-                                <div className="mt-auto">
+                                <div className='mt-auto'>
                                     <Link className='text-decoration-none' to='https://github.com/mhrubes/TwilioLibrary' target='_blank'>
                                         <button className='btn projectDetailButton'>
                                             <span className=''>Klikni zde</span>
@@ -277,12 +300,12 @@ function About() {
                     </div>
 
                     <div className='col-md-4 p-1'>
-                        <div className='card m-0' style={{ minHeight: "200px" }}>
+                        <div className='card m-0' style={{ minHeight: '200px' }}>
                             <div className='card-body d-flex flex-column'>
                                 <h5 className='card-title'>Shop App</h5>
                                 <h6 className='card-subtitle mb-2 text-muted'>React.js, MongoDB, Express.js</h6>
                                 <p className='card-text'>{t('aboutPage.shopApp')}</p>
-                                <div className="mt-auto">
+                                <div className='mt-auto'>
                                     <Link className='text-decoration-none' to='https://github.com/mhrubes/shop_testing' target='_blank'>
                                         <button className='btn projectDetailButton'>
                                             <span className=''>Klikni zde</span>
@@ -299,230 +322,57 @@ function About() {
 
             <div className='text-white text-center pb-3'>
                 <h2 className='setShadow'>
-                    {t('aboutPage.tools')}
+                    {t('aboutPage.technology')}
                 </h2>
             </div>
 
             <div className='container'>
                 <div className='row m-0'>
-
                     {windowWidth >= 1100 && <div className='col-xl-1'></div>}
-
-                    <div className='col-xl-2 col-lg-3 col-md-3 col-6 p-1'>
-                        <div className='toolsBox d-flex justify-content-center align-items-center'>
-                            <i
-                                className={activeToolsHover === 'devicon-html5-plain' ? activeToolsHover + " colored toolsIconStyleActive" : "devicon-html5-plain toolsIconStyle"}
-                                title="HTML"
-                                onMouseEnter={(event) => setActiveToolsHover(event.target.classList.value.split(' ')[0])}
-                                onMouseLeave={() => setActiveToolsHover('')}
-                            ></i>
-                        </div>
-                    </div>
-
-                    <div className='col-xl-2 col-lg-3 col-md-3 col-6 p-1'>
-                        <div className='toolsBox d-flex justify-content-center align-items-center'>
-                            <i
-                                className={activeToolsHover === 'devicon-css3-plain' ? activeToolsHover + " colored toolsIconStyleActive" : "devicon-css3-plain toolsIconStyle"}
-                                title="CSS3"
-                                onMouseEnter={(event) => setActiveToolsHover(event.target.classList.value.split(' ')[0])}
-                                onMouseLeave={() => setActiveToolsHover('')}
-                            ></i>
-                        </div>
-                    </div>
-
-                    <div className='col-xl-2 col-lg-3 col-md-3 col-6 p-1'>
-                        <div className='toolsBox d-flex justify-content-center align-items-center'>
-                            <i
-                                className={activeToolsHover === 'devicon-bootstrap-plain' ? activeToolsHover + " colored toolsIconStyleActive" : "devicon-bootstrap-plain toolsIconStyle"}
-                                title="Bootstrap"
-                                onMouseEnter={(event) => setActiveToolsHover(event.target.classList.value.split(' ')[0])}
-                                onMouseLeave={() => setActiveToolsHover('')}
-                            ></i>
-                        </div>
-                    </div>
-
-                    <div className='col-xl-2 col-lg-3 col-md-3 col-6 p-1'>
-                        <div className='toolsBox d-flex justify-content-center align-items-center'>
-                            <i
-                                className={activeToolsHover === 'devicon-nodejs-plain' ? activeToolsHover + " colored toolsIconStyleActive" : "devicon-nodejs-plain toolsIconStyle"}
-                                title="Node.js"
-                                onMouseEnter={(event) => setActiveToolsHover(event.target.classList.value.split(' ')[0])}
-                                onMouseLeave={() => setActiveToolsHover('')}
-                            ></i>
-                        </div>
-                    </div>
-
-                    <div className='col-xl-2 col-lg-3 col-md-3 col-6 p-1'>
-                        <div className='toolsBox d-flex justify-content-center align-items-center'>
-                            <i
-                                className={activeToolsHover === 'devicon-react-original' ? activeToolsHover + " colored toolsIconStyleActive" : "devicon-react-original toolsIconStyle"}
-                                title="React.js"
-                                onMouseEnter={(event) => setActiveToolsHover(event.target.classList.value.split(' ')[0])}
-                                onMouseLeave={() => setActiveToolsHover('')}
-                            ></i>
-                        </div>
-                    </div>
-
-                    {windowWidth >= 1100 && <div className='col-xl-1'></div>}
-                    {windowWidth >= 1100 && <div className='col-xl-1'></div>}
-
-                    <div className='col-xl-2 col-lg-3 col-md-3 col-6 p-1'>
-                        <div className='toolsBox d-flex justify-content-center align-items-center'>
-                            <i
-                                className={activeToolsHover === 'devicon-express-original' ? activeToolsHover + " colored toolsIconStyleActive" : "devicon-express-original toolsIconStyle"}
-                                title="Express.js"
-                                onMouseEnter={(event) => setActiveToolsHover(event.target.classList.value.split(' ')[0])}
-                                onMouseLeave={() => setActiveToolsHover('')}
-                            ></i>
-                        </div>
-                    </div>
-
-                    <div className='col-xl-2 col-lg-3 col-md-3 col-6 p-1'>
-                        <div className='toolsBox d-flex justify-content-center align-items-center'>
-                            <i
-                                className={activeToolsHover === 'devicon-csharp-plain' ? activeToolsHover + " colored toolsIconStyleActive" : "devicon-csharp-plain toolsIconStyle"}
-                                title="C#"
-                                onMouseEnter={(event) => setActiveToolsHover(event.target.classList.value.split(' ')[0])}
-                                onMouseLeave={() => setActiveToolsHover('')}
-                            ></i>
-                        </div>
-                    </div>
-
-                    <div className='col-xl-2 col-lg-3 col-md-3 col-6 p-1'>
-                        <div className='toolsBox d-flex justify-content-center align-items-center'>
-                            <i
-                                className={activeToolsHover === 'devicon-dotnetcore-plain' ? activeToolsHover + " colored toolsIconStyleActive" : "devicon-dotnetcore-plain toolsIconStyle"}
-                                title=".NET Core"
-                                onMouseEnter={(event) => setActiveToolsHover(event.target.classList.value.split(' ')[0])}
-                                onMouseLeave={() => setActiveToolsHover('')}
-                            ></i>
-                        </div>
-                    </div>
-
-                    <div className='col-xl-2 col-lg-3 col-md-3 col-6 p-1'>
-                        <div className='toolsBox d-flex justify-content-center align-items-center'>
-                            <i
-                                className={activeToolsHover === 'devicon-mysql-original' ? activeToolsHover + " colored toolsIconStyleActive" : "devicon-mysql-original toolsIconStyle"}
-                                title="MySQL"
-                                onMouseEnter={(event) => setActiveToolsHover(event.target.classList.value.split(' ')[0])}
-                                onMouseLeave={() => setActiveToolsHover('')}
-                            ></i>
-                        </div>
-                    </div>
-
-                    <div className='col-xl-2 col-lg-3 col-md-3 col-6 p-1'>
-                        <div className='toolsBox d-flex justify-content-center align-items-center'>
-                            <i
-                                className={activeToolsHover === 'devicon-sqldeveloper-plain' ? activeToolsHover + " colored toolsIconStyleActive" : "devicon-sqldeveloper-plain toolsIconStyle"}
-                                title="SQL Developer"
-                                onMouseEnter={(event) => setActiveToolsHover(event.target.classList.value.split(' ')[0])}
-                                onMouseLeave={() => setActiveToolsHover('')}
-
-                            ></i>
-                        </div>
-                    </div>
-
-                    {windowWidth >= 1100 && <div className='col-xl-1'></div>}
-                    {windowWidth >= 1100 && <div className='col-xl-1'></div>}
-
-                    <div className='col-xl-2 col-lg-3 col-md-3 col-6 p-1'>
-                        <div className='toolsBox d-flex justify-content-center align-items-center'>
-                            <i
-                                className={activeToolsHover === 'devicon-postman-plain' ? activeToolsHover + " colored toolsIconStyleActive" : "devicon-postman-plain toolsIconStyle"}
-                                title="Postman"
-                                onMouseEnter={(event) => setActiveToolsHover(event.target.classList.value.split(' ')[0])}
-                                onMouseLeave={() => setActiveToolsHover('')}
-                            ></i>
-                        </div>
-                    </div>
-
-                    <div className='col-xl-2 col-lg-3 col-md-3 col-6 p-1'>
-                        <div className='toolsBox d-flex justify-content-center align-items-center'>
-                            <i
-                                className={activeToolsHover === 'devicon-insomnia-plain' ? activeToolsHover + " colored toolsIconStyleActive" : "devicon-insomnia-plain toolsIconStyle"}
-                                title="Insomnia"
-                                onMouseEnter={(event) => setActiveToolsHover(event.target.classList.value.split(' ')[0])}
-                                onMouseLeave={() => setActiveToolsHover('')}
-
-                            ></i>
-                        </div>
-                    </div>
-
-                    <div className='col-xl-2 col-lg-3 col-md-3 col-6 p-1'>
-                        <div className='toolsBox d-flex justify-content-center align-items-center'>
-                            <i
-                                className={activeToolsHover === 'devicon-git-plain' ? activeToolsHover + " colored toolsIconStyleActive" : "devicon-git-plain toolsIconStyle"}
-                                title="Git"
-                                onMouseEnter={(event) => setActiveToolsHover(event.target.classList.value.split(' ')[0])}
-                                onMouseLeave={() => setActiveToolsHover('')}
-                            ></i>
-                        </div>
-                    </div>
-
-                    <div className='col-xl-2 col-lg-3 col-md-3 col-6 p-1'>
-                        <div className='toolsBox d-flex justify-content-center align-items-center'>
-                            <i
-                                className={activeToolsHover === 'devicon-github-original' ? activeToolsHover + " colored toolsIconStyleActive" : "devicon-github-original toolsIconStyle"}
-                                title="GitHub"
-                                onMouseEnter={(event) => setActiveToolsHover(event.target.classList.value.split(' ')[0])}
-                                onMouseLeave={() => setActiveToolsHover('')}
-                            ></i>
-                        </div>
-                    </div>
-
-                    <div className='col-xl-2 col-lg-3 col-md-3 col-6 p-1'>
-                        <div className='toolsBox d-flex justify-content-center align-items-center'>
-                            <i
-                                className={activeToolsHover === 'devicon-jira-plain' ? activeToolsHover + " colored toolsIconStyleActive" : "devicon-jira-plain toolsIconStyle"}
-                                title="Jira"
-                                onMouseEnter={(event) => setActiveToolsHover(event.target.classList.value.split(' ')[0])}
-                                onMouseLeave={() => setActiveToolsHover('')}
-                            ></i>
-                        </div>
-                    </div>
-
-                    {windowWidth >= 1100 && <div className='col-xl-1'></div>}
-                    {windowWidth >= 1100 && <div className='col-xl-1'></div>}
-
-                    <div className='col-xl-2 col-lg-3 col-md-3 col-6 p-1'>
-                        <div className='toolsBox d-flex justify-content-center align-items-center'>
-                            <i
-                                className={activeToolsHover === 'devicon-docker-plain' ? activeToolsHover + " colored toolsIconStyleActive" : "devicon-docker-plain toolsIconStyle"}
-                                title="Docker"
-                                onMouseEnter={(event) => setActiveToolsHover(event.target.classList.value.split(' ')[0])}
-                                onMouseLeave={() => setActiveToolsHover('')}
-                            ></i>
-                        </div>
-                    </div>
-
-                    <div className='col-xl-2 col-lg-3 col-md-3 col-6 p-1'>
-                        <div className='toolsBox d-flex justify-content-center align-items-center'>
-                            <i
-                                className={activeToolsHover === 'devicon-jenkins-line' ? activeToolsHover + " colored toolsIconStyleActive" : "devicon-jenkins-line toolsIconStyle"}
-                                title="Jenkins"
-                                onMouseEnter={(event) => setActiveToolsHover(event.target.classList.value.split(' ')[0])}
-                                onMouseLeave={() => setActiveToolsHover('')}
-                            ></i>
-                        </div>
-                    </div>
-
+                    {technologyObj.map((item, index) => (
+                        <>
+                            <div key={index} className='col-xl-2 col-lg-3 col-md-3 col-6 p-1'>
+                                <div className='toolsBox d-flex justify-content-center align-items-center' title={item.title}>
+                                    <Icon iconName={item.className} title={item.title} />
+                                </div>
+                            </div>
+                            {(index === 4 || index === 10 || index === 15 || index === 21) && windowWidth >= 1100 && <div className='col-xl-1'></div>}
+                        </>
+                    ))}
                 </div>
             </div>
 
-            {
-                backToTop && (
-                    <button className='btn text-white' style={{
-                        position: 'fixed',
-                        bottom: '20px',
-                        right: '20px',
-                        fontSize: '40px'
-                    }}
-                        onClick={scrollUp}
-                    >
-                        👆
-                    </button>
-                )
-            }
+            <hr className='text-white m-5' />
+
+            <div className='text-center' style={{ marginTop: "-50px" }}>
+                <span className='display-2 text-white'>
+                    ↓
+                </span>
+            </div>
+
+            <div className='text-center mt-2 pb-5'>
+                <div>
+                    <Link className='text-decoration-none' to="/contact">
+                        <span className='text-white'>{t('aboutPage.contactMe')}</span>
+                    </Link>
+                </div>
+                <div className='mt-2'>
+                    <Language color="text-white" />
+                </div>
+            </div>
+
+            {backToTop && (
+                <button className='btn text-white' style={{
+                    position: 'fixed',
+                    bottom: '20px',
+                    right: '20px',
+                    fontSize: '40px'
+                }}
+                    onClick={scrollUp}
+                >
+                    👆
+                </button>
+            )}
 
         </div >
     );

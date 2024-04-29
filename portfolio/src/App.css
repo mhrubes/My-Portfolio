@@ -4,7 +4,7 @@ body {
 
 .main {
   background-color: #1d052e;
-  min-height: 300vh;
+  min-height: 100vh;
   height: auto;
 }
 
@@ -87,10 +87,6 @@ body {
 .toolsIconStyleActive {
   font-size: 100px;
 }
-
-/* .toolsBox:hover .toolsIconStyle {
-  color: aqua;
-} */
 
 .navbarAboutButton {
   border-radius: 15px;
