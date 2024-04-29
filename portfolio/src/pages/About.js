@@ -353,7 +353,7 @@ function About() {
             <div className='text-center mt-2 pb-5'>
                 <div>
                     <Link className='text-decoration-none' to="/contact">
-                        <span className='text-white'>{t('aboutPage.contactMe')}</span>
+                        <span className='text-white h5'>{t('aboutPage.contactMe')}</span>
                     </Link>
                 </div>
                 <div className='mt-2'>
