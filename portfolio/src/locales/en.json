@@ -22,6 +22,18 @@
     "contactMe": "Contact Me"
   },
 
+  "contactPage": {
+    "connectWithMe": "Connect With Me",
+    "czechRepublic": "The Czech Republic",
+    "contactForm": "Contact Form",
+    "emailAddress": "Email address",
+    "firstname": "Firstname",
+    "lastname": "Lastname",
+    "yourMessage": "Your message",
+    "gdpr": "I agree to the processing of personal data according to the GDPR.",
+    "submitButton": "Send"
+  },
+
   "jobTitle": {
     "webFrontendDeveloper": "Frontend developer",
     "webBackendDeveloper": "Backend developer",

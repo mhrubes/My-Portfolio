@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import Navigation from '../navigation';
 
 function Main() {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
 
     return (
         <div className='main'>

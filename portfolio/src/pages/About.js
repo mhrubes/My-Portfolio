@@ -14,41 +14,36 @@ import instagramImage from '../icons/instagram.png';
 import githubImage from '../icons/github.png';
 
 function About() {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
     const [backToTop, setBackToTop] = useState(false);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     const technologyObj = [
-        { className: "devicon-html5-plain", title: "HTML5" },
-        { className: "devicon-css3-plain", title: "CSS3" },
-        { className: "devicon-bootstrap-plain", title: "Bootstrap" },
-        { className: "devicon-javascript-plain", title: "Javascript" },
-        { className: "devicon-nodejs-plain", title: "Node.js" },
-        { className: "devicon-react-original", title: "React.js" },
-        { className: "devicon-nextjs-plain", title: "Next.js" },
-        { className: "devicon-csharp-plain", title: "C#" },
-        { className: "devicon-dotnetcore-plain", title: ".NET Core" },
-        { className: "devicon-blazor-original", title: "C# Blazor" },
-        { className: "devicon-php-plain", title: "PHP" },
-        { className: "devicon-symfony-original", title: "PHP Symfony" },
-        { className: "devicon-mysql-original", title: "MySQL" },
-        { className: "devicon-sqldeveloper-plain", title: "SQL Developer" },
-        { className: "devicon-mongodb-plain", title: "MongoDB" },
-        { className: "devicon-postman-plain", title: "Postman" },
-        { className: "devicon-insomnia-plain", title: "Insomnia" },
-        { className: "devicon-git-plain", title: "Git" },
-        { className: "devicon-github-original", title: "Github" },
-        { className: "devicon-jira-plain", title: "Jira" },
-        { className: "devicon-docker-plain", title: "Docker" },
-        { className: "devicon-jenkins-line", title: "Jenkins" },
+        { className: 'devicon-html5-plain', title: 'HTML5' },
+        { className: 'devicon-css3-plain', title: 'CSS3' },
+        { className: 'devicon-bootstrap-plain', title: 'Bootstrap' },
+        { className: 'devicon-javascript-plain', title: 'Javascript' },
+        { className: 'devicon-nodejs-plain', title: 'Node.js' },
+        { className: 'devicon-react-original', title: 'React.js' },
+        { className: 'devicon-nextjs-plain', title: 'Next.js' },
+        { className: 'devicon-csharp-plain', title: 'C#' },
+        { className: 'devicon-dotnetcore-plain', title: '.NET Core' },
+        { className: 'devicon-blazor-original', title: 'C# Blazor' },
+        { className: 'devicon-php-plain', title: 'PHP' },
+        { className: 'devicon-symfony-original', title: 'PHP Symfony' },
+        { className: 'devicon-mysql-original', title: 'MySQL' },
+        { className: 'devicon-sqldeveloper-plain', title: 'SQL Developer' },
+        { className: 'devicon-mongodb-plain', title: 'MongoDB' },
+        { className: 'devicon-postman-plain', title: 'Postman' },
+        { className: 'devicon-insomnia-plain', title: 'Insomnia' },
+        { className: 'devicon-git-plain', title: 'Git' },
+        { className: 'devicon-github-original', title: 'Github' },
+        { className: 'devicon-jira-plain', title: 'Jira' },
+        { className: 'devicon-docker-plain', title: 'Docker' },
+        { className: 'devicon-jenkins-line', title: 'Jenkins' },
     ];
 
     useEffect(() => {
-        const savedLanguage = localStorage.getItem('language');
-        if (savedLanguage) {
-            i18n.changeLanguage(savedLanguage);
-        }
-
         window.addEventListener(('scroll'), () => {
             if (window.scrollY > 80) {
                 setBackToTop(true);
@@ -98,9 +93,9 @@ function About() {
 
             <div className='container text-center mt-3'>
                 <img className='aboutLinksImage m-1' src={facebookImage} alt='facebook' title='Facebook' />
-                <img className='aboutLinksImage m-1' src={instagramImage} alt='facebook' title='Instagram' />
+                <img className='aboutLinksImage m-1' src={instagramImage} alt='Instagram' title='Instagram' />
                 <Link to='https://github.com/mhrubes?tab=repositories' target='_blank'>
-                    <img className='aboutLinksImage m-1 rounded-circle' src={githubImage} alt='facebook' title='GitHub' />
+                    <img className='aboutLinksImage m-1 rounded-circle' src={githubImage} alt='Github' title='GitHub' />
                 </Link>
             </div>
 
@@ -344,7 +339,7 @@ function About() {
 
             <hr className='text-white m-5' />
 
-            <div className='text-center' style={{ marginTop: "-50px" }}>
+            <div className='text-center' style={{ marginTop: '-50px' }}>
                 <span className='display-2 text-white'>
                     ↓
                 </span>
@@ -352,12 +347,12 @@ function About() {
 
             <div className='text-center mt-2 pb-5'>
                 <div>
-                    <Link className='text-decoration-none' to="/contact">
+                    <Link className='text-decoration-none' to='/contact'>
                         <span className='text-white h5'>{t('aboutPage.contactMe')}</span>
                     </Link>
                 </div>
                 <div className='mt-2'>
-                    <Language color="text-white" />
+                    <Language color='text-white' />
                 </div>
             </div>
 

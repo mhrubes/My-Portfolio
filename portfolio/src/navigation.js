@@ -5,7 +5,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import Language from './components/LanguageChange.js';
 
 function Navigation() {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
     const location = useLocation();
 
     return (

@@ -1,19 +1,41 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import TypeWritter from 'typewriter-effect';
 import '../../node_modules/bootstrap/dist/css/bootstrap.css';
 
+import facebookImage from '../icons/facebook.png';
+import instagramImage from '../icons/instagram.png';
+import githubImage from '../icons/github.png';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faBriefcase, faMobileAlt, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faMobileAlt, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import Navigation from '../navigation';
 
 function Contact() {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     const [email, setEmail] = useState('');
+    const [firstname, setFirstname] = useState('');
+    const [lastname, setLastname] = useState('');
     const [message, setMessageArea] = useState('');
+    const [acceptProccess, setAcceptProccess] = useState(false);
 
     const [emailErrorMessage, setEmailErrorMessage] = useState('');
+    const [acceptProccessError, setAcceptProccessError] = useState('');
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     const onSubmit = () => {
         if (email === '' || email.length === 0) {
@@ -25,20 +47,30 @@ function Contact() {
         else {
             setEmailErrorMessage('');
         }
+
+        if (!acceptProccess) {
+            setAcceptProccessError('You must accept with conditions.')
+        }
+        else {
+            setAcceptProccessError('')
+        }
+
+        if (email !== '' && email.length !== 0 && email.includes('@') && acceptProccess) {
+            console.log('text');
+        }
     }
 
     return (
         <div className='main'>
             <Navigation />
-
-            <div className='container' style={{ paddingTop: '300px' }}>
+            <div className='container' style={windowWidth < 768 ? { paddingTop: '150px' } : { paddingTop: '300px' }}>
                 <div className='row m-0 p-0'>
                     <div className='col-md-5 col-12 text-white'>
-                        <h3>
+                        <h3 style={{ textDecoration: 'underline' }}>
                             <strong>
                                 <TypeWritter
                                     options={{
-                                        strings: 'Spojte se semnou',
+                                        strings: t('contactPage.connectWithMe'),
                                         autoStart: true,
                                         loop: false,
                                         delay: 50,
@@ -56,84 +88,110 @@ function Contact() {
                                 Martin H.
                             </span>
                         </div>
-
-                        <div className='mt-3'>
-                            <span>
-                                <FontAwesomeIcon icon={faBriefcase} className='m-0' />
-                            </span>
-                            <span className='m-2 p-2'>
-                                IČO:
-                            </span>
-                        </div>
-
-                        <div className='mt-3'>
-                            <span>
-                                <FontAwesomeIcon icon={faBriefcase} className='m-0' />
-                            </span>
-                            <span className='m-2 p-2'>
-                                DIČ:
-                            </span>
-                        </div>
-
                         <div className='mt-3'>
                             <span>
                                 <FontAwesomeIcon icon={faMobileAlt} className='m-0' />
                             </span>
                             <span className='m-2 p-2'>
-                                Telefon:
+                                +420 000 000 000
                             </span>
                         </div>
-
                         <div className='mt-3'>
                             <span>
                                 <FontAwesomeIcon icon={faEnvelope} className='m-0' />
                             </span>
                             <span className='m-2 p-2'>
-                                Email:
+                                email@example.cz
                             </span>
                         </div>
-
                         <div className='mt-3'>
                             <span>
                                 <FontAwesomeIcon icon={faMapMarkerAlt} className='m-0' />
                             </span>
                             <span className='m-2 p-2'>
-                                Telefon:
+                                Rakovník 269 01 | {t('contactPage.czechRepublic')}
                             </span>
                         </div>
-
+                        <div className='m-0 pt-3'>
+                            <img className='aboutLinksImage m-1' src={facebookImage} alt='facebook' title='Facebook' />
+                            <img className='aboutLinksImage m-1' src={instagramImage} alt='Instagram' title='Instagram' />
+                            <Link className='text-decoration-none' to='https://github.com/mhrubes?tab=repositories' target='_blank'>
+                                <img className='aboutLinksImage m-1 rounded-circle' src={githubImage} alt='Github' title='GitHub' />
+                            </Link>
+                        </div>
                     </div>
-                    <div className='col-md-7 col-12 text-white'>
+
+                    {windowWidth < 768 && <hr className='text-white mt-4' />}
+
+                    <div className='col-md-7 col-12 text-white pb-5'>
+                        <h3>
+                            <strong>
+                                <TypeWritter
+                                    options={{
+                                        strings: t('contactPage.contactForm'),
+                                        autoStart: true,
+                                        loop: false,
+                                        delay: 50,
+                                        cursor: ''
+                                    }}
+                                />
+                            </strong>
+                        </h3>
+                        <br />
                         <form>
                             <div className='form-group'>
-                                <label for='emailLabel'>Email address <strong>*</strong></label>
+                                <label htmlFor='emailLabel'>{t('contactPage.emailAddress')} <strong>*</strong></label>
                                 <input type='email' className='form-control' id='emailFormInput' placeholder='email@example.com'
                                     onChange={(e) => setEmail(e.target.value)}
                                 />
-                                <span style={{ color: 'red' }}>
-                                    {emailErrorMessage}
-                                </span>
+                                {emailErrorMessage !== '' &&
+                                    <span style={{ color: 'red' }}>
+                                        {emailErrorMessage}
+                                    </span>
+                                }
                             </div>
-
                             <div className='row mt-2'>
-                                <div className='col-md-6 col-12'>
-                                    <label for='firstnameLabel'>Firstname</label>
-                                    <input type='text' className='form-control' placeholder='First name' />
+                                <div className='col-md-6 col-12 pt-2'>
+                                    <label htmlFor='firstnameLabel'>{t('contactPage.firstname')}</label>
+                                    <input type='text' className='form-control' placeholder={t('contactPage.firstname')}
+                                        onChange={(e) => setFirstname(e.target.value)}
+                                    />
                                 </div>
-                                <div className='col-md-6 col-12'>
-                                    <label for='lastnameLabel'>Lastname</label>
-                                    <input type='text' className='form-control' placeholder='Last name' />
+                                <div className='col-md-6 col-12 pt-2'>
+                                    <label htmlFor='lastnameLabel'>{t('contactPage.lastname')}</label>
+                                    <input type='text' className='form-control' placeholder={t('contactPage.lastname')}
+                                        onChange={(e) => setLastname(e.target.value)}
+                                    />
                                 </div>
                             </div>
-
-                            <div className='form-group mt-3'>
-                                <label for='messageAreaLabel'>Your message..</label>
+                            <div className='form-group pt-3'>
+                                <label htmlFor='messageAreaLabel'>{t('contactPage.yourMessage')}..</label>
                                 <textarea className='form-control' id='messageAreaLabel' rows='3'
                                     onChange={(e) => setMessageArea(e.target.value)}
                                 ></textarea>
                             </div>
+                            <div className='form-group pt-2'>
+                                <div className='form-check'>
+                                    <input className='form-check-input' type='checkbox' id='acceptProccess'
+                                        checked={acceptProccess}
+                                        onChange={() => setAcceptProccess(acceptProccess ? false : true)}
+                                    />
+                                    <label className='form-check-label' htmlFor='gridCheck'>
+                                        {t('contactPage.gdpr')} <strong>*</strong>
+                                    </label>
+                                    <br />
+                                    {!acceptProccess &&
+                                        <span style={{ color: 'red' }}>
+                                            {acceptProccessError}
+                                        </span>
+                                    }
+                                </div>
+                            </div>
+
                             <div className='text-center'>
-                                <button className='btn aboutButton mt-3' type='button' onClick={() => onSubmit()}>Submit form</button>
+                                <button className='btn aboutButton mt-3 w-50' type='button' onClick={() => onSubmit()}>
+                                    {t('contactPage.submitButton')}
+                                </button>
                             </div>
                         </form>
                     </div>
