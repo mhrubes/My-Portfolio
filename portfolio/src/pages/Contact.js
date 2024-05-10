@@ -93,7 +93,7 @@ function Contact() {
                                 Martin H.
                             </span>
                         </div>
-                        <div className='mt-3'>
+                        {/* <div className='mt-3'>
                             <span>
                                 <FontAwesomeIcon icon={faMobileAlt} className='m-0' />
                             </span>
@@ -108,7 +108,7 @@ function Contact() {
                             <span className='m-2 p-2'>
                                 email@example.cz
                             </span>
-                        </div>
+                        </div> */}
                         <div className='mt-3'>
                             <span>
                                 <FontAwesomeIcon icon={faMapMarkerAlt} className='m-0' />
@@ -142,6 +142,7 @@ function Contact() {
                                 />
                             </strong>
                         </h3>
+                        <p>{t('inDevelopment')}</p>
                         <br />
                         <form>
                             <div className='form-group'>

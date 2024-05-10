@@ -1,5 +1,7 @@
 {
   "hi": "Hi!",
+  "inDevelopment": "In Development",
+
   "mainPage": {
     "im": "My name is"
   },
