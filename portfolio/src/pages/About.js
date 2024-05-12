@@ -1,10 +1,10 @@
 import { useTranslation } from 'react-i18next';
-import { useEffect, useState } from 'react';
-import TypeWritter from 'typewriter-effect';
-import '../../node_modules/bootstrap/dist/css/bootstrap.css';
+import React, { useEffect, useState } from 'react';
 
 import Navigation from '../navigation';
 import Icon from '../components/Icon.js';
+import ProjectDetail from '../components/about/Project-detail';
+import SkillNoLoopWritter from '../components/about/Skills-no-loop-Writter';
 import Language from '../components/LanguageChange';
 
 import { Link } from 'react-router-dom';
@@ -26,6 +26,7 @@ function About() {
         { className: 'devicon-nodejs-plain', title: 'Node.js' },
         { className: 'devicon-react-original', title: 'React.js' },
         { className: 'devicon-nextjs-plain', title: 'Next.js' },
+        { className: 'devicon-typescript-plain', title: 'Typescript' },
         { className: 'devicon-csharp-plain', title: 'C#' },
         { className: 'devicon-dotnetcore-plain', title: '.NET Core' },
         { className: 'devicon-blazor-original', title: 'C# Blazor' },
@@ -41,6 +42,18 @@ function About() {
         { className: 'devicon-jira-plain', title: 'Jira' },
         { className: 'devicon-docker-plain', title: 'Docker' },
         { className: 'devicon-jenkins-line', title: 'Jenkins' },
+    ];
+
+    const skillsObj = [
+        'HTML, CSS - Bootstrap',
+        'Javascript - Node.js, React.js, Express.js, Typescript',
+        'C# - .NET Core, WPF, Windows Forms',
+        'SQL, MySQL, MongoDB',
+        'Postman, Insomnia',
+        'Git, GitHub, Jira, Slack',
+        'Docker, Jenkins',
+        '',
+        'Dahua, Hikvision, Jablotron'
     ];
 
     useEffect(() => {
@@ -106,102 +119,16 @@ function About() {
                     <div className='col-md-6'>
                         <p className='text-center h4 pb-3 setShadow'>{t('aboutPage.technicalKnowledge')}</p>
                         <ul>
-                            <li>
-                                <TypeWritter
-                                    options={{
-                                        strings: 'HTML, CSS - Bootstrap',
-                                        autoStart: true,
-                                        loop: false,
-                                        delay: 20,
-                                        cursor: ''
-                                    }}
-                                />
-                            </li>
-                            <br />
-                            <li>
-                                <TypeWritter
-                                    options={{
-                                        strings: 'Javascript - Node.js, React.js, Express.js',
-                                        autoStart: true,
-                                        loop: false,
-                                        delay: 30,
-                                        cursor: ''
-                                    }}
-                                />
-                            </li>
-                            <br />
-                            <li>
-                                <TypeWritter
-                                    options={{
-                                        strings: 'C# - .NET Core, WPF, Windows Forms',
-                                        autoStart: true,
-                                        loop: false,
-                                        delay: 30,
-                                        cursor: ''
-                                    }}
-                                />
-                            </li>
-                            <br />
-                            <li>
-                                <TypeWritter
-                                    options={{
-                                        strings: 'SQL, MySQL, MongoDB',
-                                        autoStart: true,
-                                        loop: false,
-                                        delay: 30,
-                                        cursor: ''
-                                    }}
-                                />
-                            </li>
-                            <br />
-                            <li>
-                                <TypeWritter
-                                    options={{
-                                        strings: 'Postman, Insomnia',
-                                        autoStart: true,
-                                        loop: false,
-                                        delay: 30,
-                                        cursor: ''
-                                    }}
-                                />
-                            </li>
-                            <br />
-                            <li>
-                                <TypeWritter
-                                    options={{
-                                        strings: 'Git, GitHub, Jira',
-                                        autoStart: true,
-                                        loop: false,
-                                        delay: 30,
-                                        cursor: ''
-                                    }}
-                                />
-                            </li>
-                            <br />
-                            <li>
-                                <TypeWritter
-                                    options={{
-                                        strings: 'Docker, Jenkins',
-                                        autoStart: true,
-                                        loop: false,
-                                        delay: 30,
-                                        cursor: ''
-                                    }}
-                                />
-                            </li>
-                            <br />
-                            <br />
-                            <li>
-                                <TypeWritter
-                                    options={{
-                                        strings: 'Dahua, Hikvision, Jablotron',
-                                        autoStart: true,
-                                        loop: false,
-                                        delay: 30,
-                                        cursor: ''
-                                    }}
-                                />
-                            </li>
+                            {skillsObj.map((item, index) => (
+                                <span key={index}>
+                                    {item !== '' &&
+                                        <li>
+                                            <SkillNoLoopWritter lang={item} />
+                                        </li>
+                                    }
+                                    <br />
+                                </span>
+                            ))}
                         </ul>
 
                         {window.innerWidth <= 750 && <hr className='text-white' />}
@@ -224,91 +151,57 @@ function About() {
             <div className='container text-white'>
                 <div className='row m-0'>
                     <div className='col-md-4 p-1'>
-                        <div className='card m-0' style={{ minHeight: '200px' }}>
-                            <div className='card-body d-flex flex-column'>
-                                <h5 className='card-title'>Wifi Name</h5>
-                                <h6 className='card-subtitle mb-2 text-muted'>C#</h6>
-                                <p className='card-text'>{t('aboutPage.wifiNameApp')}</p>
-                                <div className='mt-auto'>
-                                    <Link className='text-decoration-none' to='https://github.com/mhrubes/WifiName' target='_blank'>
-                                        <button className='btn projectDetailButton'>
-                                            <span className=''>Klikni zde</span>
-                                        </button>
-                                    </Link>
-
-                                </div>
-                            </div>
-                        </div>
+                        <ProjectDetail
+                            name='Wifi Name'
+                            progLang='C#'
+                            desc='wifiNameApp'
+                            link='https://github.com/mhrubes/WifiName'
+                        />
                     </div>
 
                     <div className='col-md-4 p-1'>
-                        <div className='card m-0' style={{ minHeight: '200px' }}>
-                            <div className='card-body d-flex flex-column'>
-                                <h5 className='card-title'>Overlay</h5>
-                                <h6 className='card-subtitle mb-2 text-muted'>C#</h6>
-                                <p className='card-text'>{t('aboutPage.overlayApp')}</p>
-                                <div className='mt-auto'>
-                                    <Link className='text-decoration-none' to='https://github.com/mhrubes/Overlay' target='_blank'>
-                                        <button className='btn projectDetailButton'>
-                                            <span className=''>Klikni zde</span>
-                                        </button>
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
+                        <ProjectDetail
+                            name='Overlay'
+                            progLang='C#'
+                            desc='overlayApp'
+                            link='https://github.com/mhrubes/Overlay'
+                        />
                     </div>
 
                     <div className='col-md-4 p-1'>
-                        <div className='card m-0' style={{ minHeight: '200px' }}>
-                            <div className='card-body d-flex flex-column'>
-                                <h5 className='card-title'>Symfony App</h5>
-                                <h6 className='card-subtitle mb-2 text-muted'>PHP</h6>
-                                <p className='card-text'>{t('aboutPage.symfonyApp')}</p>
-                                <div className='mt-auto'>
-                                    <Link className='text-decoration-none' to='https://github.com/mhrubes/SymfonyApp' target='_blank'>
-                                        <button className='btn projectDetailButton'>
-                                            <span className=''>Klikni zde</span>
-                                        </button>
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {windowWidth > 750 && <div className='col-md-2  p-1'></div>}
-
-                    <div className='col-md-4 p-1'>
-                        <div className='card m-0' style={{ minHeight: '200px' }}>
-                            <div className='card-body d-flex flex-column'>
-                                <h5 className='card-title'>TwilioLibrary</h5>
-                                <h6 className='card-subtitle mb-2 text-muted'>C#</h6>
-                                <p className='card-text'>{t('aboutPage.twilioLibraryApp')}</p>
-                                <div className='mt-auto'>
-                                    <Link className='text-decoration-none' to='https://github.com/mhrubes/TwilioLibrary' target='_blank'>
-                                        <button className='btn projectDetailButton'>
-                                            <span className=''>Klikni zde</span>
-                                        </button>
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
+                        <ProjectDetail
+                            name='Symfony App'
+                            progLang='PHP'
+                            desc='symfonyApp'
+                            link='https://github.com/mhrubes/SymfonyApp'
+                        />
                     </div>
 
                     <div className='col-md-4 p-1'>
-                        <div className='card m-0' style={{ minHeight: '200px' }}>
-                            <div className='card-body d-flex flex-column'>
-                                <h5 className='card-title'>Shop App</h5>
-                                <h6 className='card-subtitle mb-2 text-muted'>React.js, MongoDB, Express.js</h6>
-                                <p className='card-text'>{t('aboutPage.shopApp')}</p>
-                                <div className='mt-auto'>
-                                    <Link className='text-decoration-none' to='https://github.com/mhrubes/shop_testing' target='_blank'>
-                                        <button className='btn projectDetailButton'>
-                                            <span className=''>Klikni zde</span>
-                                        </button>
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
+                        <ProjectDetail
+                            name='TwilioLibrary'
+                            progLang='C#'
+                            desc='twilioLibraryApp'
+                            link='https://github.com/mhrubes/TwilioLibrary'
+                        />
+                    </div>
+
+                    <div className='col-md-4 p-1'>
+                        <ProjectDetail
+                            name='Shop App'
+                            progLang='React, Express.js, MongoDB'
+                            desc='shopApp'
+                            link='https://github.com/mhrubes/shop_testing'
+                        />
+                    </div>
+
+                    <div className='col-md-4 p-1'>
+                        <ProjectDetail
+                            name='FE-Seat-Case-Study'
+                            progLang='React, Typescript'
+                            desc='feSeatCaseStudy'
+                            link='https://github.com/mhrubes/frontend-seating-case-study'
+                        />
                     </div>
                 </div>
             </div>
@@ -325,14 +218,14 @@ function About() {
                 <div className='row m-0'>
                     {windowWidth >= 1100 && <div className='col-xl-1'></div>}
                     {technologyObj.map((item, index) => (
-                        <>
-                            <div key={index} className='col-xl-2 col-lg-3 col-md-3 col-6 p-1'>
-                                <div className='toolsBox d-flex justify-content-center align-items-center' title={item.title}>
+                        <React.Fragment key={index}>
+                            <div className='col-xl-2 col-lg-3 col-md-3 col-6 p-1'>
+                                <div className='toolsBox d-flex justify-content-center align-items-center rounded' title={item.title}>
                                     <Icon iconName={item.className} title={item.title} />
                                 </div>
                             </div>
                             {(index === 4 || index === 10 || index === 15 || index === 21) && windowWidth >= 1100 && <div className='col-xl-1'></div>}
-                        </>
+                        </React.Fragment>
                     ))}
                 </div>
             </div>

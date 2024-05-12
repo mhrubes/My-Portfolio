@@ -1,5 +1,5 @@
 {
-  "hi": "Hi!",
+  "hi": "Hey!",
   "inDevelopment": "In Development",
 
   "mainPage": {
@@ -19,7 +19,9 @@
     "symfonyApp": "Learning basics in PHP Symfony.",
     "twilioLibraryApp": "Library for sending SMS (now) and data as body of message.",
     "shopApp": "Testing Full Stack App in JS React / others programs.",
+    "feSeatCaseStudy": "Launch the specified application according to the template.",
 
+    "clickHere": "Click here",
     "technology": "Technology",
     "contactMe": "Contact Me"
   },

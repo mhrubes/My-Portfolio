@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
-import '../node_modules/bootstrap/dist/css/bootstrap.css';
 
 import Language from './components/LanguageChange.js';
 

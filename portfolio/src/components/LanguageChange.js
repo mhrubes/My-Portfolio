@@ -1,5 +1,4 @@
 import { useTranslation } from 'react-i18next';
-import '../../node_modules/bootstrap/dist/css/bootstrap.css';
 
 function LanguageChange(props) {
     const { t, i18n } = useTranslation();

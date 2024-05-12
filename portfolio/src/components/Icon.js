@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import '../../node_modules/bootstrap/dist/css/bootstrap.css';
 
 function Icon(props) {
     const [activeToolsHover, setActiveToolsHover] = useState('');

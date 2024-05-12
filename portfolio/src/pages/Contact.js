@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import TypeWritter from 'typewriter-effect';
-import '../../node_modules/bootstrap/dist/css/bootstrap.css';
 
 import facebookImage from '../icons/facebook.png';
 import instagramImage from '../icons/instagram.png';
@@ -13,7 +12,7 @@ import { faUser, faMobileAlt, faEnvelope, faMapMarkerAlt } from '@fortawesome/fr
 import Navigation from '../navigation';
 
 function Contact() {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     const [email, setEmail] = useState('');

@@ -17,9 +17,11 @@
       "wifiNameApp": "Získání Wi-Fi názvů a hesel, kde KeyContent není prázdný.",
       "overlayApp": "Overlay aplikace, která je vždy nadřazená nad všemi ostatními.",
       "symfonyApp": "Pochopení základů v PHP Symfony.",
-      "twilioLibraryApp": "Knihovna pro posílání SMS a dat jako tělo zprávy",
+      "twilioLibraryApp": "Knihovna pro posílání SMS a dat jako tělo zprávy.",
       "shopApp": "Full-Stack kombinace pro vytvoření aplikace.",
+      "feSeatCaseStudy": "Zprovoznění zadané aplikace podle šablony.",
 
+      "clickHere": "Klikni zde",
       "technology": "Technologie",
       "contactMe": "Kontaktujte Mě"
     },

@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next';
 import TypeWritter from 'typewriter-effect';
-import '../../node_modules/bootstrap/dist/css/bootstrap.css';
 
 import { Link } from 'react-router-dom';
 import Navigation from '../navigation';
