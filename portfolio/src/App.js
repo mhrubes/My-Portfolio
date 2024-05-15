@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react"
 
 const Main = lazy(() => import('./pages/Main'));
 const About = lazy(() => import('./pages/About'));
@@ -19,6 +20,7 @@ function App() {
           </Route>
         </Routes>
       </Suspense>
+      <Analytics debug={false} />
     </BrowserRouter>
   );
 }
