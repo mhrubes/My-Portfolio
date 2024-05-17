@@ -40,12 +40,13 @@ function About() {
         { className: 'devicon-git-plain', title: 'Git' },
         { className: 'devicon-github-original', title: 'Github' },
         { className: 'devicon-jira-plain', title: 'Jira' },
+        { className: 'devicon-slack-plain', title: 'Slack' },
         { className: 'devicon-docker-plain', title: 'Docker' },
         { className: 'devicon-jenkins-line', title: 'Jenkins' },
     ];
 
     const skillsObj = [
-        'HTML, CSS - Bootstrap',
+        'HTML5, CSS3 - Bootstrap',
         'Javascript - Node.js, React.js, Express.js, Typescript',
         'C# - .NET Core, WPF, Windows Forms',
         'SQL, MySQL, MongoDB',
@@ -105,8 +106,8 @@ function About() {
             </div>
 
             <div className='container text-center mt-3'>
-                <img className='aboutLinksImage m-1' src={facebookImage} alt='facebook' title='Facebook' />
-                <img className='aboutLinksImage m-1' src={instagramImage} alt='Instagram' title='Instagram' />
+                {/* <img className='aboutLinksImage m-1' src={facebookImage} alt='facebook' title='Facebook' />
+                <img className='aboutLinksImage m-1' src={instagramImage} alt='Instagram' title='Instagram' /> */}
                 <Link to='https://github.com/mhrubes?tab=repositories' target='_blank'>
                     <img className='aboutLinksImage m-1 rounded-circle' src={githubImage} alt='Github' title='GitHub' />
                 </Link>
@@ -220,7 +221,7 @@ function About() {
                     {technologyObj.map((item, index) => (
                         <React.Fragment key={index}>
                             <div className='col-xl-2 col-lg-3 col-md-3 col-6 p-1'>
-                                <div className='toolsBox d-flex justify-content-center align-items-center rounded' title={item.title}>
+                                <div className='toolsBox d-flex justify-content-center align-items-center rounded' title={item.title} style={{height: "150px"}}>
                                     <Icon iconName={item.className} title={item.title} />
                                 </div>
                             </div>

@@ -8,6 +8,7 @@ function Icon(props) {
         <i
             className={activeToolsHover === iconName ? activeToolsHover + " colored toolsIconStyleActive" : iconName + " toolsIconStyle"}
             title={title}
+            style={{fontSize: "75px"}}
             onMouseEnter={(event) => setActiveToolsHover(event.target.classList.value.split(' ')[0])}
             onMouseLeave={() => setActiveToolsHover('')}
         ></i>

@@ -117,8 +117,8 @@ function Contact() {
                             </span>
                         </div>
                         <div className='m-0 pt-3'>
-                            <img className='aboutLinksImage m-1' src={facebookImage} alt='facebook' title='Facebook' />
-                            <img className='aboutLinksImage m-1' src={instagramImage} alt='Instagram' title='Instagram' />
+                            {/* <img className='aboutLinksImage m-1' src={facebookImage} alt='facebook' title='Facebook' />
+                            <img className='aboutLinksImage m-1' src={instagramImage} alt='Instagram' title='Instagram' /> */}
                             <Link className='text-decoration-none' to='https://github.com/mhrubes?tab=repositories' target='_blank'>
                                 <img className='aboutLinksImage m-1 rounded-circle' src={githubImage} alt='Github' title='GitHub' />
                             </Link>
@@ -145,7 +145,7 @@ function Contact() {
                         <br />
                         <form>
                             <div className='form-group'>
-                                <label htmlFor='emailLabel'>{t('contactPage.emailAddress')} <strong>*</strong></label>
+                                <label htmlFor='emailLabel'>{t('contactPage.emailAddress')} <strong className='text-danger'>*</strong></label>
                                 <input type='email' className='form-control' id='emailFormInput' placeholder='email@example.com'
                                     onChange={(e) => setEmail(e.target.value)}
                                 />
@@ -187,7 +187,7 @@ function Contact() {
                                         onChange={() => setAcceptProccess(acceptProccess ? false : true)}
                                     />
                                     <label className='form-check-label' htmlFor='gridCheck'>
-                                        {t('contactPage.gdpr')} <strong>*</strong>
+                                        {t('contactPage.gdpr')} <strong className='text-danger'>*</strong>
                                     </label>
                                     <br />
                                     {!acceptProccess && acceptProccessErrorSubmit &&
