@@ -6,6 +6,7 @@ import TypeWritter from 'typewriter-effect';
 import facebookImage from '../icons/facebook.png';
 import instagramImage from '../icons/instagram.png';
 import githubImage from '../icons/github.png';
+import linkedin from '../icons/linkedIn.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faMobileAlt, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
@@ -99,15 +100,17 @@ function Contact() {
                             <span className='m-2 p-2'>
                                 +420 000 000 000
                             </span>
-                        </div>
+                        </div> */}
                         <div className='mt-3'>
                             <span>
                                 <FontAwesomeIcon icon={faEnvelope} className='m-0' />
                             </span>
                             <span className='m-2 p-2'>
-                                email@example.cz
+                                <Link to='mailto:m_hrubes@centrum.cz' className='email-link-style'>
+                                    m_hrubes@centrum.cz
+                                </Link>
                             </span>
-                        </div> */}
+                        </div>
                         <div className='mt-3'>
                             <span>
                                 <FontAwesomeIcon icon={faMapMarkerAlt} className='m-0' />
@@ -119,6 +122,9 @@ function Contact() {
                         <div className='m-0 pt-3'>
                             {/* <img className='aboutLinksImage m-1' src={facebookImage} alt='facebook' title='Facebook' />
                             <img className='aboutLinksImage m-1' src={instagramImage} alt='Instagram' title='Instagram' /> */}
+                            <Link to='https://www.linkedin.com/in/martin-h-8b06751b5/' target='_blank'>
+                                <img className='aboutLinksImage m-1 rounded-circle' src={linkedin} alt='linkedIn' title='linkedIn' style={{ height: "35px" }} />
+                            </Link>
                             <Link className='text-decoration-none' to='https://github.com/mhrubes?tab=repositories' target='_blank'>
                                 <img className='aboutLinksImage m-1 rounded-circle' src={githubImage} alt='Github' title='GitHub' />
                             </Link>
@@ -201,7 +207,6 @@ function Contact() {
                                 <button className='btn aboutButton mt-3 w-50' type='button' onClick={() => onSubmit()}>
                                     {t('contactPage.submitButton')}
                                 </button>
-
                                 {emailIsSent && (
                                     <div className='pt-2'>
                                         <span style={{ color: 'lightgreen' }}>
