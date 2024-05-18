@@ -110,7 +110,7 @@ function About() {
                 {/* <img className='aboutLinksImage m-1' src={facebookImage} alt='facebook' title='Facebook' />
                 <img className='aboutLinksImage m-1' src={instagramImage} alt='Instagram' title='Instagram' /> */}
                 <Link to='https://www.linkedin.com/in/martin-h-8b06751b5/' target='_blank'>
-                    <img className='aboutLinksImage m-1 rounded-circle' src={linkedin} alt='linkedIn' title='linkedIn' style={{height: "35px"}} />
+                    <img className='aboutLinksImage m-1 rounded-circle' src={linkedin} alt='linkedIn' title='linkedIn' style={{ height: "35px" }} />
                 </Link>
                 <Link to='https://github.com/mhrubes?tab=repositories' target='_blank'>
                     <img className='aboutLinksImage m-1 rounded-circle' src={githubImage} alt='Github' title='GitHub' />
@@ -136,7 +136,7 @@ function About() {
                             ))}
                         </ul>
 
-                        {window.innerWidth <= 750 && <hr className='text-white' />}
+                        {window.innerWidth <= 767 && <hr className='text-white m-5' />}
                     </div>
                     <div className='col-md-6'>
                         <p className='text-center h4 pb-3 setShadow'>{t('aboutPage.motivation')}</p>
@@ -224,10 +224,22 @@ function About() {
                     {windowWidth >= 1100 && <div className='col-xl-1'></div>}
                     {technologyObj.map((item, index) => (
                         <React.Fragment key={index}>
-                            <div className='col-xl-2 col-lg-3 col-md-3 col-6 p-1'>
-                                <div className='toolsBox d-flex justify-content-center align-items-center rounded' title={item.title} style={{height: "150px"}}>
-                                    <Icon iconName={item.className} title={item.title} />
-                                </div>
+                            <div className='col-xl-2 col-lg-3 col-md-2 col-3 p-1'>
+                                {windowWidth > 990 &&
+                                    <div className='toolsBox d-flex justify-content-center align-items-center rounded border border-1' title={item.title} style={{ height: "150px" }}>
+                                        <Icon iconName={item.className} title={item.title} height={"75px"} />
+                                    </div>
+                                }
+                                {windowWidth <= 990 && windowWidth > 767 &&
+                                    <div className='toolsBox d-flex justify-content-center align-items-center rounded border border-1' title={item.title} style={{ height: "90px" }}>
+                                        <Icon iconName={item.className} title={item.title} height={"45px"} />
+                                    </div>
+                                }
+                                {windowWidth <= 767 &&
+                                    <div className='toolsBox d-flex justify-content-center align-items-center rounded border border-1' title={item.title} style={{ height: "60px" }}>
+                                        <Icon iconName={item.className} title={item.title} height={"25px"} />
+                                    </div>
+                                }
                             </div>
                             {(index === 4 || index === 10 || index === 15 || index === 21) && windowWidth >= 1100 && <div className='col-xl-1'></div>}
                         </React.Fragment>
