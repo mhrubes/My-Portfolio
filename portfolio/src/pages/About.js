@@ -224,7 +224,7 @@ function About() {
                     {windowWidth >= 1100 && <div className='col-xl-1'></div>}
                     {technologyObj.map((item, index) => (
                         <React.Fragment key={index}>
-                            <div className='col-xl-2 col-lg-3 col-md-2 col-3 p-1'>
+                            <div className='col-xl-2 col-lg-3 col-md-2 col-4 p-1'>
                                 {windowWidth > 990 &&
                                     <div className='toolsBox d-flex justify-content-center align-items-center rounded border border-1' title={item.title} style={{ height: "150px" }}>
                                         <Icon iconName={item.className} title={item.title} height={"75px"} />
