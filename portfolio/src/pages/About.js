@@ -2,7 +2,6 @@ import { useTranslation } from 'react-i18next';
 import React, { useEffect, useState } from 'react';
 
 import Navigation from '../navigation';
-import Icon from '../components/Icon.js';
 import ProjectDetail from '../components/about/Project-detail';
 import SkillNoLoopWritter from '../components/about/Skills-no-loop-Writter';
 import Language from '../components/LanguageChange';
@@ -13,6 +12,7 @@ import facebookImage from '../icons/facebook.png';
 import instagramImage from '../icons/instagram.png';
 import githubImage from '../icons/github.png';
 import linkedin from '../icons/linkedIn.png';
+import TechFlipCard from '../components/about/Tech-flip-card';
 
 function About() {
     const { t } = useTranslation();
@@ -45,6 +45,13 @@ function About() {
         { className: 'devicon-docker-plain', title: 'Docker' },
         { className: 'devicon-jenkins-line', title: 'Jenkins' },
     ];
+
+    const [flipStates, setFlipStates] = useState(Array(technologyObj.length).fill(false));
+    const handleFlip = (index, isFlipped) => {
+        const newFlipStates = [...flipStates];
+        newFlipStates[index] = isFlipped;
+        setFlipStates(newFlipStates);
+    };
 
     const skillsObj = [
         'HTML5, CSS3 - Bootstrap',
@@ -226,22 +233,40 @@ function About() {
                         <React.Fragment key={index}>
                             <div className='col-xl-2 col-lg-3 col-md-2 col-4 p-1'>
                                 {windowWidth > 990 &&
-                                    <div className='toolsBox d-flex justify-content-center align-items-center rounded border border-1' title={item.title} style={{ height: "150px" }}>
-                                        <Icon iconName={item.className} title={item.title} height={"75px"} />
-                                    </div>
+                                    <TechFlipCard
+                                        key={index}
+                                        item={item}
+                                        index={index}
+                                        flipStates={flipStates}
+                                        handleFlip={handleFlip}
+                                        height='150px'
+                                        iconSize='75px'
+                                    />
                                 }
                                 {windowWidth <= 990 && windowWidth > 767 &&
-                                    <div className='toolsBox d-flex justify-content-center align-items-center rounded border border-1' title={item.title} style={{ height: "90px" }}>
-                                        <Icon iconName={item.className} title={item.title} height={"45px"} />
-                                    </div>
+                                    <TechFlipCard
+                                        key={index}
+                                        item={item}
+                                        index={index}
+                                        flipStates={flipStates}
+                                        handleFlip={handleFlip}
+                                        height='90px'
+                                        iconSize='45px'
+                                    />
                                 }
                                 {windowWidth <= 767 &&
-                                    <div className='toolsBox d-flex justify-content-center align-items-center rounded border border-1' title={item.title} style={{ height: "60px" }}>
-                                        <Icon iconName={item.className} title={item.title} height={"30px"} />
-                                    </div>
+                                    <TechFlipCard
+                                        key={index}
+                                        item={item}
+                                        index={index}
+                                        flipStates={flipStates}
+                                        handleFlip={handleFlip}
+                                        height='60px'
+                                        iconSize='30px'
+                                    />
                                 }
                             </div>
-                            {(index === 4 || index === 10 || index === 15 || index === 21) && windowWidth >= 1100 && <div className='col-xl-1'></div>}
+                            {(index === 4 || index === 10 || index === 15 || index === 21) && windowWidth >= 1200 && <div className='col-xl-1'></div>}
                         </React.Fragment>
                     ))}
                 </div>
