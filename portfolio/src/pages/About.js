@@ -237,7 +237,7 @@ function About() {
                                 }
                                 {windowWidth <= 767 &&
                                     <div className='toolsBox d-flex justify-content-center align-items-center rounded border border-1' title={item.title} style={{ height: "60px" }}>
-                                        <Icon iconName={item.className} title={item.title} height={"25px"} />
+                                        <Icon iconName={item.className} title={item.title} height={"30px"} />
                                     </div>
                                 }
                             </div>
