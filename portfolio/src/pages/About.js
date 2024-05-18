@@ -241,6 +241,7 @@ function About() {
                                         handleFlip={handleFlip}
                                         height='150px'
                                         iconSize='75px'
+                                        textFontSize='20px'
                                     />
                                 }
                                 {windowWidth <= 990 && windowWidth > 767 &&
@@ -252,6 +253,7 @@ function About() {
                                         handleFlip={handleFlip}
                                         height='90px'
                                         iconSize='45px'
+                                        textFontSize='14px'
                                     />
                                 }
                                 {windowWidth <= 767 &&
@@ -263,6 +265,7 @@ function About() {
                                         handleFlip={handleFlip}
                                         height='60px'
                                         iconSize='30px'
+                                        textFontSize='10px'
                                     />
                                 }
                             </div>

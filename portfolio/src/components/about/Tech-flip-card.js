@@ -2,7 +2,7 @@ import Icon from '../Icon';
 
 function TechFlipCard(props) {
 
-    let { item, index, flipStates, handleFlip, height, iconSize } = props
+    let { item, index, flipStates, handleFlip, height, iconSize, textFontSize } = props
 
     return (
         <div className={`flip-card ${flipStates[index] ? "flipped" : ""}`} style={{ height: height }}>
@@ -13,7 +13,7 @@ function TechFlipCard(props) {
                     </div>
                 </div>
                 <div className="flip-card-back d-flex justify-content-center align-items-center rounded" style={{ height: height }}>
-                    <div className="card-content">
+                    <div className="card-content" style={{fontSize: textFontSize || null}}>
                         {item.title}
                     </div>
                 </div>
