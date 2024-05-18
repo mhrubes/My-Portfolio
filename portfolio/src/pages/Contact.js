@@ -170,12 +170,14 @@ function Contact() {
                                 <div className='col-md-6 col-12 pt-2'>
                                     <label htmlFor='firstnameLabel'>{t('contactPage.firstname')}</label>
                                     <input type='text' className='form-control' placeholder={t('contactPage.firstname')}
+                                        value={firstname}
                                         onChange={(e) => setFirstname(e.target.value)}
                                     />
                                 </div>
                                 <div className='col-md-6 col-12 pt-2'>
                                     <label htmlFor='lastnameLabel'>{t('contactPage.lastname')}</label>
                                     <input type='text' className='form-control' placeholder={t('contactPage.lastname')}
+                                        value={lastname}
                                         onChange={(e) => setLastname(e.target.value)}
                                     />
                                 </div>
@@ -183,6 +185,7 @@ function Contact() {
                             <div className='form-group pt-3'>
                                 <label htmlFor='messageAreaLabel'>{t('contactPage.yourMessage')}..</label>
                                 <textarea className='form-control' id='messageAreaLabel' rows='3'
+                                    value={message}
                                     onChange={(e) => setMessageArea(e.target.value)}
                                 ></textarea>
                             </div>
