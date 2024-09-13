@@ -1,8 +1,7 @@
-import TypeWritter from 'typewriter-effect';
+import TypeWritter from 'typewriter-effect'
 
 function SkillNoLoopWritter(props) {
-
-    let { lang } = props;
+    let { lang } = props
 
     return (
         <TypeWritter
@@ -14,7 +13,7 @@ function SkillNoLoopWritter(props) {
                 cursor: ''
             }}
         />
-    );
+    )
 }
 
-export default SkillNoLoopWritter;
+export default SkillNoLoopWritter

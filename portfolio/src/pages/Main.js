@@ -1,23 +1,28 @@
-import { useTranslation } from 'react-i18next';
-import TypeWritter from 'typewriter-effect';
+import { useTranslation } from 'react-i18next'
+import TypeWritter from 'typewriter-effect'
 
-import { Link } from 'react-router-dom';
-import Navigation from '../navigation';
+import { Link } from 'react-router-dom'
+import Navigation from '../navigation'
 
 function Main() {
-    const { t } = useTranslation();
+    const { t } = useTranslation()
 
     return (
-        <div className='main'>
+        <div className="main">
             <Navigation />
-            <div className='container'>
-                <div className='centered text-white'>
-                    <h1 className='setShadow'>{t('hi')}</h1>
-                    <p className='h3 setShadow'>{t('mainPage.im')} <span className='h2'><strong>Martin</strong></span></p>
+            <div className="container">
+                <div className="centered text-white">
+                    <h1 className="setShadow">{t('hi')}</h1>
+                    <p className="h3 setShadow">
+                        {t('mainPage.im')}{' '}
+                        <span className="h2">
+                            <strong>Martin</strong>
+                        </span>
+                    </p>
 
-                    <hr/>
+                    <hr />
 
-                    <p className='h2 setShadow'>
+                    <p className="h2 setShadow">
                         <TypeWritter
                             options={{
                                 strings: [t('jobTitle.webFrontendDeveloper'), t('jobTitle.webBackendDeveloper'), t('jobTitle.tester'), t('jobTitle.webFullStackDeveloper')],
@@ -29,22 +34,18 @@ function Main() {
                         />
                     </p>
 
-                    <div className='mt-3'>
-                        <Link className='setShadow' to='/about'>
-                            <button className='btn aboutButton'>
-                                {t('pages.about')}
-                            </button>
+                    <div className="mt-3">
+                        <Link className="setShadow" to="/about">
+                            <button className="btn aboutButton">{t('pages.about')}</button>
                         </Link>
-                        <Link className='m-1 setShadow' to='/contact'>
-                            <button className='btn aboutButton'>
-                                {t('pages.contact')}
-                            </button>
+                        <Link className="m-1 setShadow" to="/contact">
+                            <button className="btn aboutButton">{t('pages.contact')}</button>
                         </Link>
                     </div>
                 </div>
             </div>
         </div>
-    );
+    )
 }
 
-export default Main;
+export default Main

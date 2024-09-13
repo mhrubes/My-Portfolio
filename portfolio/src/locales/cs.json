@@ -3,57 +3,57 @@
     "inDevelopment": "V přípravě",
 
     "mainPage": {
-      "im": "Jmenuji se"
+        "im": "Jmenuji se"
     },
 
     "aboutPage": {
-      "header": "<strong>Životopis</strong>",
-      "describe": "Jelikož mě programování bavilo odjakživa, i proto jsem si již na střední škole vybral takový obor, díky kterému jsem mohl získávat cenné informace. Abych poté své vědomosti a schopnosti prohloubil ještě více, rozhodl jsem se pokračovat ve studiu na vysoké škole <strong>Unicorn University</strong>. <br/><br/>V průběhu studia na této univerzitě jsem se naučil a zdokonalil v dalších odvětvích, která spadají pod IT obor, ale zejména jsem si zvykl pracovat více v týmu a zároveň psát technickou dokumentaci v průběhu vývoje aplikace. <br/><br/>Díky vysoké škole a povinné praxi (poté pracovní zkušenosti), kde jsem získal své první větší zkušenosti, jsem se zlepšil především v JS React, C#, v databázích - MongoDB / MySQL a v dalších nástrojích, které k tomu byly potřeba. Nicméně to neznamená, že nemám povědomí nebo nějaké zkušenosti i s dalšími programovacími jazyky nebo nástroji, sloužící k vývoji softwaru.",
-      "technicalKnowledge": "Technické znalosti",
-      "motivation": "Motivace",
-      "motivationText": "Jak jsem již zmínil v úvodu, programování mě začalo bavit již na přelomu základní a střední školy. Na tomto oboru se mi líbí hlavně to, že člověk nikdy nemůže být nejlepší aniž by se stále nezdokonaloval. <br/><br/>Je tomu tak i díky rychlému vývoji v IT, a i proto mám motivaci každý den se dozvědět nebo naučit něco nového, co jsem ještě minulý den nevěděl, nebo neuměl. <br/><br/>Nejvíce se mi na IT oboru tedy líbí to, že každý další den je co se učit, ať už ve stejném nebo v jiném programovacím jazyce, nebo z pohledu databází.<br/><br/>Je tedy <strong>mým cílem</strong> se co nejvíce zlepšovat, pokud to jde a zároveň bádat a objevovat krásy IT odvětví.",
-      "reference": "Mé projekty",
+        "header": "<strong>Životopis</strong>",
+        "describe": "Jelikož mě programování bavilo odjakživa, i proto jsem si již na střední škole vybral takový obor, díky kterému jsem mohl získávat cenné informace. Abych poté své vědomosti a schopnosti prohloubil ještě více, rozhodl jsem se pokračovat ve studiu na vysoké škole <strong>Unicorn University</strong>. <br/><br/>V průběhu studia na této univerzitě jsem se naučil a zdokonalil v dalších odvětvích, která spadají pod IT obor, ale zejména jsem si zvykl pracovat více v týmu a zároveň psát technickou dokumentaci v průběhu vývoje aplikace. <br/><br/>Díky vysoké škole a povinné praxi (poté pracovní zkušenosti), kde jsem získal své první větší zkušenosti, jsem se zlepšil především v JS React, C#, v databázích - MongoDB / MySQL a v dalších nástrojích, které k tomu byly potřeba. Nicméně to neznamená, že nemám povědomí nebo nějaké zkušenosti i s dalšími programovacími jazyky nebo nástroji, sloužící k vývoji softwaru.",
+        "technicalKnowledge": "Technické znalosti",
+        "motivation": "Motivace",
+        "motivationText": "Jak jsem již zmínil v úvodu, programování mě začalo bavit již na přelomu základní a střední školy. Na tomto oboru se mi líbí hlavně to, že člověk nikdy nemůže být nejlepší aniž by se stále nezdokonaloval. <br/><br/>Je tomu tak i díky rychlému vývoji v IT, a i proto mám motivaci každý den se dozvědět nebo naučit něco nového, co jsem ještě minulý den nevěděl, nebo neuměl. <br/><br/>Nejvíce se mi na IT oboru tedy líbí to, že každý další den je co se učit, ať už ve stejném nebo v jiném programovacím jazyce, nebo z pohledu databází.<br/><br/>Je tedy <strong>mým cílem</strong> se co nejvíce zlepšovat, pokud to jde a zároveň bádat a objevovat krásy IT odvětví.",
+        "reference": "Mé projekty",
 
-      "wifiNameApp": "Získání Wi-Fi názvů a hesel, kde KeyContent není prázdný.",
-      "overlayApp": "Overlay aplikace, která je vždy nadřazená nad všemi ostatními.",
-      "symfonyApp": "Pochopení základů v PHP Symfony.",
-      "twilioLibraryApp": "Knihovna pro posílání SMS a dat jako tělo zprávy.",
-      "shopApp": "Full-Stack kombinace pro vytvoření aplikace.",
-      "feSeatCaseStudy": "Zprovoznění zadané aplikace podle šablony.",
+        "poeStashPrices": "Simulace ceny stash tabs ve hře Path of Exile.",
+        "wifiNameApp": "Získání Wi-Fi názvů a hesel, kde KeyContent není prázdný.",
+        "overlayApp": "Overlay aplikace, která je vždy nadřazená nad všemi ostatními.",
+        "symfonyApp": "Pochopení základů v PHP Symfony.",
+        "twilioLibraryApp": "Knihovna pro posílání SMS a dat jako tělo zprávy.",
+        "shopApp": "Full-Stack kombinace pro vytvoření aplikace.",
+        "feSeatCaseStudy": "Zprovoznění zadané aplikace podle šablony.",
 
-      "clickHere": "Klikni zde",
-      "technology": "Technologie",
-      "contactMe": "Kontaktujte Mě"
+        "clickHere": "Klikni zde",
+        "technology": "Technologie",
+        "contactMe": "Kontaktujte Mě"
     },
 
     "contactPage": {
-      "connectWithMe": "Spojte Se Semnou",
-      "czechRepublic": "Česká Republika",
-      "contactForm": "Kontaktní Formulář",
-      "emailAddress": "Emailová adresa",
-      "firstname": "Jméno",
-      "lastname": "Příjmení",
-      "yourMessage": "Vaše zpráva",
-      "gdpr": "Souhlasím se zpracováním osobních údajů dle GDPR.",
-      "submitButton": "Odeslat",
+        "connectWithMe": "Spojte Se Semnou",
+        "czechRepublic": "Česká Republika",
+        "contactForm": "Kontaktní Formulář",
+        "emailAddress": "Emailová adresa",
+        "firstname": "Jméno",
+        "lastname": "Příjmení",
+        "yourMessage": "Vaše zpráva",
+        "gdpr": "Souhlasím se zpracováním osobních údajů dle GDPR.",
+        "submitButton": "Odeslat",
 
-      "emailErrorMessageEmpty": "Email nemůže být prázdný.",
-      "emailErrorMessageNotInclude": "Email Neobsahuje @.",
-      "acceptProcessGDPR": "Musíte souhlasit s podmínkami.",
-      "formSent": "Formulář byl úspěšně odeslán."
+        "emailErrorMessageEmpty": "Email nemůže být prázdný.",
+        "emailErrorMessageNotInclude": "Email Neobsahuje @.",
+        "acceptProcessGDPR": "Musíte souhlasit s podmínkami.",
+        "formSent": "Formulář byl úspěšně odeslán."
     },
 
     "jobTitle": {
-      "webFrontendDeveloper": "Frontend vývojář",
-      "webBackendDeveloper": "Backend vývojář",
-      "tester": "Tester",
-      "webFullStackDeveloper": "Full-Stack vývojář"
+        "webFrontendDeveloper": "Frontend vývojář",
+        "webBackendDeveloper": "Backend vývojář",
+        "tester": "Tester",
+        "webFullStackDeveloper": "Full-Stack vývojář"
     },
 
     "pages": {
-      "home": "Domů",
-      "about": "O mně",
-      "contact": "Kontakt"
+        "home": "Domů",
+        "about": "O mně",
+        "contact": "Kontakt"
     }
-  }
-  
+}

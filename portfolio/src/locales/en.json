@@ -1,58 +1,59 @@
 {
-  "hi": "Hey!",
-  "inDevelopment": "In Development",
+    "hi": "Hey!",
+    "inDevelopment": "In Development",
 
-  "mainPage": {
-    "im": "My name is"
-  },
+    "mainPage": {
+        "im": "My name is"
+    },
 
-  "aboutPage": {
-    "header": "<strong>Biography</strong>",
-    "describe": "Since I've always enjoyed programming, that's why I already chose a field in high school that allowed me to gain valuable information. In order to deepen my knowledge and skills even more, I decided to continue my studies at university <strong>Unicorn University</strong>. <br/><br/>During my studies at this university, I learned and improved in other areas that fall under the IT field, but especially I got used to working more in a team and at the same time writing technical documentation during application development. <br/><br/>Thanks to university and compulsory practice (after - work experience), where I got my first major experience, I improved mainly in JS React, C#, databases - MongoDB / MySQL and other tools that were needed for this. However, this does not mean that I have no knowledge or experience with other programming languages or tools used for software development.",
-    "technicalKnowledge": "Technical knowledge",
-    "motivation": "Motivation",
-    "motivationText": "As I already mentioned in the introduction, I started to enjoy programming at the turn of primary and secondary school. What I like about this field is that one can never be the best without constantly improving. <br/><br/>This is also due to the rapid development in IT, and that's why I have the motivation to learn or learn something new every day that I didn't know or couldn't do the day before.<br/><br/>I like the IT field the most so I like the fact that every other day there is something to learn, whether in the same or a different programming language, or from the point of view of databases.<br/><br/>So <strong>my goal</strong> is to to improve as much as possible while at the same time researching and discovering the beauty of the IT industry.",
-    "reference": "My Projects",
+    "aboutPage": {
+        "header": "<strong>Biography</strong>",
+        "describe": "Since I've always enjoyed programming, that's why I already chose a field in high school that allowed me to gain valuable information. In order to deepen my knowledge and skills even more, I decided to continue my studies at university <strong>Unicorn University</strong>. <br/><br/>During my studies at this university, I learned and improved in other areas that fall under the IT field, but especially I got used to working more in a team and at the same time writing technical documentation during application development. <br/><br/>Thanks to university and compulsory practice (after - work experience), where I got my first major experience, I improved mainly in JS React, C#, databases - MongoDB / MySQL and other tools that were needed for this. However, this does not mean that I have no knowledge or experience with other programming languages or tools used for software development.",
+        "technicalKnowledge": "Technical knowledge",
+        "motivation": "Motivation",
+        "motivationText": "As I already mentioned in the introduction, I started to enjoy programming at the turn of primary and secondary school. What I like about this field is that one can never be the best without constantly improving. <br/><br/>This is also due to the rapid development in IT, and that's why I have the motivation to learn or learn something new every day that I didn't know or couldn't do the day before.<br/><br/>I like the IT field the most so I like the fact that every other day there is something to learn, whether in the same or a different programming language, or from the point of view of databases.<br/><br/>So <strong>my goal</strong> is to to improve as much as possible while at the same time researching and discovering the beauty of the IT industry.",
+        "reference": "My Projects",
 
-    "wifiNameApp": "Get Wi-Fi Name & Password where KeyContent is not empty.",
-    "overlayApp": "Overlay app which is all time top most over another applications.",
-    "symfonyApp": "Learning basics in PHP Symfony.",
-    "twilioLibraryApp": "Library for sending SMS (now) and data as body of message.",
-    "shopApp": "Testing Full Stack App in JS React / others programs.",
-    "feSeatCaseStudy": "Launch the specified application according to the template.",
+        "poeStashPrices": "Simulate the price of stash tabs in Path of Exile.",
+        "wifiNameApp": "Get Wi-Fi Name & Password where KeyContent is not empty.",
+        "overlayApp": "Overlay app which is all time top most over another applications.",
+        "symfonyApp": "Learning basics in PHP Symfony.",
+        "twilioLibraryApp": "Library for sending SMS (now) and data as body of message.",
+        "shopApp": "Testing Full Stack App in JS React / others programs.",
+        "feSeatCaseStudy": "Launch the specified application according to the template.",
 
-    "clickHere": "Click here",
-    "technology": "Tech Stacks",
-    "contactMe": "Contact Me"
-  },
+        "clickHere": "Click here",
+        "technology": "Tech Stacks",
+        "contactMe": "Contact Me"
+    },
 
-  "contactPage": {
-    "connectWithMe": "Connect With Me",
-    "czechRepublic": "The Czech Republic",
-    "contactForm": "Contact Form",
-    "emailAddress": "Email address",
-    "firstname": "Firstname",
-    "lastname": "Lastname",
-    "yourMessage": "Your message",
-    "gdpr": "I agree to the processing of personal data according to the GDPR.",
-    "submitButton": "Send",
+    "contactPage": {
+        "connectWithMe": "Connect With Me",
+        "czechRepublic": "The Czech Republic",
+        "contactForm": "Contact Form",
+        "emailAddress": "Email address",
+        "firstname": "Firstname",
+        "lastname": "Lastname",
+        "yourMessage": "Your message",
+        "gdpr": "I agree to the processing of personal data according to the GDPR.",
+        "submitButton": "Send",
 
-    "emailErrorMessageEmpty": "Email cannot be empty.",
-    "emailErrorMessageNotInclude": "Email doesn't contain @.",
-    "acceptProcessGDPR": "You must accept with conditions.",
-    "formSent": "The form was sent successfully."
-  },
+        "emailErrorMessageEmpty": "Email cannot be empty.",
+        "emailErrorMessageNotInclude": "Email doesn't contain @.",
+        "acceptProcessGDPR": "You must accept with conditions.",
+        "formSent": "The form was sent successfully."
+    },
 
-  "jobTitle": {
-    "webFrontendDeveloper": "Frontend developer",
-    "webBackendDeveloper": "Backend developer",
-    "tester": "Tester",
-    "webFullStackDeveloper": "Full-Stack developer"
-  },
+    "jobTitle": {
+        "webFrontendDeveloper": "Frontend developer",
+        "webBackendDeveloper": "Backend developer",
+        "tester": "Tester",
+        "webFullStackDeveloper": "Full-Stack developer"
+    },
 
-  "pages": {
-    "home": "Home",
-    "about": "About me",
-    "contact": "Contact"
-  }
+    "pages": {
+        "home": "Home",
+        "about": "About me",
+        "contact": "Contact"
+    }
 }

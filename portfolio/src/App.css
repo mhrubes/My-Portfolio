@@ -1,152 +1,168 @@
 body {
-  background-color: #1d052e;
+    background-color: #1d052e;
 }
 
 .main {
-  background-color: #1d052e;
-  min-height: 100vh;
-  height: auto;
+    background-color: #1d052e;
+    min-height: 100vh;
+    height: auto;
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+    width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(200, 200, 200, 1);
-  border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(200, 200, 200, 1);
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: #8814d9;
-  -webkit-box-shadow: inset 0 0 6px rgba(90, 90, 90, 0.7);
+    border-radius: 10px;
+    background-color: #8814d9;
+    -webkit-box-shadow: inset 0 0 6px rgba(90, 90, 90, 0.7);
 }
 
 .centered {
-  position: absolute;
-  min-width: 300px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    position: absolute;
+    min-width: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .centeredAbout {
-  padding-top: 150px;
-  min-width: 300px;
+    padding-top: 150px;
+    min-width: 300px;
 }
 
 .aboutLinksImage {
-  height: 40px;
-  width: auto;
+    height: 40px;
+    width: auto;
 }
 
 .aboutButton {
-  background-color: black;
-  color: white;
-  font-weight: bold;
+    background-color: black;
+    color: white;
+    font-weight: bold;
 }
 
 .aboutButton:hover {
-  background-color: white;
-  color: black;
-  font-weight: bold;
+    background-color: white;
+    color: black;
+    font-weight: bold;
 }
 
 .email-link-style {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 .email-link-style:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .projectDetailButton {
-  background-color: black;
-  color: white;
+    background-color: black;
+    color: white;
 }
 
 .projectDetailButton:hover {
-  border: 1px solid black;
-  background-color: white;
-  color: black;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
 }
 
 .setShadow {
-  text-shadow: 10px 10px 10px rgba(0, 0, 0, 1)
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
 }
 
 .toolsBox {
-  height: 175px;
-  /* width: 210px; */
-  border: 2px solid white;
+    height: 175px;
+    /* width: 210px; */
+    border: 2px solid white;
 }
 
 .toolsBox:hover {
-  height: 175px;
-  /* width: 210px; */
+    height: 175px;
+    /* width: 210px; */
 }
 
 .toolsIconStyle {
-  color: white;
-  font-size: 100px;
+    color: white;
+    font-size: 100px;
 }
 
 .toolsIconStyleActive {
-  font-size: 100px;
+    font-size: 100px;
 }
 
 .navbarAboutButton {
-  border-radius: 15px;
-  background: white;
-  color: black;
-  box-shadow: 5px 5px 14px #b5b5b5,
-    -5px -5px 14px #ffffff;
+    border-radius: 15px;
+    background: white;
+    color: black;
+    box-shadow: 5px 5px 14px #b5b5b5, -5px -5px 14px #ffffff;
 }
 
 .navbarAboutButton:hover {
-  border-radius: 15px;
-  background: black;
-  color: white;
-  box-shadow: 5px 5px 14px #b5b5b5,
-    -5px -5px 14px #ffffff;
+    border-radius: 15px;
+    background: black;
+    color: white;
+    box-shadow: 5px 5px 14px #b5b5b5, -5px -5px 14px #ffffff;
 }
 
 .navbarAboutButtonActive {
-  border-radius: 15px;
-  background: black;
-  color: white;
-  box-shadow: 5px 5px 14px #b5b5b5,
-    -5px -5px 14px #ffffff;
+    border-radius: 15px;
+    background: black;
+    color: white;
+    box-shadow: 5px 5px 14px #b5b5b5, -5px -5px 14px #ffffff;
 }
 
 .flip-card {
-  width: auto;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 1s;
+    width: auto;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
 }
 
 .flip-card.flipped {
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 .flip-card-inner {
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
 }
 
 .flip-card-front,
 .flip-card-back {
-  width: 100%;
-  position: absolute;
-  backface-visibility: hidden;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
 }
 
 .flip-card-back {
-  background-color: white;
-  color: black;
-  transform: rotateY(180deg);
+    background-color: white;
+    color: black;
+    transform: rotateY(180deg);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.pulse-animation {
+    animation: pulse 2.5s ease-in-out infinite;
 }
