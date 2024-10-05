@@ -27,6 +27,8 @@ function Contact() {
     const [emailErrorMessageSubmit, setEmailErrorMessageSubmit] = useState(false)
     const [acceptProccessErrorSubmit, setAcceptProccessErrorSubmit] = useState(false)
 
+    const [isDisabled, setIsDisabled] = useState(true)
+
     useEffect(() => {
         const handleResize = () => {
             setWindowWidth(window.innerWidth)
@@ -65,7 +67,7 @@ function Contact() {
     return (
         <div className="main">
             <Navigation />
-            <div className="container" style={windowWidth < 768 ? { paddingTop: '150px' } : { paddingTop: '300px' }}>
+            <div className="container" style={windowWidth < 768 ? { paddingTop: '150px' } : { paddingTop: '220px' }}>
                 <div className="row m-0 p-0">
                     <div className="col-md-5 col-12 text-white">
                         <h3 style={{ textDecoration: 'underline' }}>
@@ -147,23 +149,37 @@ function Contact() {
                                 <label htmlFor="emailLabel">
                                     {t('contactPage.emailAddress')} <strong className="text-danger">*</strong>
                                 </label>
-                                <input type="email" className="form-control" id="emailFormInput" placeholder="email@example.com" onChange={(e) => setEmail(e.target.value)} />
+                                <input type="email" className="form-control" id="emailFormInput" placeholder="email@example.com" onChange={(e) => setEmail(e.target.value)} disabled={isDisabled} />
                                 {emailErrorMessageSubmit && email.length === 0 && <span style={{ color: 'red' }}>{t('contactPage.emailErrorMessageEmpty')}</span>}
                                 {emailErrorMessageSubmit && email.length !== 0 && !email.includes('@') && <span style={{ color: 'red' }}>{t('contactPage.emailErrorMessageNotInclude')}</span>}
                             </div>
                             <div className="row mt-2">
                                 <div className="col-md-6 col-12 pt-2">
                                     <label htmlFor="firstnameLabel">{t('contactPage.firstname')}</label>
-                                    <input type="text" className="form-control" placeholder={t('contactPage.firstname')} value={firstname} onChange={(e) => setFirstname(e.target.value)} />
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        placeholder={t('contactPage.firstname')}
+                                        value={firstname}
+                                        onChange={(e) => setFirstname(e.target.value)}
+                                        disabled={isDisabled}
+                                    />
                                 </div>
                                 <div className="col-md-6 col-12 pt-2">
                                     <label htmlFor="lastnameLabel">{t('contactPage.lastname')}</label>
-                                    <input type="text" className="form-control" placeholder={t('contactPage.lastname')} value={lastname} onChange={(e) => setLastname(e.target.value)} />
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        placeholder={t('contactPage.lastname')}
+                                        value={lastname}
+                                        onChange={(e) => setLastname(e.target.value)}
+                                        disabled={isDisabled}
+                                    />
                                 </div>
                             </div>
                             <div className="form-group pt-3">
                                 <label htmlFor="messageAreaLabel">{t('contactPage.yourMessage')}..</label>
-                                <textarea className="form-control" id="messageAreaLabel" rows="3" value={message} onChange={(e) => setMessageArea(e.target.value)}></textarea>
+                                <textarea className="form-control" id="messageAreaLabel" rows="3" value={message} onChange={(e) => setMessageArea(e.target.value)} disabled={isDisabled}></textarea>
                             </div>
                             <div className="form-group pt-2">
                                 <div className="form-check">
@@ -173,6 +189,7 @@ function Contact() {
                                         id="acceptProccess"
                                         checked={acceptProccess}
                                         onChange={() => setAcceptProccess(acceptProccess ? false : true)}
+                                        disabled={isDisabled}
                                     />
                                     <label className="form-check-label" htmlFor="gridCheck">
                                         {t('contactPage.gdpr')} <strong className="text-danger">*</strong>
@@ -182,7 +199,7 @@ function Contact() {
                                 </div>
                             </div>
                             <div className="text-center">
-                                <button className="btn aboutButton mt-3 w-50" type="button" onClick={() => onSubmit()}>
+                                <button className="btn aboutButton mt-3 w-50" type="button" onClick={() => onSubmit()} disabled={isDisabled}>
                                     {t('contactPage.submitButton')}
                                 </button>
                                 {emailIsSent && (
