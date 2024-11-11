@@ -19,7 +19,7 @@ function ProjectDetail(props) {
           }
         : {}
 
-    const buttonClass = special ? 'btn projectDetailButton color-sweep-animation' : 'btn projectDetailButton'
+    const buttonClass = special ? 'btn color-sweep-animation' : 'btn projectDetailButton'
 
     return (
         <div className="card m-0" style={cardStyle}>
