@@ -19,7 +19,7 @@ function ProjectDetail(props) {
           }
         : {}
 
-    const buttonClass = special ? 'btn projectDetailButton pulse-animation' : 'btn projectDetailButton'
+    const buttonClass = special ? 'btn projectDetailButton color-sweep-animation' : 'btn projectDetailButton'
 
     return (
         <div className="card m-0" style={cardStyle}>
@@ -35,7 +35,7 @@ function ProjectDetail(props) {
                 <div className="mt-auto">
                     <Link className="text-decoration-none" to={link} target="_blank">
                         <button className={buttonClass}>
-                            <span className="">{t('aboutPage.clickHere')}</span>
+                            <span className={special && 'text-white'}>{t('aboutPage.clickHere')}</span>
                         </button>
                     </Link>
                 </div>

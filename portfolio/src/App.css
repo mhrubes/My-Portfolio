@@ -148,21 +148,17 @@ body {
     transform: rotateY(180deg);
 }
 
-@keyframes pulse {
+@keyframes colorSweep {
     0% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    50% {
-        transform: scale(1.1);
-        opacity: 0.8;
+        background-position: 0% 100%;
     }
     100% {
-        transform: scale(1);
-        opacity: 1;
+        background-position: 0% 0%;
     }
 }
 
-.pulse-animation {
-    animation: pulse 2.5s ease-in-out infinite;
+.color-sweep-animation {
+    background: linear-gradient(180deg, #52148d, #195f1d, #d9d9da, #195f1d, #52148d);
+    background-size: 100% 600%;
+    animation: colorSweep 10s linear infinite;
 }

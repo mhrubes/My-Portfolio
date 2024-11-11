@@ -48,13 +48,14 @@ function About() {
     ]
 
     const projects = [
+        { name: 'Metro simulation', progLang: 'React', desc: 'metroSimulation', link: 'https://metro-simulation.vercel.app/', special: true, year: '2024' },
         { name: 'Poe Stash Prices', progLang: 'React', desc: 'poeStashPrices', link: 'https://poe-stash-prices.vercel.app/', special: true, year: '2024' },
         { name: 'Wifi Name', progLang: 'C#', desc: 'wifiNameApp', link: 'https://github.com/mhrubes/WifiName', year: '2024' },
         { name: 'Overlay', progLang: 'C#', desc: 'overlayApp', link: 'https://github.com/mhrubes/Overlay', year: '2024' },
         { name: 'Symfony App', progLang: 'PHP', desc: 'symfonyApp', link: 'https://github.com/mhrubes/SymfonyApp', year: '2024' },
         { name: 'TwilioLibrary', progLang: 'C#', desc: 'twilioLibraryApp', link: 'https://github.com/mhrubes/TwilioLibrary', year: '2023' },
-        { name: 'Shop App', progLang: 'React, Express.js, MongoDB', desc: 'shopApp', link: 'https://github.com/mhrubes/shop_testing', year: '2022' },
-        { name: 'FE-Seat-Case-Study', progLang: 'React, Typescript', desc: 'feSeatCaseStudy', link: 'https://github.com/mhrubes/frontend-seating-case-study', year: '2023' }
+        { name: 'FE-Seat-Case-Study', progLang: 'React, Typescript', desc: 'feSeatCaseStudy', link: 'https://github.com/mhrubes/frontend-seating-case-study', year: '2023' },
+        { name: 'Shop App', progLang: 'React, Express.js, MongoDB', desc: 'shopApp', link: 'https://github.com/mhrubes/shop_testing', year: '2022' }
     ]
 
     const getColumnClass = (index, total) => {
