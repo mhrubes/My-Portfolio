@@ -30,9 +30,9 @@ function About() {
         { className: 'devicon-typescript-plain', title: 'Typescript' },
         { className: 'devicon-csharp-plain', title: 'C#' },
         { className: 'devicon-dotnetcore-plain', title: '.NET Core' },
-        { className: 'devicon-blazor-original', title: 'C# Blazor' },
-        { className: 'devicon-php-plain', title: 'PHP' },
-        { className: 'devicon-symfony-original', title: 'PHP Symfony' },
+        // { className: 'devicon-blazor-original', title: 'C# Blazor' },
+        // { className: 'devicon-php-plain', title: 'PHP' },
+        // { className: 'devicon-symfony-original', title: 'PHP Symfony' },
         { className: 'devicon-postgresql-plain', title: 'PostgreSQL' },
         { className: 'devicon-mysql-original', title: 'MySQL' },
         { className: 'devicon-sqldeveloper-plain', title: 'SQL Developer' },
@@ -43,8 +43,8 @@ function About() {
         { className: 'devicon-github-original', title: 'Github' },
         { className: 'devicon-jira-plain', title: 'Jira' },
         { className: 'devicon-slack-plain', title: 'Slack' },
-        { className: 'devicon-docker-plain', title: 'Docker' },
-        { className: 'devicon-jenkins-line', title: 'Jenkins' }
+        { className: 'devicon-docker-plain', title: 'Docker' }
+        // { className: 'devicon-jenkins-line', title: 'Jenkins' }
     ]
 
     const projects = [
@@ -83,7 +83,8 @@ function About() {
         'SQL, PostgreSQL, MySQL, MongoDB',
         'Postman, Insomnia',
         'Git, GitHub, Jira, Slack',
-        'Docker, Jenkins',
+        // 'Docker, Jenkins',
+        'Docker',
         '',
         'Dahua, Hikvision, Jablotron'
     ]
