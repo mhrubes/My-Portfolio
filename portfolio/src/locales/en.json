@@ -48,7 +48,6 @@
     "jobTitle": {
         "webFrontendDeveloper": "Frontend developer",
         "webBackendDeveloper": "Backend developer",
-        "tester": "Tester",
         "webFullStackDeveloper": "Full-Stack developer"
     },
 

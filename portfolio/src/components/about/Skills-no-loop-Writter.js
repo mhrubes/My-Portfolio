@@ -6,11 +6,12 @@ function SkillNoLoopWritter(props) {
     return (
         <TypeWritter
             options={{
-                strings: `${lang}`,
+                strings: lang,
                 autoStart: true,
                 loop: false,
                 delay: 30,
-                cursor: ''
+                cursor: '',
+                html: true
             }}
         />
     )

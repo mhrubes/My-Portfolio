@@ -85,6 +85,7 @@ function About() {
         'Git, GitHub, Jira, Slack',
         // 'Docker, Jenkins',
         'Docker',
+        'Swarmpit',
         '',
         'Dahua, Hikvision, Jablotron'
     ]
@@ -152,16 +153,25 @@ function About() {
                     <div className="col-md-6">
                         <p className="text-center h4 pb-3 setShadow">{t('aboutPage.technicalKnowledge')}</p>
                         <ul>
-                            {skillsObj.map((item, index) => (
-                                <span key={index}>
-                                    {item !== '' && (
-                                        <li>
-                                            <SkillNoLoopWritter lang={item} />
-                                        </li>
-                                    )}
-                                    <br />
-                                </span>
-                            ))}
+                            {skillsObj.map((item, index) => {
+                                const keywordsToHighlight = ['Node.js', 'PostgreSQL', 'Postman', 'Swarmpit']
+                                const highlightKeywords = (text, keywords) => {
+                                    const pattern = new RegExp(`\\b(${keywords.join('|')})\\b`, 'g')
+                                    return text.replace(pattern, '<strong>$1</strong>')
+                                }
+                                const highlightedText = highlightKeywords(item, keywordsToHighlight)
+
+                                return (
+                                    <span key={index}>
+                                        {item !== '' && (
+                                            <li>
+                                                <SkillNoLoopWritter lang={highlightedText} />
+                                            </li>
+                                        )}
+                                        <br />
+                                    </span>
+                                )
+                            })}
                         </ul>
 
                         {window.innerWidth <= 767 && <hr className="text-white m-5" />}
@@ -204,15 +214,9 @@ function About() {
                     {technologyObj.map((item, index) => (
                         <React.Fragment key={index}>
                             <div className="col-xl-2 col-lg-3 col-md-2 col-4 p-1">
-                                {windowWidth > 990 && (
-                                    <TechFlipCard key={index} item={item} index={index} flipStates={flipStates} handleFlip={handleFlip} height="150px" iconSize="75px" textFontSize="20px" />
-                                )}
-                                {windowWidth <= 990 && windowWidth > 767 && (
-                                    <TechFlipCard key={index} item={item} index={index} flipStates={flipStates} handleFlip={handleFlip} height="90px" iconSize="45px" textFontSize="14px" />
-                                )}
-                                {windowWidth <= 767 && (
-                                    <TechFlipCard key={index} item={item} index={index} flipStates={flipStates} handleFlip={handleFlip} height="60px" iconSize="30px" textFontSize="10px" />
-                                )}
+                                {windowWidth > 990 && <TechFlipCard key={index} item={item} index={index} flipStates={flipStates} handleFlip={handleFlip} height="150px" iconSize="75px" textFontSize="20px" />}
+                                {windowWidth <= 990 && windowWidth > 767 && <TechFlipCard key={index} item={item} index={index} flipStates={flipStates} handleFlip={handleFlip} height="90px" iconSize="45px" textFontSize="14px" />}
+                                {windowWidth <= 767 && <TechFlipCard key={index} item={item} index={index} flipStates={flipStates} handleFlip={handleFlip} height="60px" iconSize="30px" textFontSize="10px" />}
                             </div>
                             {(index === 4 || index === 10 || index === 15 || index === 21) && windowWidth >= 1200 && <div className="col-xl-1"></div>}
                         </React.Fragment>
