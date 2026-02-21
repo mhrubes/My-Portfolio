@@ -67,7 +67,8 @@
     "jobTitle": {
         "webFrontendDeveloper": "Frontend vývojář",
         "webBackendDeveloper": "Backend vývojář",
-        "webFullStackDeveloper": "Full-Stack vývojář"
+        "webFullStackDeveloper": "Full-Stack vývojář",
+        "tester": "Tester"
     },
     "pages": {
         "home": "Domů",
