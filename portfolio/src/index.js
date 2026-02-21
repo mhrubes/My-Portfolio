@@ -5,7 +5,7 @@ import App from './App'
 import reportWebVitals from './reportWebVitals'
 import './App.css'
 import 'bootstrap'
-import i18n from './i18n'
+import './i18n'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(

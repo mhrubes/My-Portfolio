@@ -8,8 +8,6 @@ import Language from '../components/LanguageChange'
 
 import { Link } from 'react-router-dom'
 
-import facebookImage from '../icons/facebook.png'
-import instagramImage from '../icons/instagram.png'
 import githubImage from '../icons/github.png'
 import linkedin from '../icons/linkedIn.png'
 import TechFlipCard from '../components/about/Tech-flip-card'
@@ -197,7 +195,6 @@ function About() {
                         <div className="position-relative ps-3 ps-md-4">
                             {workExperienceKeys.map((key, index) => {
                                 const experience = t(`aboutPage.workExperienceItems.${key}`, { returnObjects: true })
-                                const isLast = index === workExperienceKeys.length - 1
                                 return (
                                     <div key={index} className="position-relative mb-5 pb-4">
                                         <div

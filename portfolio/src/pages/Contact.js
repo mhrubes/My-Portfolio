@@ -3,13 +3,11 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import TypeWritter from 'typewriter-effect'
 
-import facebookImage from '../icons/facebook.png'
-import instagramImage from '../icons/instagram.png'
 import githubImage from '../icons/github.png'
 import linkedin from '../icons/linkedIn.png'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser, faMobileAlt, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 import Navigation from '../navigation'
 
 function Contact() {
@@ -27,7 +25,7 @@ function Contact() {
     const [emailErrorMessageSubmit, setEmailErrorMessageSubmit] = useState(false)
     const [acceptProccessErrorSubmit, setAcceptProccessErrorSubmit] = useState(false)
 
-    const [isDisabled, setIsDisabled] = useState(true)
+    const [isDisabled] = useState(true)
 
     useEffect(() => {
         const handleResize = () => {
@@ -156,25 +154,11 @@ function Contact() {
                             <div className="row mt-2">
                                 <div className="col-md-6 col-12 pt-2">
                                     <label htmlFor="firstnameLabel">{t('contactPage.firstname')}</label>
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        placeholder={t('contactPage.firstname')}
-                                        value={firstname}
-                                        onChange={(e) => setFirstname(e.target.value)}
-                                        disabled={isDisabled}
-                                    />
+                                    <input type="text" className="form-control" placeholder={t('contactPage.firstname')} value={firstname} onChange={(e) => setFirstname(e.target.value)} disabled={isDisabled} />
                                 </div>
                                 <div className="col-md-6 col-12 pt-2">
                                     <label htmlFor="lastnameLabel">{t('contactPage.lastname')}</label>
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        placeholder={t('contactPage.lastname')}
-                                        value={lastname}
-                                        onChange={(e) => setLastname(e.target.value)}
-                                        disabled={isDisabled}
-                                    />
+                                    <input type="text" className="form-control" placeholder={t('contactPage.lastname')} value={lastname} onChange={(e) => setLastname(e.target.value)} disabled={isDisabled} />
                                 </div>
                             </div>
                             <div className="form-group pt-3">
@@ -183,14 +167,7 @@ function Contact() {
                             </div>
                             <div className="form-group pt-2">
                                 <div className="form-check">
-                                    <input
-                                        className="form-check-input"
-                                        type="checkbox"
-                                        id="acceptProccess"
-                                        checked={acceptProccess}
-                                        onChange={() => setAcceptProccess(acceptProccess ? false : true)}
-                                        disabled={isDisabled}
-                                    />
+                                    <input className="form-check-input" type="checkbox" id="acceptProccess" checked={acceptProccess} onChange={() => setAcceptProccess(acceptProccess ? false : true)} disabled={isDisabled} />
                                     <label className="form-check-label" htmlFor="gridCheck">
                                         {t('contactPage.gdpr')} <strong className="text-danger">*</strong>
                                     </label>
