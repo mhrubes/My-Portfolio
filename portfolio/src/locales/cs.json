@@ -1,19 +1,42 @@
 {
     "hi": "Ahoj!",
     "inDevelopment": "V přípravě",
-
     "mainPage": {
         "im": "Jmenuji se"
     },
-
     "aboutPage": {
         "header": "<strong>Životopis</strong>",
-        "describe": "Jelikož mě programování bavilo odjakživa, i proto jsem si již na střední škole vybral takový obor, díky kterému jsem mohl získávat cenné informace. Abych poté své vědomosti a schopnosti prohloubil ještě více, rozhodl jsem se pokračovat ve studiu na vysoké škole <strong>Unicorn University</strong>. <br/><br/>V průběhu studia na této univerzitě jsem se naučil a zdokonalil v dalších odvětvích, která spadají pod IT obor, ale zejména jsem si zvykl pracovat více v týmu a zároveň psát technickou dokumentaci v průběhu vývoje aplikace. <br/><br/>Díky vysoké škole a povinné praxi (poté pracovní zkušenosti), kde jsem získal své první větší zkušenosti, jsem se zlepšil především v JS React, C#, v databázích - MongoDB / MySQL a v dalších nástrojích, které k tomu byly potřeba. V aktuální době se zaměřuji spíše na Backend a fungování aplikace v pozadí, kde mě baví řešit logické problémy a výpočetní náročnosti. Dalo by se nyní říci, že v aktuální době získávám nejvíce zkušenosti v Node.js a PostgreSQL s pomocí dalších nástrojů, jako je například Dozzle sloužící pro logování aplikace a další.",
+        "describe": "Programování mě baví odjakživa, a proto jsem si již na střední škole vybral obor, který mi umožnil získávat cenné zkušenosti v IT. Pro další prohloubení svých znalostí a schopností jsem se rozhodl pokračovat ve studiu na vysoké škole <strong>Unicorn University</strong>. <br/><br/>Během studia na této univerzitě jsem se zdokonalil v různých odvětvích IT, naučil se efektivně pracovat v týmu a psát technickou dokumentaci v průběhu vývoje aplikací. <br/><br/>Díky vysoké škole a následným pracovním zkušenostem jsem získal solidní základy v JS React, C#, databázích - MongoDB / MySQL a dalších nástrojích. V současné době se specializuji na Backend vývoj a architekturu aplikací, kde řeším komplexní logické problémy a optimalizuji výpočetní náročnost. <br/><br/>Posledních několik let pracuji ve společnosti <strong>YOUR SYSTEM</strong>, kde se zaměřuji na vývoj aplikací a mikroslužeb pro pokladní systémy čerpacích stanic. Mám zde bohaté zkušenosti s Node.js a PostgreSQL, které aktivně využívám při řešení reálných projektů. Pracuji také s dalšími nástroji, jako je Dozzle pro logování aplikací a další technologie potřebné pro robustní backend řešení.",
         "technicalKnowledge": "Technické znalosti",
         "motivation": "Motivace",
-        "motivationText": "Jak jsem již zmínil v úvodu, programování mě začalo bavit již na přelomu základní a střední školy. Na tomto oboru se mi líbí hlavně to, že člověk nikdy nemůže být nejlepší aniž by se stále nezdokonaloval. <br/><br/>Je tomu tak i díky rychlému vývoji v IT, a i proto mám motivaci každý den se dozvědět nebo naučit něco nového, co jsem ještě minulý den nevěděl, nebo neuměl. <br/><br/>Nejvíce se mi na IT oboru tedy líbí to, že každý další den je co se učit, ať už ve stejném nebo v jiném programovacím jazyce, nebo z pohledu databází.<br/><br/>Je tedy <strong>mým cílem</strong> se co nejvíce zlepšovat, pokud to jde a zároveň bádat a objevovat krásy IT odvětví.",
+        "motivationText": "Programování mě baví již od přelomu základní a střední školy. Právě na tomto oboru oceňuji, že je to neustálá cesta zdokonalování - člověk nikdy nemůže být nejlepší, aniž by se nepřetržitě rozvíjel. <br/><br/>Rychlý vývoj v IT je pro mě výzvou i příležitostí. Každý den se aktivně učím a aplikuji nové poznatky, které přináší reálné projekty a praxe. Tato dynamika mě motivuje k neustálému růstu a hledání optimálních řešení. <br/><br/>Na IT oboru mě nejvíce fascinuje jeho rozmanitost - každý den přináší nové výzvy, ať už jde o práci s různými programovacími jazyky, databázemi, nebo architekturou systémů. <br/><br/>Mým <strong>cílem</strong> je neustále posouvat hranice svých znalostí, aplikovat osvědčené postupy a zároveň objevovat inovativní přístupy, které přinášejí hodnotu v reálných projektech.",
+        "workExperience": "Pracovní Zkušenosti",
+        "workExperienceItems": {
+            "unicorn": {
+                "period": "10. 2020 - 3. 2023",
+                "company": "Unicorn a.s.",
+                "position": "Vývojář",
+                "description": "Práce na vývoji, testování (FE + BE), využívání technické dokumentace.",
+                "technologies": "C# .NET, JS, SQL"
+            },
+            "czecom": {
+                "period": "10. 2023 - 5. 2024",
+                "company": "CZECOM, s.r.o.",
+                "position": "Hardware Technik",
+                "description": "Konfigurace softwaru (CCTV, EZS, EVS)",
+                "technologies": "",
+                "url": "https://czecom.cz"
+            },
+            "yourSystem": {
+                "period": "6. 2024 - Nyní",
+                "company": "YOUR SYSTEM, spol. s r.o.",
+                "position": "Programátor",
+                "description": "Vývoj aplikací / mikroslužeb pro řídící a pokladní systémy čerpacích stanic. Zejména se zaměřením na Backedovou část aplikace s využitím databáze - PostgreSQL.",
+                "technologies": "Node.js, Postgresql",
+                "url": "https://octo-technology.cz/"
+            }
+        },
         "reference": "Mé projekty",
-
         "metroSimulation": "Simulace pražského metra.",
         "poeStashPrices": "Simulace ceny stash tabs ve hře Path of Exile.",
         "wifiNameApp": "Získání Wi-Fi názvů a hesel, kde KeyContent není prázdný.",
@@ -22,12 +45,10 @@
         "twilioLibraryApp": "Knihovna pro posílání SMS a dat jako tělo zprávy.",
         "shopApp": "Full-Stack kombinace pro vytvoření aplikace.",
         "feSeatCaseStudy": "Zprovoznění zadané aplikace podle šablony.",
-
         "clickHere": "Klikni zde",
-        "technology": "Technologie",
+        "technology": "Technologie - Aktuálně používané",
         "contactMe": "Kontaktujte Mě"
     },
-
     "contactPage": {
         "connectWithMe": "Spojte Se Semnou",
         "czechRepublic": "Česká Republika",
@@ -38,19 +59,16 @@
         "yourMessage": "Vaše zpráva",
         "gdpr": "Souhlasím se zpracováním osobních údajů dle GDPR.",
         "submitButton": "Odeslat",
-
         "emailErrorMessageEmpty": "Email nemůže být prázdný.",
         "emailErrorMessageNotInclude": "Email Neobsahuje @.",
         "acceptProcessGDPR": "Musíte souhlasit s podmínkami.",
         "formSent": "Formulář byl úspěšně odeslán."
     },
-
     "jobTitle": {
         "webFrontendDeveloper": "Frontend vývojář",
         "webBackendDeveloper": "Backend vývojář",
         "webFullStackDeveloper": "Full-Stack vývojář"
     },
-
     "pages": {
         "home": "Domů",
         "about": "O mně",

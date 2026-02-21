@@ -11,7 +11,7 @@ function ProjectDetail(props) {
               minHeight: '215px',
               background: 'linear-gradient(to top, #d9ffa1, #f8ffb6, white)'
           }
-        : { minHeight: '215px' }
+        : { minHeight: '215px', background: 'gray' }
 
     const boldStyle = special
         ? {

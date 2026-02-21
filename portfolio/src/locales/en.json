@@ -1,19 +1,42 @@
 {
     "hi": "Hey!",
     "inDevelopment": "In Development",
-
     "mainPage": {
         "im": "My name is"
     },
-
     "aboutPage": {
         "header": "<strong>Biography</strong>",
-        "describe": "Since I've always enjoyed programming, that's why I chose a field in high school that allowed me to gain valuable information. In order to deepen my knowledge and skills even more, I decided to continue my studies at university <strong>Unicorn University</strong>.<br/><br/>During my studies at this university, I learned and improved in other sectors that fall under the IT field, but especially I got used to working more in team and at the same time write technical documentation during application development.<br/><br/>Thanks to university and compulsory practice (after work experience), where I gained my first major experience, I improved mainly in JS React, C#, databases - MongoDB / MySQL and other tools that were needed for this. At the moment, I am focusing more on the backend and the functioning of the application in the background, where I enjoy solving logical problems and computational demands I get the most experience in Node.js and PostgreSQL with the help of other tools such as Dozzle for application logging and more.",
+        "describe": "I've always been passionate about programming, which is why I chose an IT-focused field in high school that allowed me to gain valuable experience. To further deepen my knowledge and skills, I decided to continue my studies at <strong>Unicorn University</strong>.<br/><br/>During my studies at this university, I improved in various IT sectors, learned to work effectively in teams, and write technical documentation during application development.<br/><br/>Thanks to university and subsequent work experience, I gained solid foundations in JS React, C#, databases - MongoDB / MySQL, and other essential tools. Currently, I specialize in Backend development and application architecture, where I solve complex logical problems and optimize computational performance.<br/><br/>For the past several years, I've been working at <strong>YOUR SYSTEM</strong>, where I focus on developing applications and microservices for point-of-sale systems at gas stations. I have extensive experience with Node.js and PostgreSQL, which I actively use in real-world projects. I also work with other tools such as Dozzle for application logging and additional technologies needed for robust backend solutions.",
         "technicalKnowledge": "Technical knowledge",
         "motivation": "Motivation",
-        "motivationText": "As I already mentioned in the introduction, I started to enjoy programming at the turn of primary and secondary school. What I like about this field is that one can never be the best without constantly improving. <br/><br/>This is also due to the rapid development in IT, and that's why I have the motivation to learn or learn something new every day that I didn't know or couldn't do the day before.<br/><br/>I like the IT field the most so I like the fact that every other day there is something to learn, whether in the same or a different programming language, or from the point of view of databases.<br/><br/>So <strong>my goal</strong> is to to improve as much as possible while at the same time researching and discovering the beauty of the IT industry.",
+        "motivationText": "I've been passionate about programming since the transition from primary to secondary school. What I appreciate most about this field is that it's a continuous journey of improvement - one can never be the best without constantly developing. <br/><br/>The rapid evolution in IT is both a challenge and an opportunity for me. Every day, I actively learn and apply new knowledge that comes from real projects and practical experience. This dynamism motivates me to continuously grow and seek optimal solutions. <br/><br/>What fascinates me most about IT is its diversity - every day brings new challenges, whether working with different programming languages, databases, or system architecture. <br/><br/>My <strong>goal</strong> is to constantly push the boundaries of my knowledge, apply best practices, and simultaneously discover innovative approaches that bring value to real-world projects.",
+        "workExperience": "Work Experience",
+        "workExperienceItems": {
+            "unicorn": {
+                "period": "10. 2020 - 3. 2023",
+                "company": "Unicorn a.s.",
+                "position": "Developer",
+                "description": "Work on development, testing (FE + BE), utilizing technical documentation.",
+                "technologies": "C# .NET, JS, SQL"
+            },
+            "czecom": {
+                "period": "10. 2023 - 5. 2024",
+                "company": "CZECOM, s.r.o.",
+                "position": "Hardware Technician",
+                "description": "Software configuration (CCTV, EZS, EVS)",
+                "technologies": "",
+                "url": "https://czecom.cz"
+            },
+            "yourSystem": {
+                "period": "6. 2024 - Present",
+                "company": "YOUR SYSTEM, spol. s r.o.",
+                "position": "Programmer",
+                "description": "Application development / microservices for controlling and point-of-sale systems at gas stations. Especially focusing on the backend part of the application using the database - PostgreSQL.",
+                "technologies": "Node.js, Postgresql",
+                "url": "https://octo-technology.cz/"
+            }
+        },
         "reference": "My Projects",
-
         "metroSimulation": "Simulation of the Prague metro.",
         "poeStashPrices": "Simulate the price of stash tabs in Path of Exile.",
         "wifiNameApp": "Get Wi-Fi Name & Password where KeyContent is not empty.",
@@ -22,12 +45,10 @@
         "twilioLibraryApp": "Library for sending SMS (now) and data as body of message.",
         "shopApp": "Testing Full Stack App in JS React / others programs.",
         "feSeatCaseStudy": "Launch the specified application according to the template.",
-
         "clickHere": "Click here",
-        "technology": "Tech Stacks",
+        "technology": "Tech Stacks - Currently used",
         "contactMe": "Contact Me"
     },
-
     "contactPage": {
         "connectWithMe": "Connect With Me",
         "czechRepublic": "The Czech Republic",
@@ -38,19 +59,16 @@
         "yourMessage": "Your message",
         "gdpr": "I agree to the processing of personal data according to the GDPR.",
         "submitButton": "Send",
-
         "emailErrorMessageEmpty": "Email cannot be empty.",
         "emailErrorMessageNotInclude": "Email doesn't contain @.",
         "acceptProcessGDPR": "You must accept with conditions.",
         "formSent": "The form was sent successfully."
     },
-
     "jobTitle": {
         "webFrontendDeveloper": "Frontend developer",
         "webBackendDeveloper": "Backend developer",
         "webFullStackDeveloper": "Full-Stack developer"
     },
-
     "pages": {
         "home": "Home",
         "about": "About me",

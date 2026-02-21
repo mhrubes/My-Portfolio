@@ -20,32 +20,34 @@ function About() {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth)
 
     const technologyObj = [
-        { className: 'devicon-html5-plain', title: 'HTML5' },
-        { className: 'devicon-css3-plain', title: 'CSS3' },
-        { className: 'devicon-bootstrap-plain', title: 'Bootstrap' },
-        { className: 'devicon-javascript-plain', title: 'Javascript' },
+        // { className: 'devicon-html5-plain', title: 'HTML5' },
+        // { className: 'devicon-css3-plain', title: 'CSS3' },
+        // { className: 'devicon-bootstrap-plain', title: 'Bootstrap' },
+        // { className: 'devicon-javascript-plain', title: 'Javascript' },
         { className: 'devicon-nodejs-plain', title: 'Node.js' },
-        { className: 'devicon-react-original', title: 'React.js' },
-        { className: 'devicon-nextjs-plain', title: 'Next.js' },
-        { className: 'devicon-typescript-plain', title: 'Typescript' },
-        { className: 'devicon-csharp-plain', title: 'C#' },
-        { className: 'devicon-dotnetcore-plain', title: '.NET Core' },
+        // { className: 'devicon-react-original', title: 'React.js' },
+        // { className: 'devicon-nextjs-plain', title: 'Next.js' },
+        // { className: 'devicon-typescript-plain', title: 'Typescript' },
+        // { className: 'devicon-csharp-plain', title: 'C#' },
+        // { className: 'devicon-dotnetcore-plain', title: '.NET Core' },
         // { className: 'devicon-blazor-original', title: 'C# Blazor' },
         // { className: 'devicon-php-plain', title: 'PHP' },
         // { className: 'devicon-symfony-original', title: 'PHP Symfony' },
         { className: 'devicon-postgresql-plain', title: 'PostgreSQL' },
-        { className: 'devicon-mysql-original', title: 'MySQL' },
+        // { className: 'devicon-mysql-original', title: 'MySQL' },
         { className: 'devicon-sqldeveloper-plain', title: 'SQL Developer' },
-        { className: 'devicon-mongodb-plain', title: 'MongoDB' },
+        // { className: 'devicon-mongodb-plain', title: 'MongoDB' },
         { className: 'devicon-postman-plain', title: 'Postman' },
-        { className: 'devicon-insomnia-plain', title: 'Insomnia' },
+        // { className: 'devicon-insomnia-plain', title: 'Insomnia' },
         { className: 'devicon-git-plain', title: 'Git' },
         { className: 'devicon-github-original', title: 'Github' },
         { className: 'devicon-jira-plain', title: 'Jira' },
-        { className: 'devicon-slack-plain', title: 'Slack' },
+        // { className: 'devicon-slack-plain', title: 'Slack' },
         { className: 'devicon-docker-plain', title: 'Docker' }
         // { className: 'devicon-jenkins-line', title: 'Jenkins' }
     ]
+
+    const workExperienceKeys = ['unicorn', 'czecom', 'yourSystem']
 
     const projects = [
         { name: 'Metro simulation', progLang: 'React', desc: 'metroSimulation', link: 'https://metro-simulation.vercel.app/', special: true, year: '2024' },
@@ -128,7 +130,7 @@ function About() {
             </div>
 
             <div className="text-white text-center">
-                <h3 className="setShadow">Martin H.</h3>
+                <h3 className="setShadow">Bc. Martin H.</h3>
             </div>
 
             <div className="container text-white mt-5">
@@ -186,6 +188,74 @@ function About() {
             <hr className="text-white m-5" />
 
             <div className="text-white text-center pb-3">
+                <h2 className="setShadow">{t('aboutPage.workExperience')}</h2>
+            </div>
+
+            <div className="container text-white">
+                <div className="row justify-content-center">
+                    <div className="col-lg-10 col-xl-8">
+                        <div className="position-relative ps-3 ps-md-4">
+                            {workExperienceKeys.map((key, index) => {
+                                const experience = t(`aboutPage.workExperienceItems.${key}`, { returnObjects: true })
+                                const isLast = index === workExperienceKeys.length - 1
+                                return (
+                                    <div key={index} className="position-relative mb-5 pb-4">
+                                        <div
+                                            className="position-absolute start-0"
+                                            style={{
+                                                width: '12px',
+                                                height: '12px',
+                                                backgroundColor: 'white',
+                                                borderRadius: '50%',
+                                                marginLeft: '-14px',
+                                                top: '0'
+                                            }}
+                                        ></div>
+                                        <div
+                                            className="position-absolute start-0"
+                                            style={{
+                                                width: '2px',
+                                                backgroundColor: 'white',
+                                                top: '12px',
+                                                height: 'calc(100% - 12px)',
+                                                marginLeft: '-8px'
+                                            }}
+                                        ></div>
+                                        <div className="ps-4">
+                                            <div className="fw-bold mb-3 h5">{experience.position}</div>
+                                            <div className="mb-3">
+                                                {experience.url ? (
+                                                    <span className="fst-italic">
+                                                        <Link to={experience.url} target="_blank" rel="noopener noreferrer" className="text-white text-decoration-none">
+                                                            {experience.company}
+                                                        </Link>
+                                                    </span>
+                                                ) : (
+                                                    <span className="fst-italic">{experience.company}</span>
+                                                )}
+                                                <span className="ms-2 small">- {experience.period}</span>
+                                            </div>
+                                            <div className="mb-3">{experience.description}</div>
+                                            {experience.technologies && <div className="mb-3">{experience.technologies}</div>}
+                                            {experience.url && (
+                                                <div className="mt-3">
+                                                    <Link to={experience.url} target="_blank" rel="noopener noreferrer" className="text-white text-decoration-underline">
+                                                        {experience.url}
+                                                    </Link>
+                                                </div>
+                                            )}
+                                        </div>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr className="text-white m-5" />
+
+            <div className="text-white text-center pb-3">
                 <h2 className="setShadow">{t('aboutPage.reference')}</h2>
             </div>
 
@@ -213,12 +283,27 @@ function About() {
                     {windowWidth >= 1100 && <div className="col-xl-1"></div>}
                     {technologyObj.map((item, index) => (
                         <React.Fragment key={index}>
-                            <div className="col-xl-2 col-lg-3 col-md-2 col-4 p-1">
-                                {windowWidth > 990 && <TechFlipCard key={index} item={item} index={index} flipStates={flipStates} handleFlip={handleFlip} height="150px" iconSize="75px" textFontSize="20px" />}
-                                {windowWidth <= 990 && windowWidth > 767 && <TechFlipCard key={index} item={item} index={index} flipStates={flipStates} handleFlip={handleFlip} height="90px" iconSize="45px" textFontSize="14px" />}
-                                {windowWidth <= 767 && <TechFlipCard key={index} item={item} index={index} flipStates={flipStates} handleFlip={handleFlip} height="60px" iconSize="30px" textFontSize="10px" />}
-                            </div>
-                            {(index === 4 || index === 10 || index === 15 || index === 21) && windowWidth >= 1200 && <div className="col-xl-1"></div>}
+                            {index < 5 && (
+                                <div className="col-xl-2 col-lg-3 col-md-2 col-4 p-1">
+                                    {windowWidth > 990 && <TechFlipCard key={index} item={item} index={index} flipStates={flipStates} handleFlip={handleFlip} height="150px" iconSize="75px" textFontSize="20px" />}
+                                    {windowWidth <= 990 && windowWidth > 767 && <TechFlipCard key={index} item={item} index={index} flipStates={flipStates} handleFlip={handleFlip} height="90px" iconSize="45px" textFontSize="14px" />}
+                                    {windowWidth <= 767 && <TechFlipCard key={index} item={item} index={index} flipStates={flipStates} handleFlip={handleFlip} height="60px" iconSize="30px" textFontSize="10px" />}
+                                </div>
+                            )}
+                            {index === 4 && windowWidth >= 1200 && <div className="col-xl-1"></div>}
+                        </React.Fragment>
+                    ))}
+                </div>
+                <div className="row m-0 justify-content-center">
+                    {technologyObj.map((item, index) => (
+                        <React.Fragment key={index}>
+                            {index >= 5 && (
+                                <div className="col-xl-2 col-lg-3 col-md-2 col-4 p-1">
+                                    {windowWidth > 990 && <TechFlipCard key={index} item={item} index={index} flipStates={flipStates} handleFlip={handleFlip} height="150px" iconSize="75px" textFontSize="20px" />}
+                                    {windowWidth <= 990 && windowWidth > 767 && <TechFlipCard key={index} item={item} index={index} flipStates={flipStates} handleFlip={handleFlip} height="90px" iconSize="45px" textFontSize="14px" />}
+                                    {windowWidth <= 767 && <TechFlipCard key={index} item={item} index={index} flipStates={flipStates} handleFlip={handleFlip} height="60px" iconSize="30px" textFontSize="10px" />}
+                                </div>
+                            )}
                         </React.Fragment>
                     ))}
                 </div>
@@ -250,7 +335,8 @@ function About() {
                         right: '20px',
                         fontSize: '40px'
                     }}
-                    onClick={scrollUp}>
+                    onClick={scrollUp}
+                >
                     👆
                 </button>
             )}
