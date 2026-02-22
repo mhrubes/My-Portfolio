@@ -60,9 +60,16 @@
         "gdpr": "I agree to the processing of personal data according to the GDPR.",
         "submitButton": "Send",
         "emailErrorMessageEmpty": "Email cannot be empty.",
-        "emailErrorMessageNotInclude": "Email doesn't contain @.",
+        "emailErrorMessageNotInclude": "Email is not in valid format.",
+        "messageErrorMessageEmpty": "Message cannot be empty.",
         "acceptProcessGDPR": "You must accept with conditions.",
-        "formSent": "The form was sent successfully."
+        "formSent": "The form was sent successfully.",
+        "formError": "Sorry, there was an error sending the message. Please try again.",
+        "formNotConfigured": "Contact form is not properly configured. Please contact the administrator.",
+        "captchaLabel": "Verification:",
+        "captchaPlaceholder": "Enter the result",
+        "captchaError": "Incorrect result. Please try again.",
+        "captchaRefresh": "🔄 New"
     },
     "jobTitle": {
         "webFrontendDeveloper": "Frontend developer",

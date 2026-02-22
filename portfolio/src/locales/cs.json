@@ -60,9 +60,16 @@
         "gdpr": "Souhlasím se zpracováním osobních údajů dle GDPR.",
         "submitButton": "Odeslat",
         "emailErrorMessageEmpty": "Email nemůže být prázdný.",
-        "emailErrorMessageNotInclude": "Email Neobsahuje @.",
+        "emailErrorMessageNotInclude": "Email není ve správném formátu.",
+        "messageErrorMessageEmpty": "Zpráva nemůže být prázdná.",
         "acceptProcessGDPR": "Musíte souhlasit s podmínkami.",
-        "formSent": "Formulář byl úspěšně odeslán."
+        "formSent": "Formulář byl úspěšně odeslán.",
+        "formError": "Omlouváme se, došlo k chybě při odesílání zprávy. Zkuste to prosím znovu.",
+        "formNotConfigured": "Kontaktní formulář není správně nakonfigurován. Kontaktujte prosím administrátora.",
+        "captchaLabel": "Ověření:",
+        "captchaPlaceholder": "Zadejte výsledek",
+        "captchaError": "Nesprávný výsledek. Zkuste to prosím znovu.",
+        "captchaRefresh": "🔄 Nová"
     },
     "jobTitle": {
         "webFrontendDeveloper": "Frontend vývojář",

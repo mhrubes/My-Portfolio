@@ -2,6 +2,8 @@ import React, { lazy, Suspense } from 'react'
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Analytics } from '@vercel/analytics/react'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const Main = lazy(() => import('./pages/Main'))
 const About = lazy(() => import('./pages/About'))
@@ -21,6 +23,18 @@ function App() {
                 </Routes>
             </Suspense>
             <Analytics debug={false} />
+            <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+            />
         </BrowserRouter>
     )
 }

@@ -22,7 +22,7 @@ function Main() {
 
                     <hr />
 
-                    <p className="h2 setShadow">
+                    <div className="h2 setShadow">
                         <TypeWritter
                             options={{
                                 strings: [t('jobTitle.webFrontendDeveloper'), t('jobTitle.webBackendDeveloper'), t('jobTitle.tester'), t('jobTitle.webFullStackDeveloper')],
@@ -32,7 +32,7 @@ function Main() {
                                 deleteSpeed: 20
                             }}
                         />
-                    </p>
+                    </div>
 
                     <div className="mt-3">
                         <Link className="setShadow" to="/about">
