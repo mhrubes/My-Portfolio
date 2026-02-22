@@ -304,7 +304,22 @@ function Contact() {
                                     {t('contactPage.captchaLabel')} <strong className="text-danger">*</strong>
                                 </label>
                                 <div className="d-flex align-items-center gap-2">
-                                    <div className="border rounded p-2 bg-light text-dark" style={{ minWidth: '150px', textAlign: 'center', fontSize: '18px', fontWeight: 'bold' }}>
+                                    <div
+                                        className="border rounded p-2 bg-light text-dark"
+                                        style={{
+                                            minWidth: '150px',
+                                            textAlign: 'center',
+                                            fontSize: '18px',
+                                            fontWeight: 'bold',
+                                            userSelect: 'none',
+                                            WebkitUserSelect: 'none',
+                                            MozUserSelect: 'none',
+                                            msUserSelect: 'none'
+                                        }}
+                                        onCopy={(e) => e.preventDefault()}
+                                        onCut={(e) => e.preventDefault()}
+                                        onPaste={(e) => e.preventDefault()}
+                                    >
                                         {captchaNum1} + {captchaNum2} + {captchaNum3} = ?
                                     </div>
                                     <input
@@ -317,6 +332,9 @@ function Contact() {
                                             setCaptchaAnswer(e.target.value)
                                             setCaptchaError(false)
                                         }}
+                                        onCopy={(e) => e.preventDefault()}
+                                        onPaste={(e) => e.preventDefault()}
+                                        onCut={(e) => e.preventDefault()}
                                         disabled={isDisabled}
                                         style={{ maxWidth: '150px' }}
                                     />
