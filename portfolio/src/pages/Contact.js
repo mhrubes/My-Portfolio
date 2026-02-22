@@ -22,8 +22,6 @@ function Contact() {
     const [message, setMessageArea] = useState('')
     const [acceptProccess, setAcceptProccess] = useState(false)
 
-    const [emailIsSent, setEmailIsSent] = useState(false)
-
     const [emailErrorMessageSubmit, setEmailErrorMessageSubmit] = useState(false)
     const [messageErrorMessageSubmit, setMessageErrorMessageSubmit] = useState(false)
     const [acceptProccessErrorSubmit, setAcceptProccessErrorSubmit] = useState(false)
@@ -149,7 +147,6 @@ function Contact() {
 
             try {
                 await emailjs.send(serviceId, templateId, templateParams, publicKey)
-                setEmailIsSent(true)
                 setAcceptProccessErrorSubmit(false)
                 setEmailErrorMessageSubmit(false)
                 setMessageErrorMessageSubmit(false)
