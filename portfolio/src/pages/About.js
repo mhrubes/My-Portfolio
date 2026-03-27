@@ -81,11 +81,11 @@ function About() {
         'Javascript - Node.js, React.js, Express.js, Typescript',
         'C# - .NET Core, WPF, Windows Forms',
         'SQL, PostgreSQL, MySQL, MongoDB',
-        'Postman, Insomnia',
+        'Postman, Insomnia, Hoppscotch',
         'Git, GitHub, Jira, Slack',
         // 'Docker, Jenkins',
         'Docker',
-        'Swarmpit',
+        'Swarmpit, Dozzle',
         '',
         'Dahua, Hikvision, Jablotron'
     ]
