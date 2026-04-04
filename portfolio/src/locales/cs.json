@@ -37,6 +37,7 @@
             }
         },
         "reference": "Mé projekty",
+        "sudokuAI": "Sudoku aplikace vytvořená pouze pomocí AI a promptů.",
         "metroSimulation": "Simulace pražského metra.",
         "poeStashPrices": "Simulace ceny stash tabs ve hře Path of Exile.",
         "wifiNameApp": "Získání Wi-Fi názvů a hesel, kde KeyContent není prázdný.",

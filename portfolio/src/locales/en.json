@@ -37,6 +37,7 @@
             }
         },
         "reference": "My Projects",
+        "sudokuAI": "Sudoku application created only with AI and prompts.",
         "metroSimulation": "Simulation of the Prague metro.",
         "poeStashPrices": "Simulate the price of stash tabs in Path of Exile.",
         "wifiNameApp": "Get Wi-Fi Name & Password where KeyContent is not empty.",
