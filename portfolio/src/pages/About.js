@@ -48,6 +48,7 @@ function About() {
     const workExperienceKeys = ['unicorn', 'czecom', 'yourSystem']
 
     const projects = [
+        { name: 'F1 Simulátor', progLang: 'Typescript', desc: 'raceSimulator', link: 'https://mh-f1-simulation.vercel.app/', special: true, year: '2026' },
         { name: 'Sudoku AI', progLang: 'Typescript', desc: 'sudokuAI', link: 'https://mh-sudoku-ai.vercel.app/', special: true, year: '2026' },
         { name: 'Metro simulation', progLang: 'React', desc: 'metroSimulation', link: 'https://metro-simulation.vercel.app/', special: true, year: '2024' },
         { name: 'Poe Stash Prices', progLang: 'React', desc: 'poeStashPrices', link: 'https://poe-stash-prices.vercel.app/', special: true, year: '2024' },
@@ -207,7 +208,8 @@ function About() {
                                                 borderRadius: '50%',
                                                 marginLeft: '-14px',
                                                 top: '0'
-                                            }}></div>
+                                            }}
+                                        ></div>
                                         <div
                                             className="position-absolute start-0"
                                             style={{
@@ -216,7 +218,8 @@ function About() {
                                                 top: '12px',
                                                 height: 'calc(100% - 12px)',
                                                 marginLeft: '-8px'
-                                            }}></div>
+                                            }}
+                                        ></div>
                                         <div className="ps-4">
                                             <div className="fw-bold mb-3 h5">{experience.position}</div>
                                             <div className="mb-3">
@@ -334,7 +337,8 @@ function About() {
                         right: '20px',
                         fontSize: '40px'
                     }}
-                    onClick={scrollUp}>
+                    onClick={scrollUp}
+                >
                     👆
                 </button>
             )}

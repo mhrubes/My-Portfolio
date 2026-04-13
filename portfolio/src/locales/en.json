@@ -37,6 +37,7 @@
             }
         },
         "reference": "My Projects",
+        "raceSimulator": "F1 Race simulator using AI.",
         "sudokuAI": "Sudoku application created only with AI and prompts.",
         "metroSimulation": "Simulation of the Prague metro.",
         "poeStashPrices": "Simulate the price of stash tabs in Path of Exile.",

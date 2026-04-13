@@ -37,6 +37,7 @@
             }
         },
         "reference": "Mé projekty",
+        "raceSimulator": "F1 Simulace závodu pomocí AI.",
         "sudokuAI": "Sudoku aplikace vytvořená pouze pomocí AI a promptů.",
         "metroSimulation": "Simulace pražského metra.",
         "poeStashPrices": "Simulace ceny stash tabs ve hře Path of Exile.",
