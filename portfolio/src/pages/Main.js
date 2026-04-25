@@ -25,7 +25,7 @@ function Main() {
                     <div className="h2 setShadow">
                         <TypeWritter
                             options={{
-                                strings: [t('jobTitle.webFrontendDeveloper'), t('jobTitle.webBackendDeveloper'), t('jobTitle.tester'), t('jobTitle.webFullStackDeveloper')],
+                                strings: [t('jobTitle.webBackendDeveloper'), t('jobTitle.webFrontendDeveloper'), t('jobTitle.tester')],
                                 autoStart: true,
                                 loop: true,
                                 delay: 70,
