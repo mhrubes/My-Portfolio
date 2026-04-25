@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEarth } from '@fortawesome/free-solid-svg-icons'
+import { faEarth, faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
 
 function LanguageChange(props) {
     const { i18n } = useTranslation()
@@ -12,7 +12,7 @@ function LanguageChange(props) {
     }
 
     return (
-        <React.Fragment>
+        <div className="d-flex align-items-center gap-2">
             {i18n.language === 'en' ? (
                 <button className={props.color ? 'btn ' + props.color : 'btn'} onClick={() => changeLanguage('cz')}>
                     <FontAwesomeIcon icon={faEarth} className="m-0" style={{ paddingRight: '5px' }} />
@@ -24,7 +24,18 @@ function LanguageChange(props) {
                     EN
                 </button>
             )}
-        </React.Fragment>
+
+            {props.showThemeToggle && (
+                <button
+                    className={props.color ? 'btn ' + props.color : 'btn'}
+                    onClick={props.onToggleTheme}
+                    title={props.isLightMode ? 'Přepnout na tmavý režim' : 'Přepnout na světlý režim'}
+                    aria-label={props.isLightMode ? 'Přepnout na tmavý režim' : 'Přepnout na světlý režim'}
+                >
+                    <FontAwesomeIcon icon={props.isLightMode ? faMoon : faSun} className="m-0" />
+                </button>
+            )}
+        </div>
     )
 }
 

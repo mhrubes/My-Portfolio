@@ -9,7 +9,8 @@ function ProjectDetail(props) {
     const cardStyle = special
         ? {
               minHeight: '215px',
-              background: 'linear-gradient(to top, #d9ffa1, #f8ffb6, white)'
+              //   background: 'linear-gradient(to top, #d9ffa1, #f8ffb6, white)'
+              background: 'white'
           }
         : { minHeight: '215px', background: 'gray' }
 
@@ -19,7 +20,8 @@ function ProjectDetail(props) {
           }
         : {}
 
-    const buttonClass = special ? 'btn color-sweep-animation' : 'btn projectDetailButton'
+    // const buttonClass = special ? 'btn color-sweep-animation' : 'btn projectDetailButton'
+    const buttonClass = 'btn projectDetailButton'
 
     return (
         <div className="card m-0" style={cardStyle}>
@@ -35,7 +37,8 @@ function ProjectDetail(props) {
                 <div className="mt-auto">
                     <Link className="text-decoration-none" to={link} target="_blank">
                         <button className={buttonClass}>
-                            <span className={special && 'text-white'}>{t('aboutPage.clickHere')}</span>
+                            {/* <span className={special && 'text-white'}>{t('aboutPage.clickHere')}</span> */}
+                            <span className={false && 'text-white'}>{t('aboutPage.clickHere')}</span>
                         </button>
                     </Link>
                 </div>

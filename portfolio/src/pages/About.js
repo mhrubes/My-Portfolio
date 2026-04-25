@@ -200,21 +200,19 @@ function About() {
                                 return (
                                     <div key={index} className="position-relative mb-5 pb-4">
                                         <div
-                                            className="position-absolute start-0"
+                                            className="position-absolute start-0 timeline-dot"
                                             style={{
                                                 width: '12px',
                                                 height: '12px',
-                                                backgroundColor: 'white',
                                                 borderRadius: '50%',
                                                 marginLeft: '-14px',
                                                 top: '0'
                                             }}
                                         ></div>
                                         <div
-                                            className="position-absolute start-0"
+                                            className="position-absolute start-0 timeline-line"
                                             style={{
                                                 width: '2px',
-                                                backgroundColor: 'white',
                                                 top: '12px',
                                                 height: 'calc(100% - 12px)',
                                                 marginLeft: '-8px'

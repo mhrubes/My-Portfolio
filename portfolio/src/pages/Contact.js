@@ -268,7 +268,7 @@ function Contact() {
                                 <label htmlFor="emailLabel">
                                     {t('contactPage.emailAddress')} <strong className="text-danger">*</strong>
                                 </label>
-                                <input type="email" className="form-control" id="emailFormInput" placeholder="email@example.com" value={email} onChange={(e) => setEmail(e.target.value)} disabled={isDisabled} />
+                                <input type="email" className="form-control" id="emailFormInput" placeholder="napr. martin@email.cz" value={email} onChange={(e) => setEmail(e.target.value)} disabled={isDisabled} />
                                 {emailErrorMessageSubmit && email.length === 0 && <span style={{ color: 'red' }}>{t('contactPage.emailErrorMessageEmpty')}</span>}
                                 {emailErrorMessageSubmit && email.length !== 0 && !isValidEmail(email) && <span style={{ color: 'red' }}>{t('contactPage.emailErrorMessageNotInclude')}</span>}
                             </div>
