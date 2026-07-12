@@ -1,5 +1,10 @@
+:root {
+    --theme-transition-duration: 0.5s;
+}
+
 body {
     background-color: #1d052e;
+    transition: background-color var(--theme-transition-duration) ease-in-out, color var(--theme-transition-duration) ease-in-out;
 }
 
 body.light-mode {
@@ -11,6 +16,7 @@ body.light-mode {
     background-color: #1d052e;
     min-height: 100vh;
     height: auto;
+    transition: background-color var(--theme-transition-duration) ease-in-out;
 }
 
 .light-mode .main {
@@ -19,6 +25,17 @@ body.light-mode {
 
 .light-mode .text-white {
     color: #1b1b1b !important;
+}
+
+.text-white,
+.setShadow,
+hr.text-white,
+.email-link-style,
+.timeline-dot,
+.timeline-line,
+.flip-card-front .card-content {
+    transition: color var(--theme-transition-duration) ease-in-out, background-color var(--theme-transition-duration) ease-in-out,
+        border-color var(--theme-transition-duration) ease-in-out, text-shadow var(--theme-transition-duration) ease-in-out;
 }
 
 .light-mode hr.text-white {
@@ -121,10 +138,15 @@ body.light-mode {
 .toolsIconStyle {
     color: white;
     font-size: 100px;
+    transition: color var(--theme-transition-duration) ease-in-out;
 }
 
 .toolsIconStyleActive {
     font-size: 100px;
+}
+
+.theme-icon {
+    transition: filter var(--theme-transition-duration) ease-in-out;
 }
 
 .navbarAboutButton {
@@ -194,13 +216,9 @@ body.light-mode {
 }
 
 /* Navbar */
-:root {
-    --navbar-transition-duration: 0.5s;
-}
-
 .navbar-theme-bar {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-    transition: background-color var(--navbar-transition-duration) ease-in-out, box-shadow var(--navbar-transition-duration) ease-in-out;
+    transition: background-color var(--theme-transition-duration) ease-in-out, box-shadow var(--theme-transition-duration) ease-in-out;
 }
 
 .navbar-inner {
@@ -270,7 +288,7 @@ body.light-mode {
     font-weight: 600;
     letter-spacing: 0.04em;
     cursor: pointer;
-    transition: background-color var(--navbar-transition-duration) ease-in-out, color var(--navbar-transition-duration) ease-in-out, box-shadow var(--navbar-transition-duration) ease-in-out, transform 0.2s ease;
+    transition: background-color var(--theme-transition-duration) ease-in-out, color var(--theme-transition-duration) ease-in-out, box-shadow var(--theme-transition-duration) ease-in-out, transform 0.2s ease;
 }
 
 .language-toggle__icon {
@@ -317,7 +335,7 @@ body.light-mode {
     width: 72px;
     height: 36px;
     border-radius: 999px;
-    transition: background var(--navbar-transition-duration) ease-in-out, box-shadow var(--navbar-transition-duration) ease-in-out;
+    transition: background var(--theme-transition-duration) ease-in-out, box-shadow var(--theme-transition-duration) ease-in-out;
 }
 
 .theme-toggle--light .theme-toggle__track {
@@ -340,7 +358,7 @@ body.light-mode {
     height: 18px;
     transform: translateY(-50%);
     pointer-events: none;
-    transition: opacity var(--navbar-transition-duration) ease-in-out, color var(--navbar-transition-duration) ease-in-out;
+    transition: opacity var(--theme-transition-duration) ease-in-out, color var(--theme-transition-duration) ease-in-out;
 }
 
 .theme-toggle__icon--sun {
@@ -380,7 +398,7 @@ body.light-mode {
     height: 28px;
     border-radius: 50%;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28);
-    transition: transform var(--navbar-transition-duration) ease-in-out, background var(--navbar-transition-duration) ease-in-out, box-shadow var(--navbar-transition-duration) ease-in-out;
+    transition: transform var(--theme-transition-duration) ease-in-out, background var(--theme-transition-duration) ease-in-out, box-shadow var(--theme-transition-duration) ease-in-out;
 }
 
 .theme-toggle--light .theme-toggle__knob {

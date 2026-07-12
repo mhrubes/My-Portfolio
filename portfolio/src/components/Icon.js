@@ -27,7 +27,7 @@ function Icon(props) {
                 src={imageUrl}
                 alt={title}
                 title={title}
-                className={shouldUseColoredIcon ? 'toolsIconStyleActive' : 'toolsIconStyle'}
+                className={shouldUseColoredIcon ? 'toolsIconStyleActive theme-icon' : 'toolsIconStyle theme-icon'}
                 style={{
                     height: iconSize,
                     width: iconSize,
