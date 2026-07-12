@@ -19,34 +19,37 @@ function Navigation() {
         setIsLightMode((prevState) => !prevState)
     }
 
+    const getNavButtonClass = (path) => (location.pathname === path ? 'btn navbarAboutButtonActive' : 'btn navbarAboutButton')
+
     return (
-        <div
-            className={`fixed-top ${isLightMode ? 'bg-light' : 'bg-white'}`}
-            style={{
-                boxShadow: '10px 10px 10px rgba(0, 0, 0, 0.5)',
-                transition: 'background-color 0.2s ease-in-out'
-            }}
-        >
-            <ul className="nav justify-content-center m-1">
-                <li className="nav-item m-1">
-                    <Link to="/">
-                        <button className={location.pathname === '/' ? 'btn navbarAboutButtonActive' : 'btn navbarAboutButton'}>{t('pages.home')}</button>
-                    </Link>
-                </li>
-                <li className="nav-item m-1">
-                    <Link to="/about">
-                        <button className={location.pathname === '/about' ? 'btn navbarAboutButtonActive' : 'btn navbarAboutButton'}>{t('pages.about')}</button>
-                    </Link>
-                </li>
-                <li className="nav-item m-1">
-                    <Link to="/contact">
-                        <button className={location.pathname === '/contact' ? 'btn navbarAboutButtonActive' : 'btn navbarAboutButton'}>{t('pages.contact')}</button>
-                    </Link>
-                </li>
-                <li className="nav-item m-1">
+        <div className={`fixed-top navbar-theme-bar ${isLightMode ? 'bg-light' : 'bg-white'}`}>
+            <div className="navbar-inner">
+                <Link to="/" className="navbar-brand" aria-label={t('pages.home')}>
+                    MH
+                </Link>
+
+                <ul className="navbar-links nav m-0">
+                    <li className="nav-item">
+                        <Link to="/">
+                            <button className={getNavButtonClass('/')}>{t('pages.home')}</button>
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link to="/about">
+                            <button className={getNavButtonClass('/about')}>{t('pages.about')}</button>
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link to="/contact">
+                            <button className={getNavButtonClass('/contact')}>{t('pages.contact')}</button>
+                        </Link>
+                    </li>
+                </ul>
+
+                <div className="navbar-utils">
                     <Language showThemeToggle={true} isLightMode={isLightMode} onToggleTheme={toggleTheme} />
-                </li>
-            </ul>
+                </div>
+            </div>
         </div>
     )
 }

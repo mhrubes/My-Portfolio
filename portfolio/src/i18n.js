@@ -1,11 +1,11 @@
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 
-// import translations
 import translationEN from './locales/en.json'
 import translationCZ from './locales/cs.json'
 
-// the translations
+const savedLanguage = localStorage.getItem('language') || 'cz'
+
 const resources = {
     en: {
         translation: translationEN
@@ -15,13 +15,19 @@ const resources = {
     }
 }
 
-i18n.use(initReactI18next) // passes i18n down to react-i18next
-    .init({
-        resources,
-        lng: 'cz', // default language
-        interpolation: {
-            escapeValue: false // react already safes from xss
-        }
-    })
+const syncDocumentLanguage = (language) => {
+    document.documentElement.lang = language === 'cz' ? 'cs' : 'en'
+}
+
+i18n.use(initReactI18next).init({
+    resources,
+    lng: savedLanguage,
+    interpolation: {
+        escapeValue: false
+    }
+})
+
+syncDocumentLanguage(savedLanguage)
+i18n.on('languageChanged', syncDocumentLanguage)
 
 export default i18n

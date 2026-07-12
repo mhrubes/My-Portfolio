@@ -73,14 +73,15 @@ body.light-mode {
 }
 
 .aboutButton {
-    background-color: black;
-    color: white;
+    background-color: black !important;
+    color: white !important;
     font-weight: bold;
+    border: none;
 }
 
 .aboutButton:hover {
-    background-color: white;
-    color: black;
+    background-color: white !important;
+    color: black !important;
     font-weight: bold;
 }
 
@@ -110,13 +111,11 @@ body.light-mode {
 
 .toolsBox {
     height: 175px;
-    /* width: 210px; */
     border: 2px solid white;
 }
 
 .toolsBox:hover {
     height: 175px;
-    /* width: 210px; */
 }
 
 .toolsIconStyle {
@@ -192,4 +191,236 @@ body.light-mode {
     background: linear-gradient(180deg, #52148d, #195f1d, #d9d9da, #195f1d, #52148d);
     background-size: 100% 600%;
     animation: colorSweep 10s linear infinite;
+}
+
+/* Navbar */
+:root {
+    --navbar-transition-duration: 0.5s;
+}
+
+.navbar-theme-bar {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    transition: background-color var(--navbar-transition-duration) ease-in-out, box-shadow var(--navbar-transition-duration) ease-in-out;
+}
+
+.navbar-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 58px;
+    padding: 0.35rem 1rem;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+}
+
+.navbar-utils {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.navbar-brand {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.15rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    color: #8814d9;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.navbar-brand:hover {
+    color: #6b0fb8;
+    transform: translateY(-50%) scale(1.04);
+}
+
+.light-mode .navbar-brand {
+    color: #8814d9;
+}
+
+.nav-controls {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.language-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 36px;
+    padding: 0 14px;
+    border: none;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: background-color var(--navbar-transition-duration) ease-in-out, color var(--navbar-transition-duration) ease-in-out, box-shadow var(--navbar-transition-duration) ease-in-out, transform 0.2s ease;
+}
+
+.language-toggle__icon {
+    font-size: 0.95rem;
+}
+
+.nav-controls--light .language-toggle {
+    color: #2d3748;
+    background: #eef1f6;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.12), inset -2px -2px 5px rgba(255, 255, 255, 0.95);
+}
+
+.nav-controls--dark .language-toggle {
+    color: #e2e8f0;
+    background: #2d3748;
+    box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.45), inset -1px -1px 4px rgba(255, 255, 255, 0.06);
+}
+
+.language-toggle:hover {
+    transform: translateY(-1px);
+}
+
+.language-toggle:active {
+    transform: translateY(0);
+}
+
+.theme-toggle {
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    line-height: 0;
+}
+
+.theme-toggle:focus-visible,
+.language-toggle:focus-visible {
+    outline: 2px solid #8814d9;
+    outline-offset: 2px;
+}
+
+.theme-toggle__track {
+    position: relative;
+    display: block;
+    width: 72px;
+    height: 36px;
+    border-radius: 999px;
+    transition: background var(--navbar-transition-duration) ease-in-out, box-shadow var(--navbar-transition-duration) ease-in-out;
+}
+
+.theme-toggle--light .theme-toggle__track {
+    background: #e9edf3;
+    box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.14), inset -2px -2px 6px rgba(255, 255, 255, 0.95);
+}
+
+.theme-toggle--dark .theme-toggle__track {
+    background: #252b34;
+    box-shadow: inset 2px 2px 7px rgba(0, 0, 0, 0.55), inset -1px -1px 4px rgba(255, 255, 255, 0.04);
+}
+
+.theme-toggle__icon {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: opacity var(--navbar-transition-duration) ease-in-out, color var(--navbar-transition-duration) ease-in-out;
+}
+
+.theme-toggle__icon--sun {
+    left: 11px;
+}
+
+.theme-toggle__icon--moon {
+    right: 11px;
+}
+
+.theme-toggle--light .theme-toggle__icon--sun {
+    opacity: 0;
+}
+
+.theme-toggle--light .theme-toggle__icon--moon {
+    color: #718096;
+    opacity: 0.85;
+}
+
+.theme-toggle--dark .theme-toggle__icon--sun {
+    color: #a0aec0;
+    opacity: 0.85;
+}
+
+.theme-toggle--dark .theme-toggle__icon--moon {
+    opacity: 0;
+}
+
+.theme-toggle__knob {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28);
+    transition: transform var(--navbar-transition-duration) ease-in-out, background var(--navbar-transition-duration) ease-in-out, box-shadow var(--navbar-transition-duration) ease-in-out;
+}
+
+.theme-toggle--light .theme-toggle__knob {
+    transform: translateX(0);
+    background: radial-gradient(circle at 32% 28%, #ffe082 0%, #ffb300 55%, #ff8f00 100%);
+}
+
+.theme-toggle--dark .theme-toggle__knob {
+    transform: translateX(36px);
+    background: radial-gradient(circle at 32% 28%, #4a5568 0%, #2d3748 55%, #1a202c 100%);
+}
+
+.theme-toggle:active .theme-toggle__knob {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.22);
+}
+
+@media (max-width: 767px) {
+    .navbar-inner {
+        flex-direction: column;
+        gap: 0.65rem;
+        padding: 0.65rem 0.75rem 0.75rem;
+    }
+
+    .navbar-brand {
+        position: static;
+        transform: none;
+        align-self: flex-start;
+    }
+
+    .navbar-brand:hover {
+        transform: scale(1.04);
+    }
+
+    .navbar-utils {
+        position: static;
+        transform: none;
+    }
+
+    .navbar-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
