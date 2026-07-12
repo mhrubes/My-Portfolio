@@ -8,7 +8,7 @@ function TechFlipCard(props) {
             <div className="flip-card-inner" onClick={() => handleFlip(index, !flipStates[index])}>
                 <div className="flip-card-front" style={{ height: height }}>
                     <div className="card-content d-flex justify-content-center align-items-center rounded border border-1" style={{ height: height }}>
-                        <Icon iconName={item.className} title={item.title} iconSize={iconSize} />
+                        <Icon iconName={item.className} title={item.title} iconSize={iconSize} imageUrl={item.imageUrl} />
                     </div>
                 </div>
                 <div className="flip-card-back d-flex justify-content-center align-items-center rounded" style={{ height: height }}>

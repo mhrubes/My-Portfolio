@@ -4,7 +4,7 @@ function Icon(props) {
     const [activeToolsHover, setActiveToolsHover] = useState('')
     const [isLightMode, setIsLightMode] = useState(() => document.body.classList.contains('light-mode'))
 
-    let { iconName, title, iconSize } = props
+    let { iconName, title, iconSize, imageUrl } = props
 
     useEffect(() => {
         const syncTheme = () => {
@@ -18,6 +18,27 @@ function Icon(props) {
     }, [])
 
     const shouldUseColoredIcon = isLightMode || activeToolsHover === iconName
+
+    if (imageUrl) {
+        const imageFilter = shouldUseColoredIcon && isLightMode ? 'none' : 'brightness(0) invert(1)'
+
+        return (
+            <img
+                src={imageUrl}
+                alt={title}
+                title={title}
+                className={shouldUseColoredIcon ? 'toolsIconStyleActive' : 'toolsIconStyle'}
+                style={{
+                    height: iconSize,
+                    width: iconSize,
+                    objectFit: 'contain',
+                    filter: imageFilter
+                }}
+                onMouseEnter={() => setActiveToolsHover(iconName)}
+                onMouseLeave={() => setActiveToolsHover('')}
+            />
+        )
+    }
 
     return (
         <i

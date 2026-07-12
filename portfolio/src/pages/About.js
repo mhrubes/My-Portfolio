@@ -41,13 +41,16 @@ function About() {
         { className: 'devicon-github-original', title: 'Github' },
         { className: 'devicon-jira-plain', title: 'Jira' },
         // { className: 'devicon-slack-plain', title: 'Slack' },
-        { className: 'devicon-docker-plain', title: 'Docker' }
+        { className: 'devicon-docker-plain', title: 'Docker' },
+        { className: 'devicon-cursor-plain', title: 'Cursor', imageUrl: '/icons/cursor-plain.svg' },
+        { className: 'devicon-claude-plain', title: 'Claude', imageUrl: '/icons/claude-plain.svg' }
         // { className: 'devicon-jenkins-line', title: 'Jenkins' }
     ]
 
     const workExperienceKeys = ['unicorn', 'czecom', 'yourSystem']
 
     const projects = [
+        { name: 'Byt Planner', progLang: 'Vite, Three.js', desc: 'bytPlanner', link: 'https://mh-byt-planner.vercel.app/', special: true, year: '2026' },
         { name: 'F1 Simulátor', progLang: 'Typescript', desc: 'raceSimulator', link: 'https://mh-f1-simulation.vercel.app/', special: true, year: '2026' },
         { name: 'Sudoku AI', progLang: 'Typescript', desc: 'sudokuAI', link: 'https://mh-sudoku-ai.vercel.app/', special: true, year: '2026' },
         { name: 'Metro simulation', progLang: 'React', desc: 'metroSimulation', link: 'https://metro-simulation.vercel.app/', special: true, year: '2024' },
@@ -85,6 +88,7 @@ function About() {
         'SQL, PostgreSQL, MySQL, MongoDB',
         'Postman, Insomnia, Hoppscotch',
         'Git, GitHub, Jira, Slack',
+        'AI - Cursor, Claude, ChatGPT, GitHub Copilot, Gemini',
         // 'Docker, Jenkins',
         'Docker',
         'Swarmpit, Dozzle',
@@ -156,7 +160,7 @@ function About() {
                         <p className="text-center h4 pb-3 setShadow">{t('aboutPage.technicalKnowledge')}</p>
                         <ul>
                             {skillsObj.map((item, index) => {
-                                const keywordsToHighlight = ['Node.js', 'PostgreSQL', 'Postman', 'Swarmpit']
+                                const keywordsToHighlight = ['Node.js', 'PostgreSQL', 'Postman', 'Swarmpit', 'Cursor']
                                 const highlightKeywords = (text, keywords) => {
                                     const pattern = new RegExp(`\\b(${keywords.join('|')})\\b`, 'g')
                                     return text.replace(pattern, '<strong>$1</strong>')

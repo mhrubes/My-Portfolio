@@ -37,6 +37,7 @@
             }
         },
         "reference": "Mé projekty",
+        "bytPlanner": "Možnost návrhu vlastního bytu s architekturou a náhledem.",
         "raceSimulator": "F1 Simulace závodu pomocí AI.",
         "sudokuAI": "Sudoku aplikace vytvořená pouze pomocí AI a promptů.",
         "metroSimulation": "Simulace pražského metra.",
