@@ -32,7 +32,7 @@
                 "company": "Your Solutions s.r.o.",
                 "position": "Programmer",
                 "description": "Application development / microservices for controlling and point-of-sale systems at gas stations. Especially focusing on the backend part of the application using the database - PostgreSQL.",
-                "technologies": "Node.js, Postgresql",
+                "technologies": "Node.js, PostgreSQL, Vue.js",
                 "url": "https://octo-technology.cz/"
             }
         },
@@ -54,6 +54,7 @@
     },
     "contactPage": {
         "connectWithMe": "Connect With Me",
+        "downloadCV": "Download CV",
         "czechRepublic": "The Czech Republic",
         "contactForm": "Contact Form",
         "emailAddress": "Email address",

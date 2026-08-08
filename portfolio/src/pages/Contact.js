@@ -9,11 +9,11 @@ import githubImage from '../icons/github.png'
 import linkedin from '../icons/linkedIn.png'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faEnvelope, faMapMarkerAlt, faDownload } from '@fortawesome/free-solid-svg-icons'
 import Navigation from '../navigation'
 
 function Contact() {
-    const { t } = useTranslation()
+    const { t, i18n } = useTranslation()
     const [windowWidth, setWindowWidth] = useState(window.innerWidth)
 
     const [email, setEmail] = useState('')
@@ -233,6 +233,12 @@ function Contact() {
                                 <FontAwesomeIcon icon={faMapMarkerAlt} className="m-0" />
                             </span>
                             <span className="m-2 p-2">Rakovník 269 01 | {t('contactPage.czechRepublic')}</span>
+                        </div>
+                        <div className="mt-3">
+                            <a href={`/cv/CV_${i18n.language === 'en' ? 'en' : 'cz'}.pdf`} download className="btn aboutButton btn-sm">
+                                <FontAwesomeIcon icon={faDownload} className="me-2" />
+                                {t('contactPage.downloadCV')}
+                            </a>
                         </div>
                         <div className="m-0 pt-3">
                             {/* <img className='aboutLinksImage m-1' src={facebookImage} alt='facebook' title='Facebook' />

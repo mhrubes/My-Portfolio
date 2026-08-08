@@ -32,7 +32,7 @@
                 "company": "Your Solutions s.r.o.",
                 "position": "Programátor",
                 "description": "Vývoj aplikací / mikroslužeb pro řídící a pokladní systémy čerpacích stanic. Zejména se zaměřením na Backedovou část aplikace s využitím databáze - PostgreSQL.",
-                "technologies": "Node.js, Postgresql",
+                "technologies": "Node.js, PostgreSQL, Vue.js",
                 "url": "https://octo-technology.cz/"
             }
         },
@@ -54,6 +54,7 @@
     },
     "contactPage": {
         "connectWithMe": "Spojte Se Semnou",
+        "downloadCV": "Stáhnout CV",
         "czechRepublic": "Česká Republika",
         "contactForm": "Kontaktní Formulář",
         "emailAddress": "Emailová adresa",

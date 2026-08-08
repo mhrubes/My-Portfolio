@@ -82,16 +82,16 @@ function About() {
     }
 
     const skillsObj = [
-        'HTML5, CSS3 - Bootstrap',
-        'Javascript - Node.js, React.js, Express.js, Typescript',
+        'HTML5 + CSS3',
+        'Javascript - Node.js, React.js, Vue.js Express.js, Typescript',
         'C# - .NET Core, WPF, Windows Forms',
         'SQL, PostgreSQL, MySQL, MongoDB',
         'Postman, Insomnia, Hoppscotch',
         'Git, GitHub, Jira, Slack',
-        'AI - Cursor, Claude, ChatGPT, GitHub Copilot, Gemini',
+        'AI - Claude, Cursor, ChatGPT, GitHub Copilot',
         // 'Docker, Jenkins',
         'Docker',
-        'Swarmpit, Dozzle',
+        'Portainer, Swarmpit, Dozzle',
         '',
         'Dahua, Hikvision, Jablotron'
     ]
@@ -160,7 +160,7 @@ function About() {
                         <p className="text-center h4 pb-3 setShadow">{t('aboutPage.technicalKnowledge')}</p>
                         <ul>
                             {skillsObj.map((item, index) => {
-                                const keywordsToHighlight = ['Node.js', 'PostgreSQL', 'Postman', 'Swarmpit', 'Cursor']
+                                const keywordsToHighlight = ['Node.js', 'PostgreSQL', 'Postman', 'Portainer', 'Claude']
                                 const highlightKeywords = (text, keywords) => {
                                     const pattern = new RegExp(`\\b(${keywords.join('|')})\\b`, 'g')
                                     return text.replace(pattern, '<strong>$1</strong>')
