@@ -31,12 +31,13 @@
                 "period": "6. 2024 - Nyní",
                 "company": "Your Solutions s.r.o.",
                 "position": "Programátor",
-                "description": "Vývoj aplikací / mikroslužeb pro řídící a pokladní systémy čerpacích stanic. Zejména se zaměřením na Backedovou část aplikace s využitím databáze - PostgreSQL.",
+                "description": "Vývoj aplikací / mikroslužeb pro řídící a pokladní systémy čerpacích stanic. Zejména se zaměřením na Backendovou část aplikace s využitím databáze - PostgreSQL.",
                 "technologies": "Node.js, PostgreSQL, Vue.js",
                 "url": "https://octo-technology.cz/"
             }
         },
         "reference": "Mé projekty",
+        "fakturaApp": "Aplikace pro vytváření a správu faktur, dostupná jako webová i desktopová verze.",
         "bytPlanner": "Možnost návrhu vlastního bytu s architekturou a náhledem.",
         "raceSimulator": "F1 Simulace závodu pomocí AI.",
         "sudokuAI": "Sudoku aplikace vytvořená pouze pomocí AI a promptů.",

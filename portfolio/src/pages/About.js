@@ -50,6 +50,7 @@ function About() {
     const workExperienceKeys = ['unicorn', 'czecom', 'yourSystem']
 
     const projects = [
+        { name: 'Faktura App', progLang: 'Node.js, PostgreSQL, Electron', desc: 'fakturaApp', link: 'https://github.com/mhrubes/faktura-app', special: true, year: '2026' },
         { name: 'Byt Planner', progLang: 'Vite, Three.js', desc: 'bytPlanner', link: 'https://mh-byt-planner.vercel.app/', special: true, year: '2026' },
         { name: 'F1 Simulátor', progLang: 'Typescript', desc: 'raceSimulator', link: 'https://mh-f1-simulation.vercel.app/', special: true, year: '2026' },
         { name: 'Sudoku AI', progLang: 'Typescript', desc: 'sudokuAI', link: 'https://mh-sudoku-ai.vercel.app/', special: true, year: '2026' },
