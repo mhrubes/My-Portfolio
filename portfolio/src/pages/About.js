@@ -3,22 +3,24 @@ import { useEffect, useState } from 'react'
 
 import Navigation from '../navigation'
 import ProjectDetail from '../components/about/Project-detail'
-import Language from '../components/LanguageChange'
 
 import { Link } from 'react-router-dom'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCode, faServer, faDatabase, faToolbox, faCloud, faRobot, faMicrochip, faBriefcase, faLightbulb, faLayerGroup, faFolderTree, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 import githubImage from '../icons/github.png'
 import linkedin from '../icons/linkedIn.png'
 import TechFlipCard from '../components/about/Tech-flip-card'
 
 const skillCategories = [
-    { key: 'languages', items: ['HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'C# / .NET Core'] },
-    { key: 'backend', items: ['Node.js', 'Express.js', 'Vue.js', 'React.js'] },
-    { key: 'databases', items: ['SQL', 'PostgreSQL', 'MySQL', 'MongoDB'] },
-    { key: 'tools', items: ['Git', 'GitHub', 'Jira', 'Slack', 'Postman', 'Insomnia', 'Hoppscotch'] },
-    { key: 'devops', items: ['Docker', 'Portainer', 'Swarmpit', 'Dozzle'] },
-    { key: 'ai', items: ['Claude', 'Cursor', 'ChatGPT', 'GitHub Copilot'] },
-    { key: 'hardware', items: ['Dahua', 'Hikvision', 'Jablotron'] }
+    { key: 'languages', icon: faCode, items: ['HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'C# / .NET Core'] },
+    { key: 'backend', icon: faServer, items: ['Node.js', 'Express.js', 'Vue.js', 'React.js'] },
+    { key: 'databases', icon: faDatabase, items: ['SQL', 'PostgreSQL', 'MySQL', 'MongoDB'] },
+    { key: 'tools', icon: faToolbox, items: ['Git', 'GitHub', 'Jira', 'Slack', 'Postman', 'Insomnia', 'Hoppscotch'] },
+    { key: 'devops', icon: faCloud, items: ['Docker', 'Portainer', 'Swarmpit', 'Dozzle'] },
+    { key: 'ai', icon: faRobot, items: ['Claude', 'Cursor', 'ChatGPT', 'GitHub Copilot'] },
+    { key: 'hardware', icon: faMicrochip, items: ['Dahua', 'Hikvision', 'Jablotron'] }
 ]
 
 function About() {
@@ -64,13 +66,13 @@ function About() {
         { name: 'F1 Simulátor', progLang: 'Typescript', desc: 'raceSimulator', link: 'https://mh-f1-simulation.vercel.app/', special: true, year: '2026' },
         { name: 'Sudoku AI', progLang: 'Typescript', desc: 'sudokuAI', link: 'https://mh-sudoku-ai.vercel.app/', special: true, year: '2026' },
         { name: 'Metro simulation', progLang: 'React', desc: 'metroSimulation', link: 'https://metro-simulation.vercel.app/', special: true, year: '2024' },
-        { name: 'Poe Stash Prices', progLang: 'React', desc: 'poeStashPrices', link: 'https://poe-stash-prices.vercel.app/', special: true, year: '2024' },
-        { name: 'Wifi Name', progLang: 'C#', desc: 'wifiNameApp', link: 'https://github.com/mhrubes/WifiName', year: '2024' },
-        { name: 'Overlay', progLang: 'C#', desc: 'overlayApp', link: 'https://github.com/mhrubes/Overlay', year: '2024' },
-        { name: 'Symfony App', progLang: 'PHP', desc: 'symfonyApp', link: 'https://github.com/mhrubes/SymfonyApp', year: '2024' },
-        { name: 'TwilioLibrary', progLang: 'C#', desc: 'twilioLibraryApp', link: 'https://github.com/mhrubes/TwilioLibrary', year: '2023' },
-        { name: 'FE-Seat-Case-Study', progLang: 'React, Typescript', desc: 'feSeatCaseStudy', link: 'https://github.com/mhrubes/frontend-seating-case-study', year: '2023' },
-        { name: 'Shop App', progLang: 'React, Express.js, MongoDB', desc: 'shopApp', link: 'https://github.com/mhrubes/shop_testing', year: '2022' }
+        { name: 'Poe Stash Prices', progLang: 'React', desc: 'poeStashPrices', link: 'https://poe-stash-prices.vercel.app/', special: true, year: '2024' }
+        // { name: 'Wifi Name', progLang: 'C#', desc: 'wifiNameApp', link: 'https://github.com/mhrubes/WifiName', year: '2024' },
+        // { name: 'Overlay', progLang: 'C#', desc: 'overlayApp', link: 'https://github.com/mhrubes/Overlay', year: '2024' },
+        // { name: 'Symfony App', progLang: 'PHP', desc: 'symfonyApp', link: 'https://github.com/mhrubes/SymfonyApp', year: '2024' },
+        // { name: 'TwilioLibrary', progLang: 'C#', desc: 'twilioLibraryApp', link: 'https://github.com/mhrubes/TwilioLibrary', year: '2023' },
+        // { name: 'FE-Seat-Case-Study', progLang: 'React, Typescript', desc: 'feSeatCaseStudy', link: 'https://github.com/mhrubes/frontend-seating-case-study', year: '2023' },
+        // { name: 'Shop App', progLang: 'React, Express.js, MongoDB', desc: 'shopApp', link: 'https://github.com/mhrubes/shop_testing', year: '2022' }
     ]
 
     const getColumnClass = (index, total) => {
@@ -133,7 +135,7 @@ function About() {
             </div>
 
             <div className="container text-white mt-5">
-                <p dangerouslySetInnerHTML={{ __html: t('aboutPage.describe') }}></p>
+                <p className="typing-cursor-after" dangerouslySetInnerHTML={{ __html: t('aboutPage.describe') }}></p>
             </div>
 
             <div className="container text-center mt-3">
@@ -152,11 +154,17 @@ function About() {
             <div className="container text-white">
                 <div className="row m-0">
                     <div className="col-md-6">
-                        <p className="text-center h4 pb-3 setShadow">{t('aboutPage.technicalKnowledge')}</p>
+                        <p className="text-center h4 pb-3 setShadow">
+                            <FontAwesomeIcon icon={faLayerGroup} className="section-heading-icon" />
+                            {t('aboutPage.technicalKnowledge')}
+                        </p>
                         <div className="skills-grid">
                             {skillCategories.map((category) => (
                                 <div key={category.key} className="skill-category-card">
-                                    <div className="skill-category-title">{t(`aboutPage.skillCategories.${category.key}`)}</div>
+                                    <div className="skill-category-header">
+                                        <FontAwesomeIcon icon={category.icon} className="skill-category-icon" />
+                                        <span className="skill-category-title">{t(`aboutPage.skillCategories.${category.key}`)}</span>
+                                    </div>
                                     <div className="skill-pill-row">
                                         {category.items.map((item) => (
                                             <span key={item} className="skill-pill">
@@ -171,8 +179,11 @@ function About() {
                         {window.innerWidth <= 767 && <hr className="text-white m-5" />}
                     </div>
                     <div className="col-md-6">
-                        <p className="text-center h4 pb-3 setShadow">{t('aboutPage.motivation')}</p>
-                        <p dangerouslySetInnerHTML={{ __html: t('aboutPage.motivationText') }}></p>
+                        <p className="text-center h4 pb-3 setShadow">
+                            <FontAwesomeIcon icon={faLightbulb} className="section-heading-icon" />
+                            {t('aboutPage.motivation')}
+                        </p>
+                        <p className="typing-cursor-after" dangerouslySetInnerHTML={{ __html: t('aboutPage.motivationText') }}></p>
                     </div>
                 </div>
             </div>
@@ -180,7 +191,10 @@ function About() {
             <hr className="text-white m-5" />
 
             <div className="text-white text-center pb-3">
-                <h2 className="setShadow">{t('aboutPage.workExperience')}</h2>
+                <h2 className="setShadow">
+                    <FontAwesomeIcon icon={faBriefcase} className="section-heading-icon" />
+                    {t('aboutPage.workExperience')}
+                </h2>
             </div>
 
             <div className="container text-white">
@@ -196,7 +210,7 @@ function About() {
                                             style={{
                                                 width: '12px',
                                                 height: '12px',
-                                                borderRadius: '50%',
+                                                borderRadius: '3px',
                                                 marginLeft: '-14px',
                                                 top: '0'
                                             }}></div>
@@ -243,7 +257,10 @@ function About() {
             <hr className="text-white m-5" />
 
             <div className="text-white text-center pb-3">
-                <h2 className="setShadow">{t('aboutPage.reference')}</h2>
+                <h2 className="setShadow">
+                    <FontAwesomeIcon icon={faFolderTree} className="section-heading-icon" />
+                    {t('aboutPage.reference')}
+                </h2>
                 <Link to="https://github.com/mhrubes?tab=repositories" target="_blank">
                     <img className="aboutLinksImage m-1 rounded-circle" src={githubImage} alt="Github" title="GitHub" />
                 </Link>
@@ -265,7 +282,10 @@ function About() {
             <hr className="text-white m-5" />
 
             <div className="text-white text-center pb-3">
-                <h2 className="setShadow">{t('aboutPage.technology')}</h2>
+                <h2 className="setShadow">
+                    <FontAwesomeIcon icon={faServer} className="section-heading-icon" />
+                    {t('aboutPage.technology')}
+                </h2>
             </div>
 
             <div className="container">
@@ -284,19 +304,11 @@ function About() {
 
             <hr className="text-white m-5" />
 
-            <div className="text-center" style={{ marginTop: '-50px' }}>
-                <span className="display-2 text-white">↓</span>
-            </div>
-
-            <div className="text-center mt-2 pb-5">
-                <div>
-                    <Link className="text-decoration-none" to="/contact">
-                        <span className="text-white h5">{t('aboutPage.contactMe')}</span>
-                    </Link>
-                </div>
-                <div className="mt-2">
-                    <Language color="text-white" />
-                </div>
+            <div className="text-center pb-5">
+                <Link to="/contact" className="cta-contact-button">
+                    {t('aboutPage.contactMe')}
+                    <FontAwesomeIcon icon={faArrowRight} />
+                </Link>{' '}
             </div>
 
             {backToTop && (

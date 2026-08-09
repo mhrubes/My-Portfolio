@@ -1,47 +1,34 @@
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFolder } from '@fortawesome/free-solid-svg-icons'
 
 function ProjectDetail(props) {
     const { t } = useTranslation()
 
-    let { name, progLang, desc, link, special, year } = props
-
-    const cardStyle = special
-        ? {
-              minHeight: '215px',
-              //   background: 'linear-gradient(to top, #d9ffa1, #f8ffb6, white)'
-              background: 'white'
-          }
-        : { minHeight: '215px', background: 'gray' }
-
-    const boldStyle = special
-        ? {
-              fontWeight: 'bold'
-          }
-        : {}
-
-    // const buttonClass = special ? 'btn color-sweep-animation' : 'btn projectDetailButton'
-    const buttonClass = 'btn projectDetailButton'
+    let { name, progLang, desc, link, year } = props
 
     return (
-        <div className="card m-0" style={cardStyle}>
-            <div className="card-body d-flex flex-column">
-                <div className="d-flex justify-content-between align-items-center">
-                    <h5 className="card-title" style={boldStyle}>
-                        {name}
-                    </h5>
-                    <span className="text-muted">{year}</span>
-                </div>
-                <h6 className="card-subtitle mb-2 text-muted">{progLang}</h6>
-                <p className="card-text">{t(`aboutPage.${desc}`)}</p>
-                <div className="mt-auto">
-                    <Link className="text-decoration-none" to={link} target="_blank">
-                        <button className={buttonClass}>
-                            {/* <span className={special && 'text-white'}>{t('aboutPage.clickHere')}</span> */}
-                            <span className={false && 'text-white'}>{t('aboutPage.clickHere')}</span>
-                        </button>
-                    </Link>
-                </div>
+        <div className="project-card">
+            <div className="project-card-header">
+                <span className="project-card-name">
+                    <FontAwesomeIcon icon={faFolder} className="project-card-icon" />
+                    {name}
+                </span>
+                <span className="project-card-year">{year}</span>
+            </div>
+            <div className="skill-pill-row mb-2">
+                {progLang.split(',').map((tech) => (
+                    <span key={tech} className="skill-pill">
+                        {tech.trim()}
+                    </span>
+                ))}
+            </div>
+            <p className="project-card-text">{t(`aboutPage.${desc}`)}</p>
+            <div className="mt-auto">
+                <Link className="text-decoration-none" to={link} target="_blank">
+                    <button className="btn aboutButton aboutButton--pulse btn-sm">{t('aboutPage.clickHere')}</button>
+                </Link>
             </div>
         </div>
     )

@@ -323,7 +323,7 @@ function Contact() {
                                         disabled={isDisabled}
                                         style={{ maxWidth: '150px' }}
                                     />
-                                    <button type="button" className="btn btn-sm btn-outline-light" onClick={generateCaptcha} disabled={isDisabled} title={t('contactPage.captchaRefresh')}>
+                                    <button type="button" className="btn btn-sm captcha-refresh-btn" onClick={generateCaptcha} disabled={isDisabled} title={t('contactPage.captchaRefresh')}>
                                         🔄
                                     </button>
                                 </div>
