@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
-import TypeWritter from 'typewriter-effect'
 import emailjs from '@emailjs/browser'
 import { toast } from 'react-toastify'
 
@@ -187,21 +186,11 @@ function Contact() {
     return (
         <div className="main">
             <Navigation />
-            <div className="container" style={windowWidth < 768 ? { paddingTop: '150px' } : { paddingTop: '220px' }}>
+            <div className="container" style={windowWidth < 768 ? { paddingTop: '110px' } : { paddingTop: '150px' }}>
                 <div className="row m-0 p-0">
                     <div className="col-md-5 col-12 text-white">
                         <h3 style={{ textDecoration: 'underline' }}>
-                            <strong>
-                                <TypeWritter
-                                    options={{
-                                        strings: t('contactPage.connectWithMe'),
-                                        autoStart: true,
-                                        loop: false,
-                                        delay: 50,
-                                        cursor: ''
-                                    }}
-                                />
-                            </strong>
+                            <strong>{t('contactPage.connectWithMe')}</strong>
                         </h3>
                         <br />
                         <div>
@@ -256,17 +245,7 @@ function Contact() {
 
                     <div className="col-md-7 col-12 text-white pb-5">
                         <h3>
-                            <strong>
-                                <TypeWritter
-                                    options={{
-                                        strings: t('contactPage.contactForm'),
-                                        autoStart: true,
-                                        loop: false,
-                                        delay: 50,
-                                        cursor: ''
-                                    }}
-                                />
-                            </strong>
+                            <strong>{t('contactPage.contactForm')}</strong>
                         </h3>
                         <br />
                         <form onSubmit={onSubmit}>

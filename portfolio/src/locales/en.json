@@ -2,12 +2,23 @@
     "hi": "Hey!",
     "inDevelopment": "In Development",
     "mainPage": {
-        "im": "My name is"
+        "im": "My name is",
+        "greeting": "Hi, I'm Martin.",
+        "introDescription": "Backend developer focused on <strong>Node.js</strong> and <strong>PostgreSQL</strong>. I build application and microservice architecture, work on performance and reliability, and regularly use AI tools like <strong>Claude</strong> in development."
     },
     "aboutPage": {
         "header": "<strong>Biography</strong>",
         "describe": "Programming has always been my passion, which is why I chose an IT-focused field in high school that allowed me to gain valuable experience. To further deepen my knowledge and skills, I decided to continue my studies at <strong>Unicorn University</strong>.<br/><br/>During my studies at this university, I improved in various IT sectors, learned to work effectively in teams, and write technical documentation during application development.<br/><br/>Thanks to university and subsequent work experience, I gained solid foundations in JS React, C#, databases - MongoDB / MySQL, and other essential tools. Currently, I specialize in Backend development and application architecture, where I solve complex logical problems and optimize computational performance.<br/><br/>For the past several years, I've been working at <strong>Your Solutions s.r.o.</strong>, formerly known as <strong>YOUR SYSTEM</strong>, where I focus on developing applications and microservices for point-of-sale systems at gas stations. I have extensive experience with Node.js and PostgreSQL, which I actively use in real-world projects. I also work with other tools such as Dozzle for application logging and additional technologies needed for robust backend solutions. <br/><br/>I actively use AI tools such as Claude and others, which help me to optimize development, find solutions faster and improve the quality of the code.",
         "technicalKnowledge": "Technical knowledge",
+        "skillCategories": {
+            "languages": "Languages",
+            "backend": "Backend",
+            "databases": "Databases",
+            "tools": "Tools",
+            "devops": "DevOps",
+            "ai": "AI Workflow",
+            "hardware": "Hardware"
+        },
         "motivation": "Motivation",
         "motivationText": "I've been passionate about programming since the transition from primary to secondary school. What I appreciate most about this field is that it's a continuous journey of improvement - one can never be the best without constantly developing. <br/><br/>The rapid evolution in IT is both a challenge and an opportunity for me. Every day, I actively learn and apply new knowledge that comes from real projects and practical experience. This dynamism motivates me to continuously grow and seek optimal solutions. <br/><br/>What fascinates me most about IT is its diversity - every day brings new challenges, whether working with different programming languages, databases, or system architecture. <br/><br/>My <strong>goal</strong> is to constantly push the boundaries of my knowledge, apply best practices, and simultaneously discover innovative approaches that bring value to real-world projects.",
         "workExperience": "Work Experience",
@@ -27,7 +38,7 @@
                 "technologies": "",
                 "url": "https://czecom.cz"
             },
-            "yourSystem": {
+            "yourSolutions": {
                 "period": "6. 2024 - Present",
                 "company": "Your Solutions s.r.o.",
                 "position": "Programmer",

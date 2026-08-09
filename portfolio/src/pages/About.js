@@ -1,9 +1,8 @@
 import { useTranslation } from 'react-i18next'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import Navigation from '../navigation'
 import ProjectDetail from '../components/about/Project-detail'
-import SkillNoLoopWritter from '../components/about/Skills-no-loop-Writter'
 import Language from '../components/LanguageChange'
 
 import { Link } from 'react-router-dom'
@@ -11,6 +10,16 @@ import { Link } from 'react-router-dom'
 import githubImage from '../icons/github.png'
 import linkedin from '../icons/linkedIn.png'
 import TechFlipCard from '../components/about/Tech-flip-card'
+
+const skillCategories = [
+    { key: 'languages', items: ['HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'C# / .NET Core'] },
+    { key: 'backend', items: ['Node.js', 'Express.js', 'Vue.js', 'React.js'] },
+    { key: 'databases', items: ['SQL', 'PostgreSQL', 'MySQL', 'MongoDB'] },
+    { key: 'tools', items: ['Git', 'GitHub', 'Jira', 'Slack', 'Postman', 'Insomnia', 'Hoppscotch'] },
+    { key: 'devops', items: ['Docker', 'Portainer', 'Swarmpit', 'Dozzle'] },
+    { key: 'ai', items: ['Claude', 'Cursor', 'ChatGPT', 'GitHub Copilot'] },
+    { key: 'hardware', items: ['Dahua', 'Hikvision', 'Jablotron'] }
+]
 
 function About() {
     const { t } = useTranslation()
@@ -42,12 +51,12 @@ function About() {
         { className: 'devicon-jira-plain', title: 'Jira' },
         // { className: 'devicon-slack-plain', title: 'Slack' },
         { className: 'devicon-docker-plain', title: 'Docker' },
-        { className: 'devicon-cursor-plain', title: 'Cursor', imageUrl: '/icons/cursor-plain.svg' },
+        // { className: 'devicon-cursor-plain', title: 'Cursor', imageUrl: '/icons/cursor-plain.svg' },
         { className: 'devicon-claude-plain', title: 'Claude', imageUrl: '/icons/claude-plain.svg' }
         // { className: 'devicon-jenkins-line', title: 'Jenkins' }
     ]
 
-    const workExperienceKeys = ['unicorn', 'czecom', 'yourSystem']
+    const workExperienceKeys = ['unicorn', 'czecom', 'yourSolutions']
 
     const projects = [
         { name: 'Faktura App', progLang: 'Node.js, PostgreSQL, Electron', desc: 'fakturaApp', link: 'https://github.com/mhrubes/faktura-app', special: true, year: '2026' },
@@ -81,21 +90,6 @@ function About() {
         newFlipStates[index] = isFlipped
         setFlipStates(newFlipStates)
     }
-
-    const skillsObj = [
-        'HTML5 + CSS3',
-        'Javascript - Node.js, React.js, Vue.js Express.js, Typescript',
-        'C# - .NET Core, WPF, Windows Forms',
-        'SQL, PostgreSQL, MySQL, MongoDB',
-        'Postman, Insomnia, Hoppscotch',
-        'Git, GitHub, Jira, Slack',
-        'AI - Claude, Cursor, ChatGPT, GitHub Copilot',
-        // 'Docker, Jenkins',
-        'Docker',
-        'Portainer, Swarmpit, Dozzle',
-        '',
-        'Dahua, Hikvision, Jablotron'
-    ]
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
@@ -159,27 +153,20 @@ function About() {
                 <div className="row m-0">
                     <div className="col-md-6">
                         <p className="text-center h4 pb-3 setShadow">{t('aboutPage.technicalKnowledge')}</p>
-                        <ul>
-                            {skillsObj.map((item, index) => {
-                                const keywordsToHighlight = ['Node.js', 'PostgreSQL', 'Postman', 'Portainer', 'Claude']
-                                const highlightKeywords = (text, keywords) => {
-                                    const pattern = new RegExp(`\\b(${keywords.join('|')})\\b`, 'g')
-                                    return text.replace(pattern, '<strong>$1</strong>')
-                                }
-                                const highlightedText = highlightKeywords(item, keywordsToHighlight)
-
-                                return (
-                                    <span key={index}>
-                                        {item !== '' && (
-                                            <li>
-                                                <SkillNoLoopWritter lang={highlightedText} />
-                                            </li>
-                                        )}
-                                        <br />
-                                    </span>
-                                )
-                            })}
-                        </ul>
+                        <div className="skills-grid">
+                            {skillCategories.map((category) => (
+                                <div key={category.key} className="skill-category-card">
+                                    <div className="skill-category-title">{t(`aboutPage.skillCategories.${category.key}`)}</div>
+                                    <div className="skill-pill-row">
+                                        {category.items.map((item) => (
+                                            <span key={item} className="skill-pill">
+                                                {item}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
 
                         {window.innerWidth <= 767 && <hr className="text-white m-5" />}
                     </div>
@@ -212,8 +199,7 @@ function About() {
                                                 borderRadius: '50%',
                                                 marginLeft: '-14px',
                                                 top: '0'
-                                            }}
-                                        ></div>
+                                            }}></div>
                                         <div
                                             className="position-absolute start-0 timeline-line"
                                             style={{
@@ -221,8 +207,7 @@ function About() {
                                                 top: '12px',
                                                 height: 'calc(100% - 12px)',
                                                 marginLeft: '-8px'
-                                            }}
-                                        ></div>
+                                            }}></div>
                                         <div className="ps-4">
                                             <div className="fw-bold mb-3 h5">{experience.position}</div>
                                             <div className="mb-3">
@@ -242,7 +227,7 @@ function About() {
                                             {experience.url && (
                                                 <div className="mt-3">
                                                     <Link to={experience.url} target="_blank" rel="noopener noreferrer" className="text-white text-decoration-underline">
-                                                        {experience.url}
+                                                        {experience.url.replace(/^https?:\/\//, '').replace(/\/$/, '')}
                                                     </Link>
                                                 </div>
                                             )}
@@ -284,32 +269,15 @@ function About() {
             </div>
 
             <div className="container">
-                <div className="row m-0">
-                    {windowWidth >= 1100 && <div className="col-xl-1"></div>}
-                    {technologyObj.map((item, index) => (
-                        <React.Fragment key={index}>
-                            {index < 5 && (
-                                <div className="col-xl-2 col-lg-3 col-md-2 col-4 p-1">
-                                    {windowWidth > 990 && <TechFlipCard key={index} item={item} index={index} flipStates={flipStates} handleFlip={handleFlip} height="150px" iconSize="75px" textFontSize="20px" />}
-                                    {windowWidth <= 990 && windowWidth > 767 && <TechFlipCard key={index} item={item} index={index} flipStates={flipStates} handleFlip={handleFlip} height="90px" iconSize="45px" textFontSize="14px" />}
-                                    {windowWidth <= 767 && <TechFlipCard key={index} item={item} index={index} flipStates={flipStates} handleFlip={handleFlip} height="60px" iconSize="30px" textFontSize="10px" />}
-                                </div>
-                            )}
-                            {index === 4 && windowWidth >= 1200 && <div className="col-xl-1"></div>}
-                        </React.Fragment>
-                    ))}
-                </div>
                 <div className="row m-0 justify-content-center">
                     {technologyObj.map((item, index) => (
-                        <React.Fragment key={index}>
-                            {index >= 5 && (
-                                <div className="col-xl-2 col-lg-3 col-md-2 col-4 p-1">
-                                    {windowWidth > 990 && <TechFlipCard key={index} item={item} index={index} flipStates={flipStates} handleFlip={handleFlip} height="150px" iconSize="75px" textFontSize="20px" />}
-                                    {windowWidth <= 990 && windowWidth > 767 && <TechFlipCard key={index} item={item} index={index} flipStates={flipStates} handleFlip={handleFlip} height="90px" iconSize="45px" textFontSize="14px" />}
-                                    {windowWidth <= 767 && <TechFlipCard key={index} item={item} index={index} flipStates={flipStates} handleFlip={handleFlip} height="60px" iconSize="30px" textFontSize="10px" />}
-                                </div>
+                        <div key={index} className="col-xl-2 col-lg-3 col-md-2 col-4 p-1">
+                            {windowWidth > 990 && <TechFlipCard item={item} index={index} flipStates={flipStates} handleFlip={handleFlip} height="150px" iconSize="75px" textFontSize="20px" />}
+                            {windowWidth <= 990 && windowWidth > 767 && (
+                                <TechFlipCard item={item} index={index} flipStates={flipStates} handleFlip={handleFlip} height="90px" iconSize="45px" textFontSize="14px" />
                             )}
-                        </React.Fragment>
+                            {windowWidth <= 767 && <TechFlipCard item={item} index={index} flipStates={flipStates} handleFlip={handleFlip} height="60px" iconSize="30px" textFontSize="10px" />}
+                        </div>
                     ))}
                 </div>
             </div>
@@ -340,8 +308,7 @@ function About() {
                         right: '20px',
                         fontSize: '40px'
                     }}
-                    onClick={scrollUp}
-                >
+                    onClick={scrollUp}>
                     👆
                 </button>
             )}

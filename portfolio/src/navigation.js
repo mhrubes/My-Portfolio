@@ -8,12 +8,17 @@ function Navigation() {
     const { t } = useTranslation()
     const location = useLocation()
     const [isLightMode, setIsLightMode] = useState(() => localStorage.getItem('theme') === 'light')
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     useEffect(() => {
         document.body.classList.toggle('light-mode', isLightMode)
         localStorage.setItem('theme', isLightMode ? 'light' : 'dark')
         window.dispatchEvent(new Event('theme-changed'))
     }, [isLightMode])
+
+    useEffect(() => {
+        setIsMenuOpen(false)
+    }, [location.pathname])
 
     const toggleTheme = () => {
         setIsLightMode((prevState) => !prevState)
@@ -28,26 +33,34 @@ function Navigation() {
                     MH
                 </Link>
 
-                <ul className="navbar-links nav m-0">
-                    <li className="nav-item">
-                        <Link to="/">
-                            <button className={getNavButtonClass('/')}>{t('pages.home')}</button>
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to="/about">
-                            <button className={getNavButtonClass('/about')}>{t('pages.about')}</button>
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to="/contact">
-                            <button className={getNavButtonClass('/contact')}>{t('pages.contact')}</button>
-                        </Link>
-                    </li>
-                </ul>
+                <button type="button" className="navbar-hamburger" aria-label="Menu" aria-expanded={isMenuOpen} onClick={() => setIsMenuOpen((prevState) => !prevState)}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
 
-                <div className="navbar-utils">
-                    <Language showThemeToggle={true} isLightMode={isLightMode} onToggleTheme={toggleTheme} />
+                <div className={`navbar-collapse ${isMenuOpen ? 'navbar-collapse--open' : ''}`}>
+                    <ul className="navbar-links nav m-0">
+                        <li className="nav-item">
+                            <Link to="/">
+                                <button className={getNavButtonClass('/')}>{t('pages.home')}</button>
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/about">
+                                <button className={getNavButtonClass('/about')}>{t('pages.about')}</button>
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/contact">
+                                <button className={getNavButtonClass('/contact')}>{t('pages.contact')}</button>
+                            </Link>
+                        </li>
+                    </ul>
+
+                    <div className="navbar-utils">
+                        <Language showThemeToggle={true} isLightMode={isLightMode} onToggleTheme={toggleTheme} />
+                    </div>
                 </div>
             </div>
         </div>
