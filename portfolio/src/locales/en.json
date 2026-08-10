@@ -1,8 +1,5 @@
 {
-    "hi": "Hey!",
-    "inDevelopment": "In Development",
     "mainPage": {
-        "im": "My name is",
         "greeting": "Hi, I'm Martin.",
         "introDescription": "Backend developer focused on <strong>Node.js</strong> and <strong>PostgreSQL</strong>. I build application and microservice architecture, work on performance and reliability, and regularly use AI tools like <strong>Claude</strong> in development."
     },
@@ -54,12 +51,6 @@
         "sudokuAI": "Sudoku application created only with AI and prompts.",
         "metroSimulation": "Simulation of the Prague metro.",
         "poeStashPrices": "Simulation of stash tab prices in Path of Exile.",
-        "wifiNameApp": "Get Wi-Fi Name & Password where KeyContent is not empty.",
-        "overlayApp": "Overlay app that always stays on top of other applications.",
-        "symfonyApp": "Learning basics in PHP Symfony.",
-        "twilioLibraryApp": "Library for sending SMS and data as the message body.",
-        "shopApp": "Full-Stack app built with React and other technologies.",
-        "feSeatCaseStudy": "Launch the specified application according to the template.",
         "clickHere": "Click here",
         "technology": "Tech Stacks - Currently used",
         "contactMe": "Contact Me"
@@ -70,8 +61,8 @@
         "czechRepublic": "The Czech Republic",
         "contactForm": "Contact Form",
         "emailAddress": "Email address",
-        "firstname": "Firstname",
-        "lastname": "Lastname",
+        "firstname": "First name",
+        "lastname": "Last name",
         "yourMessage": "Your message",
         "gdpr": "I agree to the processing of personal data according to the GDPR.",
         "submitButton": "Send",
@@ -85,13 +76,9 @@
         "captchaLabel": "Verification:",
         "captchaPlaceholder": "Enter the result",
         "captchaError": "Incorrect result. Please try again.",
-        "captchaRefresh": "🔄 New"
-    },
-    "jobTitle": {
-        "webFrontendDeveloper": "Frontend developer",
-        "webBackendDeveloper": "Backend developer",
-        "webFullStackDeveloper": "Full-Stack developer",
-        "tester": "Tester"
+        "captchaRefresh": "🔄 New",
+        "sending": "Sending...",
+        "unknownName": "Unknown"
     },
     "pages": {
         "home": "Home",

@@ -123,7 +123,7 @@ function Contact() {
 
             // Kontrola, zda jsou nastaveny environment variables
             if (!serviceId || !templateId || !publicKey) {
-                console.error('EmailJS není správně nakonfigurován. Prosím nastavte environment variables podle EMAILJS_SETUP.md')
+                console.error('EmailJS není správně nakonfigurován. Prosím nastavte REACT_APP_EMAILJS_SERVICE_ID, REACT_APP_EMAILJS_TEMPLATE_ID a REACT_APP_EMAILJS_PUBLIC_KEY v .env souboru.')
                 toast.error(t('contactPage.formNotConfigured'), {
                     position: 'top-right',
                     autoClose: 5000,
@@ -137,7 +137,7 @@ function Contact() {
             }
 
             const templateParams = {
-                from_name: `${firstname} ${lastname}`.trim() || 'Neznámý',
+                from_name: `${firstname} ${lastname}`.trim() || t('contactPage.unknownName'),
                 from_email: email,
                 message: message,
                 to_email: 'm_hrubes@centrum.cz',
@@ -331,7 +331,7 @@ function Contact() {
                             </div>
                             <div className="text-center">
                                 <button className="btn aboutButton mt-3 w-50" type="submit" disabled={isDisabled || isLoading || !isFormValid()}>
-                                    {isLoading ? 'Odesílám...' : t('contactPage.submitButton')}
+                                    {isLoading ? t('contactPage.sending') : t('contactPage.submitButton')}
                                 </button>
                             </div>
                         </form>

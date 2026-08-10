@@ -1,8 +1,5 @@
 {
-    "hi": "Ahoj!",
-    "inDevelopment": "V přípravě",
     "mainPage": {
-        "im": "Jmenuji se",
         "greeting": "Ahoj, jsem Martin.",
         "introDescription": "Backend developer se zaměřením na <strong>Node.js</strong> a <strong>PostgreSQL</strong>. Stavím architekturu aplikací a mikroslužeb, řeším výkon a spolehlivost, a do vývoje běžně zapojuji AI nástroje jako <strong>Claude</strong>."
     },
@@ -54,18 +51,12 @@
         "sudokuAI": "Sudoku aplikace vytvořená pouze pomocí AI a promptů.",
         "metroSimulation": "Simulace pražského metra.",
         "poeStashPrices": "Simulace ceny stash tabs ve hře Path of Exile.",
-        "wifiNameApp": "Získání Wi-Fi názvů a hesel, kde KeyContent není prázdný.",
-        "overlayApp": "Overlay aplikace, která je vždy nadřazená nad všemi ostatními.",
-        "symfonyApp": "Pochopení základů v PHP Symfony.",
-        "twilioLibraryApp": "Knihovna pro posílání SMS a dat jako tělo zprávy.",
-        "shopApp": "Full-Stack kombinace pro vytvoření aplikace.",
-        "feSeatCaseStudy": "Zprovoznění zadané aplikace podle šablony.",
         "clickHere": "Klikni zde",
         "technology": "Technologie - Aktuálně používané",
         "contactMe": "Kontaktujte Mě"
     },
     "contactPage": {
-        "connectWithMe": "Spojte Se Semnou",
+        "connectWithMe": "Spojte se se mnou",
         "downloadCV": "Stáhnout CV",
         "czechRepublic": "Česká Republika",
         "contactForm": "Kontaktní Formulář",
@@ -85,13 +76,9 @@
         "captchaLabel": "Ověření:",
         "captchaPlaceholder": "Zadejte výsledek",
         "captchaError": "Nesprávný výsledek. Zkuste to prosím znovu.",
-        "captchaRefresh": "🔄 Nová"
-    },
-    "jobTitle": {
-        "webFrontendDeveloper": "Frontend vývojář",
-        "webBackendDeveloper": "Backend vývojář",
-        "webFullStackDeveloper": "Full-Stack vývojář",
-        "tester": "Tester"
+        "captchaRefresh": "🔄 Nová",
+        "sending": "Odesílám...",
+        "unknownName": "Neznámý"
     },
     "pages": {
         "home": "Domů",

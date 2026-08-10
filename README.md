@@ -6,11 +6,11 @@ Live: [mh-portfolio.vercel.app](https://mh-portfolio.vercel.app) *(uprav, pokud 
 
 ## Tech stack
 
-- React 18 + React Router v6
-- Bootstrap 5
+- React 19 + React Router v7
+- Bootstrap 5 (jen CSS)
 - i18next (čeština / angličtina)
 - EmailJS (kontaktní formulář)
-- react-toastify, typewriter-effect
+- react-toastify
 - FontAwesome + Devicon
 - Vercel Analytics
 

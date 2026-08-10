@@ -4,7 +4,6 @@ import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import './App.css'
-import 'bootstrap'
 import './i18n'
 import './utils/applyStoredTheme'
 
