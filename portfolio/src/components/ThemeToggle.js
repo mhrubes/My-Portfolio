@@ -1,7 +1,5 @@
 import { useState } from 'react'
 
-import playThemeSquaresTransition from '../utils/themeSquaresTransition'
-
 function SunIcon({ filled = false }) {
     const color = filled ? '#ffffff' : 'currentColor'
     const fill = filled ? '#ffffff' : 'none'
@@ -36,9 +34,6 @@ function ThemeToggle({ isLightMode, onToggle }) {
     const nextTheme = isLightMode ? 'dark' : 'light'
 
     const handleClick = () => {
-        const backgroundColor = isLightMode ? '#f3f5ff' : '#1d052e'
-        const borderColor = isLightMode ? 'rgba(27, 27, 27, 0.12)' : 'rgba(184, 156, 255, 0.15)'
-        playThemeSquaresTransition(backgroundColor, borderColor)
         onToggle()
         setShowCommand(true)
         setTimeout(() => setShowCommand(false), 1300)
