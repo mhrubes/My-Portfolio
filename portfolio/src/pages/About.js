@@ -7,7 +7,7 @@ import ProjectDetail from '../components/about/Project-detail'
 import { Link } from 'react-router-dom'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCode, faServer, faDatabase, faToolbox, faCloud, faRobot, faMicrochip, faBriefcase, faLightbulb, faLayerGroup, faFolderTree, faArrowRight, faDisplay } from '@fortawesome/free-solid-svg-icons'
+import { faCode, faServer, faDatabase, faToolbox, faCloud, faRobot, faMicrochip, faBriefcase, faLightbulb, faLayerGroup, faFolderTree, faArrowRight, faDisplay, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 
 import githubImage from '../icons/github.png'
 import linkedin from '../icons/linkedIn.png'
@@ -152,11 +152,11 @@ function About() {
                 </Link>
             </div>
 
-            <hr className="text-white m-5" />
+            <hr className="text-white section-divider" />
 
             <div className="container text-white">
                 <div className="row m-0">
-                    <div className="col-md-6">
+                    <div className="col-xl-6">
                         <p className="text-center h4 pb-3 setShadow">
                             <FontAwesomeIcon icon={faLayerGroup} className="section-heading-icon" />
                             {t('aboutPage.technicalKnowledge')}
@@ -179,9 +179,9 @@ function About() {
                             ))}
                         </div>
 
-                        {window.innerWidth <= 767 && <hr className="text-white m-5" />}
+                        {windowWidth < 1200 && <hr className="text-white section-divider" />}
                     </div>
-                    <div className="col-md-6">
+                    <div className="col-xl-6">
                         <p className="text-center h4 pb-3 setShadow">
                             <FontAwesomeIcon icon={faLightbulb} className="section-heading-icon" />
                             {t('aboutPage.motivation')}
@@ -191,7 +191,7 @@ function About() {
                 </div>
             </div>
 
-            <hr className="text-white m-5" />
+            <hr className="text-white section-divider" />
 
             <div className="text-white text-center pb-3">
                 <h2 className="setShadow">
@@ -257,7 +257,7 @@ function About() {
                 </div>
             </div>
 
-            <hr className="text-white m-5" />
+            <hr className="text-white section-divider" />
 
             <div className="text-white text-center pb-3">
                 <h2 className="setShadow">
@@ -282,7 +282,7 @@ function About() {
                 </div>
             </div>
 
-            <hr className="text-white m-5" />
+            <hr className="text-white section-divider" />
 
             <div className="text-white text-center pb-3">
                 <h2 className="setShadow">
@@ -305,7 +305,7 @@ function About() {
                 </div>
             </div>
 
-            <hr className="text-white m-5" />
+            <hr className="text-white section-divider" />
 
             <div className="text-center pb-5">
                 <Link to="/contact" className="cta-contact-button">
@@ -315,16 +315,8 @@ function About() {
             </div>
 
             {backToTop && (
-                <button
-                    className="btn text-white"
-                    style={{
-                        position: 'fixed',
-                        bottom: '20px',
-                        right: '20px',
-                        fontSize: '40px'
-                    }}
-                    onClick={scrollUp}>
-                    👆
+                <button className="back-to-top-btn" onClick={scrollUp} aria-label="Scroll to top" title="Scroll to top">
+                    <FontAwesomeIcon icon={faChevronUp} />
                 </button>
             )}
         </div>

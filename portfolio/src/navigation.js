@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useLocation } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCode, faXmark } from '@fortawesome/free-solid-svg-icons'
 
 import Language from './components/LanguageChange.js'
 
@@ -34,9 +36,7 @@ function Navigation() {
                 </Link>
 
                 <button type="button" className="navbar-hamburger" aria-label="Menu" aria-expanded={isMenuOpen} onClick={() => setIsMenuOpen((prevState) => !prevState)}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <FontAwesomeIcon icon={isMenuOpen ? faXmark : faCode} />
                 </button>
 
                 <div className={`navbar-collapse ${isMenuOpen ? 'navbar-collapse--open' : ''}`}>
