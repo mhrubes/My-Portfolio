@@ -7,7 +7,7 @@ import ProjectDetail from '../components/about/Project-detail'
 import { Link } from 'react-router-dom'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCode, faServer, faDatabase, faToolbox, faCloud, faRobot, faMicrochip, faBriefcase, faLightbulb, faLayerGroup, faFolderTree, faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { faCode, faServer, faDatabase, faToolbox, faCloud, faRobot, faMicrochip, faBriefcase, faLightbulb, faLayerGroup, faFolderTree, faArrowRight, faDisplay } from '@fortawesome/free-solid-svg-icons'
 
 import githubImage from '../icons/github.png'
 import linkedin from '../icons/linkedIn.png'
@@ -15,7 +15,8 @@ import TechFlipCard from '../components/about/Tech-flip-card'
 
 const skillCategories = [
     { key: 'languages', icon: faCode, items: ['HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'C# / .NET Core'] },
-    { key: 'backend', icon: faServer, items: ['Node.js', 'Express.js', 'Vue.js', 'React.js'] },
+    { key: 'frontend', icon: faDisplay, items: ['React.js', 'Vue.js'] },
+    { key: 'backend', icon: faServer, items: ['Node.js', 'Express.js'] },
     { key: 'databases', icon: faDatabase, items: ['SQL', 'PostgreSQL', 'MySQL', 'MongoDB'] },
     { key: 'tools', icon: faToolbox, items: ['Git', 'GitHub', 'Jira', 'Slack', 'Postman', 'Insomnia', 'Hoppscotch'] },
     { key: 'devops', icon: faCloud, items: ['Docker', 'Portainer', 'Swarmpit', 'Dozzle'] },

@@ -1,4 +1,6 @@
-import { useTranslation } from 'react-i18next'
+import { useState } from 'react'
+
+import playThemeSquaresTransition from '../utils/themeSquaresTransition'
 
 function SunIcon({ filled = false }) {
     const color = filled ? '#ffffff' : 'currentColor'
@@ -24,30 +26,26 @@ function MoonIcon({ filled = false }) {
 
     return (
         <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
-            <path
-                d="M18 14.5A6.5 6.5 0 0 1 9.5 6 7 7 0 1 0 18 14.5Z"
-                fill={filled ? '#ffffff' : 'none'}
-                stroke={color}
-                strokeWidth="1.5"
-                strokeLinejoin="round"
-            />
+            <path d="M18 14.5A6.5 6.5 0 0 1 9.5 6 7 7 0 1 0 18 14.5Z" fill={filled ? '#ffffff' : 'none'} stroke={color} strokeWidth="1.5" strokeLinejoin="round" />
         </svg>
     )
 }
 
 function ThemeToggle({ isLightMode, onToggle }) {
-    const { t } = useTranslation()
-    const label = isLightMode ? t('theme.switchToDark') : t('theme.switchToLight')
+    const [showCommand, setShowCommand] = useState(false)
+    const nextTheme = isLightMode ? 'dark' : 'light'
+
+    const handleClick = () => {
+        const backgroundColor = isLightMode ? '#f3f5ff' : '#1d052e'
+        const borderColor = isLightMode ? 'rgba(27, 27, 27, 0.12)' : 'rgba(184, 156, 255, 0.15)'
+        playThemeSquaresTransition(backgroundColor, borderColor)
+        onToggle()
+        setShowCommand(true)
+        setTimeout(() => setShowCommand(false), 1300)
+    }
 
     return (
-        <button
-            type="button"
-            className={`theme-toggle ${isLightMode ? 'theme-toggle--light' : 'theme-toggle--dark'}`}
-            onClick={onToggle}
-            title={label}
-            aria-label={label}
-            aria-pressed={isLightMode}
-        >
+        <button type="button" className={`theme-toggle ${isLightMode ? 'theme-toggle--light' : 'theme-toggle--dark'}`} onClick={handleClick} aria-pressed={isLightMode}>
             <span className="theme-toggle__track">
                 <span className="theme-toggle__icon theme-toggle__icon--sun">
                     <SunIcon />
@@ -56,6 +54,10 @@ function ThemeToggle({ isLightMode, onToggle }) {
                     <MoonIcon />
                 </span>
                 <span className="theme-toggle__knob">{isLightMode ? <SunIcon filled /> : <MoonIcon filled />}</span>
+            </span>
+            <span className={`theme-toggle-command ${showCommand ? 'is-visible' : ''}`} aria-hidden="true">
+                $ theme --set={nextTheme}
+                <span className="theme-toggle-command-cursor">▋</span>
             </span>
         </button>
     )

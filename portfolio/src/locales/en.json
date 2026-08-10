@@ -9,6 +9,7 @@
         "technicalKnowledge": "Technical knowledge",
         "skillCategories": {
             "languages": "Languages",
+            "frontend": "Frontend",
             "backend": "Backend",
             "databases": "Databases",
             "tools": "Tools",
@@ -84,9 +85,5 @@
         "home": "Home",
         "about": "About me",
         "contact": "Contact"
-    },
-    "theme": {
-        "switchToDark": "Switch to dark mode",
-        "switchToLight": "Switch to light mode"
     }
 }

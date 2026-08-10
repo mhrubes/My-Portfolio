@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Analytics } from '@vercel/analytics/react'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import ScrollToTop from './components/ScrollToTop'
 
 const Main = lazy(() => import('./pages/Main'))
 const About = lazy(() => import('./pages/About'))
@@ -12,6 +13,7 @@ const Contact = lazy(() => import('./pages/Contact'))
 function App() {
     return (
         <BrowserRouter>
+            <ScrollToTop />
             <Suspense fallback={<div>Loading</div>}>
                 <Routes>
                     <Route path="/">

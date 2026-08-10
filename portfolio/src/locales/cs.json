@@ -9,6 +9,7 @@
         "technicalKnowledge": "Technické znalosti",
         "skillCategories": {
             "languages": "Jazyky",
+            "frontend": "Frontend",
             "backend": "Backend",
             "databases": "Databáze",
             "tools": "Nástroje",
@@ -84,9 +85,5 @@
         "home": "Domů",
         "about": "O mně",
         "contact": "Kontakt"
-    },
-    "theme": {
-        "switchToDark": "Přepnout na tmavý režim",
-        "switchToLight": "Přepnout na světlý režim"
     }
 }
