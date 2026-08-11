@@ -244,97 +244,122 @@ function Contact() {
                     {windowWidth < 768 && <hr className="text-white mt-4" />}
 
                     <div className="col-md-7 col-12 text-white pb-5">
-                        <h3>
-                            <strong>{t('contactPage.contactForm')}</strong>
-                        </h3>
-                        <br />
-                        <form onSubmit={onSubmit}>
-                            <div className="form-group">
-                                <label htmlFor="emailLabel">
-                                    {t('contactPage.emailAddress')} <strong className="text-danger">*</strong>
-                                </label>
-                                <input type="email" className="form-control" id="emailFormInput" placeholder="napr. martin@email.cz" value={email} onChange={(e) => setEmail(e.target.value)} disabled={isDisabled} />
-                                {emailErrorMessageSubmit && email.length === 0 && <span style={{ color: 'red' }}>{t('contactPage.emailErrorMessageEmpty')}</span>}
-                                {emailErrorMessageSubmit && email.length !== 0 && !isValidEmail(email) && <span style={{ color: 'red' }}>{t('contactPage.emailErrorMessageNotInclude')}</span>}
+                        <div className="dev-panel">
+                            <div className="dev-panel-header">
+                                <span className="dev-panel-dot"></span>
+                                <span className="dev-panel-dot"></span>
+                                <span className="dev-panel-dot"></span>
+                                <span className="dev-panel-title">{t('contactPage.contactForm')}</span>
                             </div>
-                            <div className="row mt-2">
-                                <div className="col-md-6 col-12 pt-2">
-                                    <label htmlFor="firstnameLabel">{t('contactPage.firstname')}</label>
-                                    <input type="text" className="form-control" placeholder={t('contactPage.firstname')} value={firstname} onChange={(e) => setFirstname(e.target.value)} disabled={isDisabled} />
-                                </div>
-                                <div className="col-md-6 col-12 pt-2">
-                                    <label htmlFor="lastnameLabel">{t('contactPage.lastname')}</label>
-                                    <input type="text" className="form-control" placeholder={t('contactPage.lastname')} value={lastname} onChange={(e) => setLastname(e.target.value)} disabled={isDisabled} />
-                                </div>
-                            </div>
-                            <div className="form-group pt-3">
-                                <label htmlFor="messageAreaLabel">
-                                    {t('contactPage.yourMessage')} <strong className="text-danger">*</strong>
-                                </label>
-                                <textarea className="form-control" id="messageAreaLabel" rows="3" value={message} onChange={(e) => setMessageArea(e.target.value)} disabled={isDisabled}></textarea>
-                                {messageErrorMessageSubmit && message.trim().length === 0 && <span style={{ color: 'red' }}>{t('contactPage.messageErrorMessageEmpty')}</span>}
-                            </div>
-                            <div className="form-group pt-2">
-                                <div className="form-check">
-                                    <input className="form-check-input" type="checkbox" id="acceptProccess" checked={acceptProccess} onChange={() => setAcceptProccess(acceptProccess ? false : true)} disabled={isDisabled} />
-                                    <label className="form-check-label" htmlFor="gridCheck">
-                                        {t('contactPage.gdpr')} <strong className="text-danger">*</strong>
-                                    </label>
-                                    <br />
-                                    {!acceptProccess && acceptProccessErrorSubmit && <span style={{ color: 'red' }}>{t('contactPage.acceptProcessGDPR')}</span>}
-                                </div>
-                            </div>
-                            <div className="form-group pt-3">
-                                <label htmlFor="captchaLabel">
-                                    {t('contactPage.captchaLabel')} <strong className="text-danger">*</strong>
-                                </label>
-                                <div className="d-flex align-items-center gap-2">
-                                    <div
-                                        className="border rounded p-2 bg-light text-dark"
-                                        style={{
-                                            minWidth: '150px',
-                                            textAlign: 'center',
-                                            fontSize: '18px',
-                                            fontWeight: 'bold',
-                                            userSelect: 'none',
-                                            WebkitUserSelect: 'none',
-                                            MozUserSelect: 'none',
-                                            msUserSelect: 'none'
-                                        }}
-                                        onCopy={(e) => e.preventDefault()}
-                                        onCut={(e) => e.preventDefault()}
-                                        onPaste={(e) => e.preventDefault()}
-                                    >
-                                        {captchaNum1} + {captchaNum2} + {captchaNum3} = ?
+                            <div className="dev-panel-body">
+                                <form onSubmit={onSubmit}>
+                                    <div className="form-group">
+                                        <label htmlFor="emailFormInput" className="contact-label">
+                                            {t('contactPage.emailAddress')} <strong className="text-danger">*</strong>
+                                        </label>
+                                        <input
+                                            type="email"
+                                            className="form-control contact-input"
+                                            id="emailFormInput"
+                                            placeholder="napr. martin@email.cz"
+                                            value={email}
+                                            onChange={(e) => setEmail(e.target.value)}
+                                            disabled={isDisabled}
+                                        />
+                                        {emailErrorMessageSubmit && email.length === 0 && <span className="form-error-text">{t('contactPage.emailErrorMessageEmpty')}</span>}
+                                        {emailErrorMessageSubmit && email.length !== 0 && !isValidEmail(email) && <span className="form-error-text">{t('contactPage.emailErrorMessageNotInclude')}</span>}
                                     </div>
-                                    <input
-                                        type="number"
-                                        className="form-control"
-                                        id="captchaInput"
-                                        placeholder={t('contactPage.captchaPlaceholder')}
-                                        value={captchaAnswer}
-                                        onChange={(e) => {
-                                            setCaptchaAnswer(e.target.value)
-                                            setCaptchaError(false)
-                                        }}
-                                        onCopy={(e) => e.preventDefault()}
-                                        onPaste={(e) => e.preventDefault()}
-                                        onCut={(e) => e.preventDefault()}
-                                        disabled={isDisabled}
-                                        style={{ maxWidth: '150px' }}
-                                    />
-                                    <button type="button" className="btn btn-sm captcha-refresh-btn" onClick={generateCaptcha} disabled={isDisabled} title={t('contactPage.captchaRefresh')}>
-                                        🔄
-                                    </button>
-                                </div>
-                                {captchaError && <span style={{ color: 'red' }}>{t('contactPage.captchaError')}</span>}
+                                    <div className="row mt-2">
+                                        <div className="col-md-6 col-12 pt-2">
+                                            <label htmlFor="firstnameInput" className="contact-label">
+                                                {t('contactPage.firstname')}
+                                            </label>
+                                            <input
+                                                type="text"
+                                                className="form-control contact-input"
+                                                id="firstnameInput"
+                                                placeholder={t('contactPage.firstname')}
+                                                value={firstname}
+                                                onChange={(e) => setFirstname(e.target.value)}
+                                                disabled={isDisabled}
+                                            />
+                                        </div>
+                                        <div className="col-md-6 col-12 pt-2">
+                                            <label htmlFor="lastnameInput" className="contact-label">
+                                                {t('contactPage.lastname')}
+                                            </label>
+                                            <input
+                                                type="text"
+                                                className="form-control contact-input"
+                                                id="lastnameInput"
+                                                placeholder={t('contactPage.lastname')}
+                                                value={lastname}
+                                                onChange={(e) => setLastname(e.target.value)}
+                                                disabled={isDisabled}
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="form-group pt-3">
+                                        <label htmlFor="messageAreaLabel" className="contact-label">
+                                            {t('contactPage.yourMessage')} <strong className="text-danger">*</strong>
+                                        </label>
+                                        <textarea
+                                            className="form-control contact-input"
+                                            id="messageAreaLabel"
+                                            rows="3"
+                                            value={message}
+                                            onChange={(e) => setMessageArea(e.target.value)}
+                                            disabled={isDisabled}
+                                        ></textarea>
+                                        {messageErrorMessageSubmit && message.trim().length === 0 && <span className="form-error-text">{t('contactPage.messageErrorMessageEmpty')}</span>}
+                                    </div>
+                                    <div className="form-group pt-3">
+                                        <div className="form-check contact-checkbox">
+                                            <input className="form-check-input" type="checkbox" id="acceptProccess" checked={acceptProccess} onChange={() => setAcceptProccess(acceptProccess ? false : true)} disabled={isDisabled} />
+                                            <label className="form-check-label" htmlFor="acceptProccess">
+                                                {t('contactPage.gdpr')} <strong className="text-danger">*</strong>
+                                            </label>
+                                            <br />
+                                            {!acceptProccess && acceptProccessErrorSubmit && <span className="form-error-text">{t('contactPage.acceptProcessGDPR')}</span>}
+                                        </div>
+                                    </div>
+                                    <div className="form-group pt-3">
+                                        <label htmlFor="captchaInput" className="contact-label">
+                                            {t('contactPage.captchaLabel')} <strong className="text-danger">*</strong>
+                                        </label>
+                                        <div className="d-flex align-items-center gap-2">
+                                            <div className="captcha-box" onCopy={(e) => e.preventDefault()} onCut={(e) => e.preventDefault()} onPaste={(e) => e.preventDefault()}>
+                                                {captchaNum1} + {captchaNum2} + {captchaNum3} = ?
+                                            </div>
+                                            <input
+                                                type="number"
+                                                className="form-control contact-input captcha-answer-input"
+                                                id="captchaInput"
+                                                placeholder={t('contactPage.captchaPlaceholder')}
+                                                value={captchaAnswer}
+                                                onChange={(e) => {
+                                                    setCaptchaAnswer(e.target.value)
+                                                    setCaptchaError(false)
+                                                }}
+                                                onCopy={(e) => e.preventDefault()}
+                                                onPaste={(e) => e.preventDefault()}
+                                                onCut={(e) => e.preventDefault()}
+                                                disabled={isDisabled}
+                                            />
+                                            <button type="button" className="btn btn-sm captcha-refresh-btn" onClick={generateCaptcha} disabled={isDisabled} title={t('contactPage.captchaRefresh')}>
+                                                🔄
+                                            </button>
+                                        </div>
+                                        {captchaError && <span className="form-error-text">{t('contactPage.captchaError')}</span>}
+                                    </div>
+                                    <div className="text-center">
+                                        <button className="btn aboutButton mt-3 w-50" type="submit" disabled={isDisabled || isLoading || !isFormValid()}>
+                                            {isLoading ? t('contactPage.sending') : t('contactPage.submitButton')}
+                                        </button>
+                                    </div>
+                                </form>
                             </div>
-                            <div className="text-center">
-                                <button className="btn aboutButton mt-3 w-50" type="submit" disabled={isDisabled || isLoading || !isFormValid()}>
-                                    {isLoading ? t('contactPage.sending') : t('contactPage.submitButton')}
-                                </button>
-                            </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>

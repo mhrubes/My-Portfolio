@@ -605,6 +605,101 @@ hr.text-white,
     }
 }
 
+.contact-label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #b89cff;
+    margin-bottom: 6px;
+}
+
+.light-mode .contact-label {
+    color: #6b0fb8;
+}
+
+.contact-input {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(184, 156, 255, 0.25) !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+}
+
+.contact-input::placeholder {
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.contact-input:focus {
+    background: rgba(255, 255, 255, 0.07) !important;
+    border-color: #8814d9 !important;
+    box-shadow: 0 0 0 3px rgba(136, 20, 217, 0.25) !important;
+    color: #ffffff !important;
+}
+
+.light-mode .contact-input {
+    background: rgba(0, 0, 0, 0.03) !important;
+    border-color: rgba(27, 27, 27, 0.15) !important;
+    color: #1b1b1b !important;
+}
+
+.light-mode .contact-input::placeholder {
+    color: rgba(27, 27, 27, 0.35);
+}
+
+.light-mode .contact-input:focus {
+    background: #ffffff !important;
+    color: #1b1b1b !important;
+}
+
+.contact-checkbox .form-check-input {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(184, 156, 255, 0.4);
+}
+
+.contact-checkbox .form-check-input:checked {
+    background-color: #8814d9;
+    border-color: #8814d9;
+}
+
+.contact-checkbox .form-check-input:focus {
+    box-shadow: 0 0 0 3px rgba(136, 20, 217, 0.25);
+    border-color: #8814d9;
+}
+
+.form-error-text {
+    display: inline-block;
+    margin-top: 4px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: #ff6b6b;
+}
+
+.captcha-box {
+    min-width: 150px;
+    padding: 10px 14px;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    font-weight: 600;
+    color: #b89cff;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(184, 156, 255, 0.25);
+    border-radius: 8px;
+    user-select: none;
+}
+
+.light-mode .captcha-box {
+    color: #6b0fb8;
+    background: rgba(0, 0, 0, 0.03);
+    border-color: rgba(27, 27, 27, 0.15);
+}
+
+.captcha-answer-input {
+    max-width: 150px;
+}
+
 .back-to-top-btn {
     position: fixed;
     bottom: 20px;
