@@ -64,6 +64,7 @@ function About() {
     const workExperienceKeys = ['unicorn', 'czecom', 'yourSolutions']
 
     const projects = [
+        { name: 'Mobile App Scanner', progLang: 'Node.js', desc: 'mobileAppScanner', link: 'https://github.com/mhrubes/mobile-app-scanner', special: true, year: '2026' },
         { name: 'Faktura App', progLang: 'Node.js, PostgreSQL, Electron', desc: 'fakturaApp', link: 'https://github.com/mhrubes/faktura-app', special: true, year: '2026' },
         { name: 'Byt Planner', progLang: 'Vite, Three.js', desc: 'bytPlanner', link: 'https://mh-byt-planner.vercel.app/', special: true, year: '2026' },
         { name: 'F1 Simulátor', progLang: 'Typescript', desc: 'raceSimulator', link: 'https://mh-f1-simulation.vercel.app/', special: true, year: '2026' },
