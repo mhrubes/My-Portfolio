@@ -327,7 +327,7 @@ function Contact() {
                                         <label htmlFor="captchaInput" className="contact-label">
                                             {t('contactPage.captchaLabel')} <strong className="text-danger">*</strong>
                                         </label>
-                                        <div className="d-flex align-items-center gap-2">
+                                        <div className="d-flex align-items-center gap-2 captcha-row">
                                             <div className="captcha-box" onCopy={(e) => e.preventDefault()} onCut={(e) => e.preventDefault()} onPaste={(e) => e.preventDefault()}>
                                                 {captchaNum1} + {captchaNum2} + {captchaNum3} = ?
                                             </div>

@@ -700,6 +700,22 @@ hr.text-white,
     max-width: 150px;
 }
 
+@media (max-width: 768px) {
+    .captcha-row {
+        flex-wrap: wrap;
+    }
+
+    .captcha-box {
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    .captcha-answer-input {
+        flex: 1;
+        max-width: none;
+    }
+}
+
 .back-to-top-btn {
     position: fixed;
     bottom: 20px;
