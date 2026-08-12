@@ -20,6 +20,7 @@
         "motivation": "Motivation",
         "motivationText": "I've been passionate about programming since the transition from primary to secondary school. What I appreciate most about this field is that it's a continuous journey of improvement - one can never be the best without constantly developing. <br/><br/>The rapid evolution in IT is both a challenge and an opportunity for me. Every day, I actively learn and apply new knowledge that comes from real projects and practical experience. This dynamism motivates me to continuously grow and seek optimal solutions. <br/><br/>What fascinates me most about IT is its diversity - every day brings new challenges, whether working with different programming languages, databases, or system architecture. <br/><br/>My <strong>goal</strong> is to constantly push the boundaries of my knowledge, apply best practices, and simultaneously discover innovative approaches that bring value to real-world projects.",
         "workExperience": "Work Experience",
+        "statusActive": "active",
         "workExperienceItems": {
             "unicorn": {
                 "period": "10. 2020 - 3. 2023",
@@ -37,7 +38,8 @@
                 "url": "https://czecom.cz"
             },
             "yourSolutions": {
-                "period": "6. 2024 - Present",
+                "period": "6. 2024 -",
+                "current": true,
                 "company": "Your Solutions s.r.o.",
                 "position": "Programmer",
                 "description": "Application development / microservices for controlling and point-of-sale systems at gas stations. Especially focusing on the backend part of the application using the database - PostgreSQL.",

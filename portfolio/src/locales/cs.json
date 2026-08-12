@@ -20,6 +20,7 @@
         "motivation": "Motivace",
         "motivationText": "Programování mě baví již od přelomu základní a střední školy. Právě na tomto oboru oceňuji, že je to neustálá cesta zdokonalování - člověk nikdy nemůže být nejlepší, aniž by se nepřetržitě rozvíjel. <br/><br/>Rychlý vývoj v IT je pro mě výzvou i příležitostí. Každý den se aktivně učím a aplikuji nové poznatky, které přináší reálné projekty a praxe. Tato dynamika mě motivuje k neustálému růstu a hledání optimálních řešení. <br/><br/>Na IT oboru mě nejvíce fascinuje jeho rozmanitost - každý den přináší nové výzvy, ať už jde o práci s různými programovacími jazyky, databázemi, nebo architekturou systémů. <br/><br/>Mým <strong>cílem</strong> je neustále posouvat hranice svých znalostí, aplikovat osvědčené postupy a zároveň objevovat inovativní přístupy, které přinášejí hodnotu v reálných projektech.",
         "workExperience": "Pracovní Zkušenosti",
+        "statusActive": "active",
         "workExperienceItems": {
             "unicorn": {
                 "period": "10. 2020 - 3. 2023",
@@ -37,7 +38,8 @@
                 "url": "https://czecom.cz"
             },
             "yourSolutions": {
-                "period": "6. 2024 - Nyní",
+                "period": "6. 2024 -",
+                "current": true,
                 "company": "Your Solutions s.r.o.",
                 "position": "Programátor",
                 "description": "Vývoj aplikací / mikroslužeb pro řídící a pokladní systémy čerpacích stanic. Zejména se zaměřením na Backendovou část aplikace s využitím databáze - PostgreSQL.",

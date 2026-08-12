@@ -239,6 +239,12 @@ function About() {
                                                     <span className="fst-italic">{experience.company}</span>
                                                 )}
                                                 <span className="ms-2 small">- {experience.period}</span>
+                                                {experience.current && (
+                                                    <span className="status-active-badge ms-2">
+                                                        <span className="status-active-dot"></span>
+                                                        {t('aboutPage.statusActive')}
+                                                    </span>
+                                                )}
                                             </div>
                                             <div className="mb-3">{experience.description}</div>
                                             {experience.technologies && <div className="mb-3">{experience.technologies}</div>}

@@ -241,6 +241,47 @@ hr.text-white,
     color: #6b0fb8;
 }
 
+.status-active-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 2px 8px;
+    border: 1px solid rgba(39, 201, 63, 0.4);
+    border-radius: 6px;
+    background: rgba(39, 201, 63, 0.08);
+    color: #27c93f;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: lowercase;
+    letter-spacing: 0.02em;
+    vertical-align: middle;
+}
+
+.light-mode .status-active-badge {
+    border-color: rgba(23, 140, 41, 0.4);
+    background: rgba(23, 140, 41, 0.08);
+    color: #178c29;
+}
+
+.status-active-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+    animation: statusActivePulse 1.6s ease-in-out infinite;
+}
+
+@keyframes statusActivePulse {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.25;
+    }
+}
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
