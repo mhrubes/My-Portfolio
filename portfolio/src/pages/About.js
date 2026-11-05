@@ -64,6 +64,8 @@ function About() {
     const workExperienceKeys = ['unicorn', 'czecom', 'yourSolutions']
 
     const projects = [
+        { name: 'Vydajo', progLang: 'React, Vite', desc: 'vydajo', link: 'https://vydajo.vercel.app/', special: true, year: '2026' },
+        { name: 'Losovačka', progLang: 'JavaScript', desc: 'losovacka', link: 'https://losovacka.vercel.app/', special: true, year: '2026' },
         { name: 'Mobile App Scanner', progLang: 'Node.js', desc: 'mobileAppScanner', link: 'https://github.com/mhrubes/mobile-app-scanner', special: true, year: '2026' },
         { name: 'Faktura App', progLang: 'Node.js, PostgreSQL, Electron', desc: 'fakturaApp', link: 'https://github.com/mhrubes/faktura-app', special: true, year: '2026' },
         { name: 'Byt Planner', progLang: 'Vite, Three.js', desc: 'bytPlanner', link: 'https://mh-byt-planner.vercel.app/', special: true, year: '2026' },
