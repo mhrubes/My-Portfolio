@@ -21,8 +21,8 @@ portfolio/
 ├── public/
 │   └── cv/              # stažitelná CV (CV_cz.pdf, CV_en.pdf)
 ├── src/
-│   ├── pages/            # Main, About, Contact
-│   ├── components/       # Navbar, ThemeToggle, LanguageChange, Icon, about/*
+│   ├── pages/            # Main, About, Backend, Contact
+│   ├── components/       # Navbar, ThemeToggle, LanguageChange, Icon, about/*, backend/*
 │   ├── locales/          # cs.json, en.json
 │   ├── utils/            # applyStoredTheme.js
 │   └── i18n.js
@@ -30,6 +30,13 @@ portfolio/
 
 ## Funkce
 
+- **Projekty (About)** – karty projektů: tlačítko „Klikni zde“ vede na živou demo stránku (jen pokud existuje), ikona GitHubu v hlavičce karty na repozitář. Projekt se definuje v poli `projects` v `src/pages/About.js` (`link` = demo, `github` = repozitář), popisek v `aboutPage.<desc>` v `src/locales/*.json`.
+- **Backend (`/backend`)** – interaktivní průvodce „co se děje v backendu“ (Node.js + PostgreSQL), dvojjazyčný, navazuje na dark/light design webu:
+  - *Cesta požadavku* – animované schéma Klient → Express → Middleware → Služba → Pool → PostgreSQL a zpět; scénáře GET, POST s transakcí, 401, 400 a výpadek DB, krokování, pauza, rychlost.
+  - *Event loop* – krokování call stacku, `nextTick`, microtasků, libuv a macrotasků + živá ukázka blokující vs. neblokující práce.
+  - *Connection pool* – simulace `pg.Pool` (velikost `max`, fronta, `totalCount`/`idleCount`/`waitingCount`).
+  - *Parametrizované dotazy* – srovnání interpolace řetězce a `$1` na ukázce SQL injection.
+  - Texty a scénáře jsou v `src/components/backend/backendData.js` (`{ cz, en }`), styly v `src/components/backend/backend.css`, nový scénář = nový záznam v `SCENARIOS`.
 - **Dark / Light mode** – přepínač v navigaci, stav v `localStorage`, sync mezi komponentami přes custom event `theme-changed`.
 - **Vícejazyčnost** – přepínač CZ/EN, texty v `src/locales/*.json`.
 - **Kontaktní formulář** – EmailJS + matematická captcha proti spamu.

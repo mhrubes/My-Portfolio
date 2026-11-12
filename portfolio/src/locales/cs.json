@@ -90,6 +90,7 @@
     "pages": {
         "home": "Domů",
         "about": "O mně",
+        "backend": "Backend",
         "contact": "Kontakt"
     }
 }

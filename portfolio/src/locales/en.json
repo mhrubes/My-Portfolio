@@ -90,6 +90,7 @@
     "pages": {
         "home": "Home",
         "about": "About me",
+        "backend": "Backend",
         "contact": "Contact"
     }
 }

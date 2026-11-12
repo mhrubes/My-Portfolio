@@ -52,6 +52,11 @@ function Navigation() {
                             </Link>
                         </li>
                         <li className="nav-item">
+                            <Link to="/backend">
+                                <button className={getNavButtonClass('/backend')}>{t('pages.backend')}</button>
+                            </Link>
+                        </li>
+                        <li className="nav-item">
                             <Link to="/contact">
                                 <button className={getNavButtonClass('/contact')}>{t('pages.contact')}</button>
                             </Link>
