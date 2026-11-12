@@ -1121,3 +1121,28 @@ hr.text-white,
         justify-content: center;
     }
 }
+
+.project-card-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.project-card-github {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.15rem;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.project-card-github:hover {
+    color: #fff;
+}
+
+.light-mode .project-card-github {
+    color: rgba(27, 27, 27, 0.6);
+}
+
+.light-mode .project-card-github:hover {
+    color: #1b1b1b;
+}

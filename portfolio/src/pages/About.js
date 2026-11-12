@@ -64,15 +64,16 @@ function About() {
     const workExperienceKeys = ['unicorn', 'czecom', 'yourSolutions']
 
     const projects = [
-        { name: 'Vydajo', progLang: 'React, Vite', desc: 'vydajo', link: 'https://vydajo.vercel.app/', special: true, year: '2026' },
-        { name: 'Losovačka', progLang: 'JavaScript', desc: 'losovacka', link: 'https://losovacka.vercel.app/', special: true, year: '2026' },
-        { name: 'Mobile App Scanner', progLang: 'Node.js', desc: 'mobileAppScanner', link: 'https://github.com/mhrubes/mobile-app-scanner', special: true, year: '2026' },
-        { name: 'Faktura App', progLang: 'Node.js, PostgreSQL, Electron', desc: 'fakturaApp', link: 'https://github.com/mhrubes/faktura-app', special: true, year: '2026' },
-        { name: 'Byt Planner', progLang: 'Vite, Three.js', desc: 'bytPlanner', link: 'https://mh-byt-planner.vercel.app/', special: true, year: '2026' },
-        { name: 'F1 Simulátor', progLang: 'Typescript', desc: 'raceSimulator', link: 'https://mh-f1-simulation.vercel.app/', special: true, year: '2026' },
-        { name: 'Sudoku AI', progLang: 'Typescript', desc: 'sudokuAI', link: 'https://mh-sudoku-ai.vercel.app/', special: true, year: '2026' },
-        { name: 'Metro simulation', progLang: 'React', desc: 'metroSimulation', link: 'https://metro-simulation.vercel.app/', special: true, year: '2024' },
-        { name: 'Poe Stash Prices', progLang: 'React', desc: 'poeStashPrices', link: 'https://poe-stash-prices.vercel.app/', special: true, year: '2024' }
+        { name: 'Pixel Bloom', progLang: 'JavaScript, Canvas', desc: 'pixelBloom', link: 'https://pixel-bloom-mh.vercel.app/', github: 'https://github.com/mhrubes/pixel-bloom', special: true, year: '2026' },
+        { name: 'Vydajo', progLang: 'React, Vite', desc: 'vydajo', link: 'https://vydajo.vercel.app/#/prehled', github: 'https://github.com/mhrubes/expense-tracker-app', special: true, year: '2026' },
+        { name: 'Losovačka', progLang: 'JavaScript', desc: 'losovacka', link: 'https://losovacka.vercel.app/', github: 'https://github.com/mhrubes/kolo-stesti', special: true, year: '2026' },
+        { name: 'Mobile App Scanner', progLang: 'Node.js', desc: 'mobileAppScanner', github: 'https://github.com/mhrubes/mobile-app-scanner', special: true, year: '2026' },
+        { name: 'Faktura App', progLang: 'Node.js, PostgreSQL, Electron', desc: 'fakturaApp', github: 'https://github.com/mhrubes/faktura-app', special: true, year: '2026' },
+        { name: 'Byt Planner', progLang: 'Vite, Three.js', desc: 'bytPlanner', link: 'https://mh-byt-planner.vercel.app/', github: 'https://github.com/mhrubes/Byt-Planner', special: true, year: '2026' },
+        { name: 'F1 Simulátor', progLang: 'Typescript', desc: 'raceSimulator', link: 'https://mh-f1-simulation.vercel.app/', github: 'https://github.com/mhrubes/F1-simulation', special: true, year: '2026' },
+        { name: 'Sudoku AI', progLang: 'Typescript', desc: 'sudokuAI', link: 'https://mh-sudoku-ai.vercel.app/', github: 'https://github.com/mhrubes/Sudoku', special: true, year: '2026' },
+        { name: 'Metro simulation', progLang: 'React', desc: 'metroSimulation', link: 'https://metro-simulation.vercel.app/', github: 'https://github.com/mhrubes/metro_simulation', special: true, year: '2024' },
+        { name: 'Poe Stash Prices', progLang: 'React', desc: 'poeStashPrices', link: 'https://poe-stash-prices.vercel.app/', github: 'https://github.com/mhrubes/poeStashPrices', special: true, year: '2024' }
         // { name: 'Wifi Name', progLang: 'C#', desc: 'wifiNameApp', link: 'https://github.com/mhrubes/WifiName', year: '2024' },
         // { name: 'Overlay', progLang: 'C#', desc: 'overlayApp', link: 'https://github.com/mhrubes/Overlay', year: '2024' },
         // { name: 'Symfony App', progLang: 'PHP', desc: 'symfonyApp', link: 'https://github.com/mhrubes/SymfonyApp', year: '2024' },
@@ -284,7 +285,7 @@ function About() {
                         const columnClass = getColumnClass(index, projects.length)
                         return (
                             <div key={index} className={`p-1 ${columnClass}`}>
-                                <ProjectDetail name={project.name} progLang={project.progLang} desc={project.desc} link={project.link} special={project.special} year={project.year} />
+                                <ProjectDetail name={project.name} progLang={project.progLang} desc={project.desc} link={project.link} github={project.github} special={project.special} year={project.year} />
                             </div>
                         )
                     })}
