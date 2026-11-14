@@ -64,7 +64,7 @@ function About() {
     const workExperienceKeys = ['unicorn', 'czecom', 'yourSolutions']
 
     const projects = [
-        { name: 'Market Simulator', progLang: 'JavaScript', desc: 'samoska', github: 'https://github.com/mhrubes/market_simulator', special: true, year: '2026' },
+        { name: 'Market Simulator', nameKey: 'marketSimulatorName', progLang: 'JavaScript', desc: 'samoska', github: 'https://github.com/mhrubes/market_simulator', special: true, year: '2026' },
         { name: 'Kočičí útulek', progLang: 'JavaScript', desc: 'kociciUtulek', link: 'https://kocici-utulek.vercel.app/', github: 'https://github.com/mhrubes/cat_simulator', special: true, year: '2026' },
         { name: 'Pixel Bloom', progLang: 'JavaScript, Canvas', desc: 'pixelBloom', link: 'https://pixel-bloom-mh.vercel.app/', github: 'https://github.com/mhrubes/pixel-bloom', special: true, year: '2026' },
         { name: 'Vydajo', progLang: 'React, Vite', desc: 'vydajo', link: 'https://vydajo.vercel.app/#/prehled', github: 'https://github.com/mhrubes/expense-tracker-app', special: true, year: '2026' },
@@ -287,7 +287,7 @@ function About() {
                         const columnClass = getColumnClass(index, projects.length)
                         return (
                             <div key={index} className={`p-1 ${columnClass}`}>
-                                <ProjectDetail name={project.name} progLang={project.progLang} desc={project.desc} link={project.link} github={project.github} special={project.special} year={project.year} />
+                                <ProjectDetail name={project.name} nameKey={project.nameKey} progLang={project.progLang} desc={project.desc} link={project.link} github={project.github} special={project.special} year={project.year} />
                             </div>
                         )
                     })}

@@ -15,7 +15,10 @@ function GithubIcon() {
 function ProjectDetail(props) {
     const { t } = useTranslation()
 
-    let { name, progLang, desc, link, github, year } = props
+    let { name, nameKey, progLang, desc, link, github, year } = props
+
+    // nameKey = volitelný překlad názvu (aboutPage.<nameKey>), jinak se použije name
+    if (nameKey) name = t(`aboutPage.${nameKey}`, { defaultValue: name })
 
     return (
         <div className="project-card">
