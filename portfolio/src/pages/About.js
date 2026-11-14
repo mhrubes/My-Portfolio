@@ -64,7 +64,7 @@ function About() {
     const workExperienceKeys = ['unicorn', 'czecom', 'yourSolutions']
 
     const projects = [
-        { name: 'Samoška', progLang: 'JavaScript', desc: 'samoska', github: 'https://github.com/mhrubes/market_simulator', special: true, year: '2026' },
+        { name: 'Market Simulator', progLang: 'JavaScript', desc: 'samoska', github: 'https://github.com/mhrubes/market_simulator', special: true, year: '2026' },
         { name: 'Kočičí útulek', progLang: 'JavaScript', desc: 'kociciUtulek', link: 'https://kocici-utulek.vercel.app/', github: 'https://github.com/mhrubes/cat_simulator', special: true, year: '2026' },
         { name: 'Pixel Bloom', progLang: 'JavaScript, Canvas', desc: 'pixelBloom', link: 'https://pixel-bloom-mh.vercel.app/', github: 'https://github.com/mhrubes/pixel-bloom', special: true, year: '2026' },
         { name: 'Vydajo', progLang: 'React, Vite', desc: 'vydajo', link: 'https://vydajo.vercel.app/#/prehled', github: 'https://github.com/mhrubes/expense-tracker-app', special: true, year: '2026' },
