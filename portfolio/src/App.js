@@ -5,6 +5,7 @@ import { Analytics } from '@vercel/analytics/react'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import ScrollToTop from './components/ScrollToTop'
+import LoadingGate from './components/LoadingGate'
 
 const Main = lazy(() => import('./pages/Main'))
 const About = lazy(() => import('./pages/About'))
@@ -15,6 +16,7 @@ function App() {
     return (
         <BrowserRouter>
             <ScrollToTop />
+            <LoadingGate>
             <Suspense fallback={<div>Loading</div>}>
                 <Routes>
                     <Route path="/">
@@ -26,6 +28,7 @@ function App() {
                     </Route>
                 </Routes>
             </Suspense>
+            </LoadingGate>
             <Analytics debug={false} />
             <ToastContainer
                 position="top-right"

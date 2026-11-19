@@ -95,5 +95,16 @@
         "about": "O mně",
         "backend": "Backend",
         "contact": "Kontakt"
+    },
+    "loading": {
+        "title": "Načítám obsah",
+        "subtitle": "Za chvíli budete přesměrováni na úvodní stránku.",
+        "steps": {
+            "connect": "Připojuji se k serveru",
+            "profile": "Načítám profil",
+            "projects": "Načítám projekty",
+            "skills": "Načítám technické znalosti",
+            "backend": "Připravuji backend ukázky"
+        }
     }
 }

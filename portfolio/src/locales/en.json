@@ -95,5 +95,16 @@
         "about": "About me",
         "backend": "Backend",
         "contact": "Contact"
+    },
+    "loading": {
+        "title": "Loading content",
+        "subtitle": "You will be redirected to the home page in a moment.",
+        "steps": {
+            "connect": "Connecting to server",
+            "profile": "Loading profile",
+            "projects": "Loading projects",
+            "skills": "Loading technical skills",
+            "backend": "Preparing backend demos"
+        }
     }
 }

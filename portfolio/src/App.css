@@ -1146,3 +1146,139 @@ hr.text-white,
 .light-mode .project-card-github:hover {
     color: #1b1b1b;
 }
+
+/* Načítání obsahu (LoadingGate): simulace při prvním načtení */
+.loading-gate {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    color: #fff;
+    background-color: #1d052e;
+    background-image: linear-gradient(rgba(184, 156, 255, 0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(184, 156, 255, 0.07) 1px, transparent 1px);
+    background-size: 34px 34px;
+}
+
+.light-mode .loading-gate {
+    color: #1b1b1b;
+    background-color: #f3f5ff;
+    background-image: linear-gradient(rgba(27, 27, 27, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(27, 27, 27, 0.05) 1px, transparent 1px);
+}
+
+.loading-panel {
+    width: min(520px, 100%);
+    animation: loadingPanelIn 0.5s ease-out;
+}
+
+@keyframes loadingPanelIn {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.loading-title {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin: 0 0 6px;
+}
+
+.loading-subtitle {
+    margin: 0 0 22px;
+    opacity: 0.7;
+}
+
+
+
+
+.loading-bar {
+    height: 8px;
+    margin: 14px 0 6px;
+    border: 1px solid rgba(184, 156, 255, 0.35);
+    border-radius: 6px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.light-mode .loading-bar {
+    border-color: rgba(136, 20, 217, 0.35);
+    background: rgba(27, 27, 27, 0.05);
+}
+
+.loading-bar__fill {
+    height: 100%;
+    background: linear-gradient(90deg, #8814d9, #b89cff);
+    transition: width 0.15s linear;
+}
+
+
+
+
+
+
+
+
+.loading-percent {
+    font-family: var(--font-mono);
+    font-size: clamp(2.6rem, 12vw, 4.2rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: #b89cff;
+    text-shadow: 0 0 28px rgba(136, 20, 217, 0.45);
+    font-variant-numeric: tabular-nums;
+}
+
+.light-mode .loading-percent {
+    color: #6b0fb8;
+    text-shadow: none;
+}
+
+.loading-steps {
+    list-style: none;
+    margin: 20px 0 18px;
+    padding: 14px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+}
+
+.light-mode .loading-steps {
+    border-color: rgba(27, 27, 27, 0.12);
+}
+
+.loading-step {
+    padding: 2px 0;
+    transition: opacity 0.3s ease;
+}
+
+.loading-step__mark {
+    display: inline-block;
+    width: 1.4em;
+}
+
+.loading-step--pending {
+    opacity: 0.3;
+}
+
+.loading-step--current {
+    color: #b89cff;
+}
+
+.light-mode .loading-step--current {
+    color: #6b0fb8;
+}
+
+.loading-step--done .loading-step__mark {
+    color: #27c93f;
+}
+
+.loading-step__dots {
+    animation: blinkCursor 1s steps(2, start) infinite;
+}
